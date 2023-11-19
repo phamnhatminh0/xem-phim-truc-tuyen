@@ -1,0 +1,145 @@
+/* CSS */
+.popup_overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.popup_box {
+  position: fixed;
+  display: none;
+  width: 400px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: limegreen;
+  border-radius: 5px;
+  z-index: 3;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.popup_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.popup_fon {
+  font-family: verdana, geneva, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.popup_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  max-width: 850px;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.popup_login {
+  width: 400px;
+  background-color: white;
+  padding: 30px;
+}
+
+.popup_form {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.popup_h1 {
+  margin: 20px 0 30px;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: limegreen;
+}
+
+.popup_p {
+  text-align: center;
+  margin: 10px;
+  color: #777;
+}
+
+.popup_hr {
+  border-top: 2px solid limegreen;
+}
+
+.popup_label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px;
+  text-align: left;
+  color: limegreen;
+}
+
+.popup_input {
+  width: 100%;
+  margin: 2px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.popup_button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: limegreen;
+  transition: background 0.3s;
+}
+
+.popup_button:hover {
+  background: darkgreen;
+}
+
+.popup_p {
+  margin: 20px;
+  color: #777;
+}
+
+.popup_a {
+  color: limegreen;
+  text-decoration: none;
+}
+
+.popup_a:hover {
+  color: darkgreen;
+  text-decoration: underline;
+Ư
