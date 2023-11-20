@@ -946,7 +946,7 @@ ol {
 -----------------------*/
 
 .anime-details {
-	padding-top: 60px;
+	padding-top: 20px;
 }
 
 .anime__details__content {
@@ -1295,7 +1295,7 @@ ol {
 -----------------------*/
 
 .breadcrumb-option {
-	padding-top: 35px;
+	padding-top: 25px;
 }
 
 .breadcrumb__links a {
@@ -2353,4 +2353,7 @@ ol {
 }
 .mota{
 color: #888;
+}
+span .mau{
+	color: #00DC5A;
 }
