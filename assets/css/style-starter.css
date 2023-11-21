@@ -14248,7 +14248,7 @@ body a {
 
 .watch-button {
   padding: 0px 40px;
-  color: var(--theme-blue);
+  color: #f4cb9b;
   height: 44px;
   display: block;
   font-size: 16px;
@@ -14257,13 +14257,13 @@ body a {
   transition: 0.3s ease-in;
   border-radius: 6px;
   background-color: transparent;
-  border: 2px solid var(--theme-blue);
+  border: 2px solid #f4cb9b;
   width: 100%;
 }
 
 .watch-button:hover {
-  background-color: var(--theme-blue);
-  border: 2px solid var(--theme-blue);
+  background-color: #f4cb9b;
+  border: 2px solid #f4cb9b;
   color: #fff;
   transition: 0.5s ease-out;
   -webkit-transition: 0.5s ease-out;
@@ -14315,14 +14315,14 @@ h3.hny-title,
 h3.hny-title.two {
   font-size: 26px;
   line-height: 36px;
-  color: var(--theme-title);
+  color: var(--theme-rose);
   text-transform: uppercase;
   font-weight: 700;
 }
 
 a.show-title {
   font-size: 20px;
-  color: var(--theme-rose);
+  color: var(--theme-title);
   font-weight: 700;
 }
 
