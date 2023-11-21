@@ -19344,7 +19344,7 @@ div#small-dialog4 iframe,
 .w3l-footer .sub-two-right ul li a:hover {
   color: var(--theme-rose);
   transition: 0.3s ease;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 @media (max-width: 1280px) {
