@@ -16097,8 +16097,6 @@ ul.resp-tabs-list {
   float: left;
   width: 31%;
   text-align: center;
-  color: var(--theme-title)!important;
-  background: var(--theme-lite);
   border-bottom: none;
   border-radius: 6px;
 }
