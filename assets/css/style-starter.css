@@ -14222,7 +14222,7 @@ body a {
 
 .view-button {
   padding: 0px 40px;
-  color: var(--theme-blue);
+  color: var(--theme-rose);
   height: 52px;
   display: inline-block;
   font-size: 16px;
@@ -14231,12 +14231,12 @@ body a {
   transition: 0.3s ease-in;
   border-radius: 6px;
   background-color: transparent;
-  border: 2px solid var(--theme-blue);
+  border: 2px solid var(--theme-rose);
 }
 
 .view-button:hover {
-  background-color: var(--theme-blue);
-  border: 2px solid var(--theme-blue);
+  background-color: var(--theme-rose);
+  border: 2px solid var(--theme-rose);
   color: #fff;
   transition: 0.5s ease-out;
   -webkit-transition: 0.5s ease-out;
