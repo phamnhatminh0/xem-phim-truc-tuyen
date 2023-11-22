@@ -1,0 +1,83 @@
+/* CSS Custom for Mobile Screen */
+
+.movie-detail {
+    color: white;
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .img-fluid {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .col-md-3 {
+        order: -1;
+    }
+
+    .release-duration {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .release-duration p {
+        margin-right: 10px;
+    }
+}
+
+/* CSS Custom for Text */
+.title {
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.bold-text {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.normal-text {
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* CSS Custom for Button */
+.watch-button2 {
+    width: 290px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #00DC5A;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.img-fluid {
+    width: 290px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.alink {
+    color: inherit;
+    text-decoration: none;
+}
+
+.alink:hover {
+    color: #00DC5A;
+}
