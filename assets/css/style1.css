@@ -121,7 +121,7 @@ ol {
 	color: #ffffff;
 	font-weight: 600;
 	line-height: 21px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	padding-left: 20px;
 	position: relative;
 	font-family: "Oswald", sans-serif;
@@ -134,7 +134,7 @@ ol {
 	top: -6px;
 	height: 32px;
 	width: 4px;
-	background: #e53637;
+	background: #00DC5A;
 	content: "";
 }
 
@@ -946,7 +946,7 @@ ol {
 -----------------------*/
 
 .anime-details {
-	padding-top: 60px;
+	padding-top: 20px;
 }
 
 .anime__details__content {
@@ -1116,7 +1116,7 @@ ol {
 	right: -30px;
 	top: 15px;
 	border-top: 15px solid transparent;
-	border-left: 15px solid #1d1e39;
+	border-left: 15px solid #222222;
 	content: "";
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
@@ -1131,15 +1131,17 @@ ol {
 
 .anime__review__item__text {
 	overflow: hidden;
-	background: #1d1e39;
+	background: #222222;
 	padding: 18px 30px 16px 20px;
 	border-radius: 10px;
 }
 
 .anime__review__item__text h6 {
+	display: flex;
+	justify-content: space-between;
 	color: #ffffff;
 	font-weight: 700;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .anime__review__item__text h6 span {
@@ -1172,7 +1174,7 @@ ol {
 	font-weight: 700;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	background: #e53637;
+	background: #00DC5A;
 	border: none;
 	padding: 10px 15px;
 	border-radius: 2px;
@@ -1183,7 +1185,7 @@ ol {
 -----------------------*/
 
 .anime__video__player {
-	margin-bottom: 70px;
+	margin-bottom: 40px;
 }
 
 .anime__video__player .plyr--video {
@@ -1273,7 +1275,7 @@ ol {
 	display: inline-block;
 	font-size: 15px;
 	color: #ffffff;
-	background: rgba(255, 255, 255, 0.2);
+	background:#222222;
 	padding: 10px 20px;
 	border-radius: 4px;
 	margin-right: 15px;
@@ -1293,7 +1295,7 @@ ol {
 -----------------------*/
 
 .breadcrumb-option {
-	padding-top: 35px;
+	padding-top: 25px;
 }
 
 .breadcrumb__links a {
@@ -2339,4 +2341,19 @@ ol {
 	.anime__review__item__text {
 		padding: 18px 20px 20px;
 	}
+}
+.tieude{
+	color: white;
+	font-family: "Oswald", sans-serif;
+}
+.tendv{
+	color: white;
+	font-family: "Oswald", sans-serif;
+	margin-left: 30px;
+}
+.mota{
+color: #888;
+}
+span .mau{
+	color: #00DC5A;
 }
