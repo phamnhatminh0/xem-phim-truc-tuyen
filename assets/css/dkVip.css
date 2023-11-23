@@ -1,0 +1,110 @@
+.DK_popup_pricing-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: min(1600px, 100%);
+    margin: auto;
+}
+
+.DK_popup_pricing-card {
+    flex: 1;
+    max-width: 360px;
+    background-color: #fff;
+    margin: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: #2d2d2d;
+    transition: .3s linear;
+}
+
+.DK_popup_pricing-card-header {
+    background-color: #00DC5A;
+    display: inline-block;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 0 0 20px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .4s linear;
+}
+
+.DK_popup_pricing-card:hover .DK_popup_pricing-card-header {
+    box-shadow: 0 0 0 24em #00DC5A;
+}
+
+.DK_popup_price {
+    font-size: 70px;
+    color: #00DC5A;
+    margin: 40px 0;
+    transition: .2s linear;
+}
+
+.DK_popup_price sup,
+.DK_popup_price span {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.DK_popup_pricing-card:hover,
+.DK_popup_pricing-card:hover .DK_popup_price {
+    color: #fff;
+}
+
+.DK_popup_pricing-card li {
+    font-size: 16px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.DK_popup_order-btn {
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 80px;
+    border: 2px solid #00DC5A;
+    color: #000000;
+    padding: 18px 40px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s linear;
+}
+
+.DK_popup_order-btn:hover {
+    background-color: #00DC5A;
+    color: #fff;
+}
+
+#DK_popup_overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#DK_popup_dkBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 3;
+    padding: 20px;
+    width: 800px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#DK_popup_close_button {
+    float: right;
+    cursor: pointer;
+}
