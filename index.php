@@ -3,13 +3,13 @@ include_once "Dao/pdo.php";
 include_once "View/header.php";
 
 if (!isset($_GET['pg'])) {
-   
+
     include "View/home.php";
 } else {
     switch ($_GET['pg']) {
         case 'home':
             include_once "View/home.php";
-           
+
             break;
         case 'genre':
             include_once "View/genre.php";
@@ -29,6 +29,10 @@ if (!isset($_GET['pg'])) {
 
         case 'watch':
             include_once "View/watch-movie.php";
+            break;
+
+        case 'search':
+            include_once "View/search.php";
             break;
 
         default:

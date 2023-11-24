@@ -333,7 +333,7 @@
 		</div>
 	</section>
 	<!--//grids-sec1-->
-    <script src="Layout/assets/js/jquery-3.3.1.min.js"></script>
+<script src="Layout/assets/js/jquery-3.3.1.min.js"></script>
 <!--/theme-change-->
 <script src="Layout/assets/js/theme-change.js"></script>
 <!-- //theme-change-->
