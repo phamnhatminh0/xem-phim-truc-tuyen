@@ -24,6 +24,10 @@ if (!isset($_GET['pg'])) {
 
             break;
         case 'genre':
+             $tencungtheloai=phimcungtheloai_ten($_GET["id"]);
+            $cacphimcungloai=phimcungtheloai_all($_GET["id"]);
+            $theloailuotxem= phimcungtheloai_luotxem($_GET["id"])
+
             include_once "View/genre.php";
             break;
 
@@ -38,6 +42,7 @@ if (!isset($_GET['pg'])) {
         case 'detail':
 
             $chitiet=chitietphim($_GET["id"]);
+            $cungtheloai= phimcungtheloai($chitiet["tentl"],$chitiet["id_phim"]);
             include_once "View/movie-detail.php";
             break;
 

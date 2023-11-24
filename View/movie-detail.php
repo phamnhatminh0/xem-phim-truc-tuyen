@@ -46,14 +46,15 @@
                     </div>
                 </div>
                 <div class="w3l-populohny-grids">
+                    <?php foreach($cungtheloai as $ctl):?>
                     <div class="item vhny-grid">
                         <div class="box16">
                             <a href="genre.html">
                                 <figure>
-                                    <img class="img-fluid" src="Upload/images/m7.jpg" alt="">
+                                    <img class="img-fluid" src="<?=$img?><?=$ctl["img"]?>" alt="">
                                 </figure>
                                 <div class="box-content">
-                                    <h3 class="title">Frozen 2</h3>
+                                    <h3 class="title"><?=$ctl["ten"]?></h3>
                                     <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
 
                                         </span>
@@ -65,63 +66,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="item vhny-grid">
-                        <div class="box16">
-                            <a href="genre.html">
-                                <figure>
-                                    <img class="img-fluid" src="Upload/images/m3.jpg" alt="">
-                                </figure>
-                                <div class="box-content">
-                                    <h3 class="title">Knives Out</h3>
-                                    <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-                                        </span>
-
-                                        <span class="post fa fa-heart text-right"></span>
-                                    </h4>
-                                </div>
-                                <!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item vhny-grid">
-                        <div class="box16">
-                            <a href="genre.html">
-                                <figure>
-                                    <img class="img-fluid" src="Upload/images/m4.jpg" alt="">
-                                </figure>
-                                <div class="box-content">
-                                    <h3 class="title">Little Women</h3>
-                                    <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-                                        </span>
-
-                                        <span class="post fa fa-heart text-right"></span>
-                                    </h4>
-                                </div>
-                                <!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item vhny-grid">
-                        <div class="box16">
-                            <a href="genre.html">
-                                <figure>
-                                    <img class="img-fluid" src="Upload/images/m5.jpg" alt="">
-                                </figure>
-                                <div class="box-content">
-                                    <h3 class="title">Jumanji</h3>
-                                    <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-                                        </span>
-
-                                        <span class="post fa fa-heart text-right"></span>
-                                    </h4>
-                                </div>
-                                <!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
-                            </a>
-                        </div>
-                    </div>
+                    <?php endforeach;?>
                 </div>
             </div>
         </div>
