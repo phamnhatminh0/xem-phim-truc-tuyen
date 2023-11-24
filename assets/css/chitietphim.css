@@ -54,14 +54,14 @@
 
 /* CSS Custom for Button */
 .watch-button2 {
-    width: 230px;
-    height: 50px;
+    width: 180px;
+    height: 45px;
     border-radius: 10px;
     background-color: #00DC5A;
     color: white;
     font-weight: bold;
     font-size: 20px;
-    display: flex;
+
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
