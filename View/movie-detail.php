@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="Layout/assets/css/chitietphim.css">
    <!-- Breadcrumb Begin -->
    <div class="w3l-breadcrumbs">
         <nav id="breadcrumbs" class="breadcrumbs">

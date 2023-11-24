@@ -28,11 +28,19 @@ if (!isset($_GET['pg'])) {
             break;
 
         case 'watch':
-            include_once "View/watch-movie.php";
+            include_once "View/watch-video.php";
             break;
 
-        case 'search':
-            include_once "View/search.php";
+        case 'user':
+            include_once "View/user.php";
+            break;
+
+        case 'bosuutap':
+            include_once "View/collection.php";
+            break;
+
+        case 'lichsu':
+            include_once "View/history.php";
             break;
 
         default:
