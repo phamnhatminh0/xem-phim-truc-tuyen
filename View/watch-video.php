@@ -1,162 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime | Template</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="./assets/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="./assets/css/plyr.css" type="text/css">
-    <link rel="stylesheet" href="./assets/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="./assets/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="./assets/css/style1.css" type="text/css">
-
-    <!-- 
-    - favicon
-  -->
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-    <!-- 
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <!-- 
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="assets/css/style-starter.css">
-    <!-- Template CSS -->
-    <link href="//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap"
-        rel="stylesheet">
-    <!-- Template CSS -->
-</head>
-
-<body id="#top">
-
-  <!-- header -->
-  <header id="site-header" class="w3l-header fixed-top">
-    <!--/nav-->
-    <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
-        <div class="container">
-            <h1><a class="navbar-brand" href="index.html"><span class="fa fa-play icon-log"
-                        aria-hidden="true"></span>
-                    ProShowz </a></h1>
-            <!-- if logo is image enable this   
-                    <a class="navbar-brand" href="#index.html">
-                        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-                    </a> -->
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <!-- <span class="navbar-toggler-icon"></span> -->
-                <span class="fa icon-expand fa-bars"></span>
-                <span class="fa icon-close fa-times"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-            <li class="nav-item">
-                            <a class="nav-link" href="genre.html">Genre</a>
-                        </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-
-                <!--/search-right-->
-                <!--/search-right-->
-                <div class="search-right">
-                    <a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">Search <span
-                            class="fa fa-search ml-3" aria-hidden="true"></span></a>
-                    <!-- search popup -->
-                    <div id="search" class="pop-overlay">
-                        <div class="popup">
-                            <form action="#" method="post" class="search-box">
-                                <input type="search" placeholder="Search your Keyword" name="search"
-                                    required="required" autofocus="">
-                                <button type="submit" class="btn"><span class="fa fa-search"
-                                        aria-hidden="true"></span></button>
-                            </form>
-                            <div class="browse-items">
-                                <h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
-                                <ul class="search-items">
-                                    <li><a href="genre.html">Action</a></li>
-                                    <li><a href="genre.html">Drama</a></li>
-                                    <li><a href="genre.html">Family</a></li>
-                                    <li><a href="genre.html">Thriller</a></li>
-                                    <li><a href="genre.html">Commedy</a></li>
-                                    <li><a href="genre.html">Romantic</a></li>
-                                    <li><a href="genre.html">Tv-Series</a></li>
-                                    <li><a href="genre.html">Horror</a></li>
-                                    <li><a href="genre.html">Action</a></li>
-                                    <li><a href="genre.html">Drama</a></li>
-                                    <li><a href="genre.html">Family</a></li>
-                                    <li><a href="genre.html">Thriller</a></li>
-                                    <li><a href="genre.html">Commedy</a></li>
-                                    <li><a href="genre.html">Romantic</a></li>
-                                    <li><a href="genre.html">Tv-Series</a></li>
-                                    <li><a href="genre.html">Horror</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a class="close" href="#close">×</a>
-                    </div>
-                    <!-- /search popup -->
-                    <!--/search-right-->
-                </div>
-
-
-            </div>
-            <!-- toggle switch for light and dark theme -->
-            <div class="mobile-position">
-                <nav class="navigation">
-                    <div class="theme-switch-wrapper">
-                        <label class="theme-switch" for="checkbox">
-                            <input type="checkbox" id="checkbox">
-                            <div class="mode-container">
-                                <i class="gg-sun"></i>
-                                <i class="gg-moon"></i>
-                            </div>
-                        </label>
-                    </div>
-                </nav>
-            </div>
-            <!-- //toggle switch for light and dark theme -->
-        </div>
-    </nav>
-    <!--//nav-->
-</header>
-	<!-- //header -->
-    
+<link rel="stylesheet" href="Layout/assets/css/style1.css" type="text/css">
 <!-- //watch-video -->
         
            <!-- Breadcrumb Begin -->
            <div class="w3l-breadcrumbs">
             <nav id="breadcrumbs" class="breadcrumbs">
                 <div class="container page-wrapper" style="display: flex; gap: 3px;">
-                    <a href="index.html">Home</a> » <a href="index.html">Chi tiết phim</a>   » <span class="breadcrumb_last" aria-current="page">Xem phim</span>
+                    <a href="index.html">Trang chủ</a> » <a href="index.html">Phim</a>»<span class="breadcrumb_last" aria-current="page">Xem phim</span>
                 </div>
             </nav>
         </div>
@@ -168,8 +17,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div  class="anime__video__player ">
-                        <video class="w-100"  id="player" playsinline controls data-poster="/assets/videos/anime-watch.jpg">
-                            <source src="./assets/videos/1.mp4" type="video/mp4" />
+                        <video class="w-100"  id="player" playsinline controls data-poster="Layout/assets/videos/anime-watch.jpg">
+                            <source src="Layout/assets/videos/1.mp4" type="video/mp4" />
                             <!-- Captions are optional -->
                             <track kind="captions" label="English captions" src="#" srclang="en" default />
                         </video>
@@ -196,7 +45,7 @@
                                             <div class="mb-0">
                                                 <a href="genre.html">
                                                     <figure>
-                                                        <img class="img-fluid rounded-circle" src="assets/images/n1.jpg" alt="" style="width: 160px; height: 160px;">
+                                                        <img class="img-fluid rounded-circle" src="Upload/images/n1.jpg" alt="" style="width: 160px; height: 160px;">
                                                         </figure>
                                                         <h6 class="tendv">lê phước thinh</h6>
                                                     
@@ -213,7 +62,7 @@
                                             <div class="mb-0">
                                                 <a href="genre.html">
                                                     <figure>
-                                                        <img class="img-fluid rounded-circle" src="assets/images/n2.jpg" alt="" style="width: 160px; height: 160px;">
+                                                        <img class="img-fluid rounded-circle" src="Upload/images/n2.jpg" alt="" style="width: 160px; height: 160px;">
                                                         </figure>
                                                         <h6 class="tendv">lê phước thinh</h6>
                                                     
@@ -227,7 +76,7 @@
                                             <div class="mb-0">
                                                 <a href="genre.html">
                                                     <figure>
-                                                        <img class="img-fluid rounded-circle" src="assets/images/n3.jpg" alt="" style="width: 160px; height: 160px;">
+                                                        <img class="img-fluid rounded-circle" src="Upload/images/n3.jpg" alt="" style="width: 160px; height: 160px;">
                                                         </figure>
                                                         <h6 class="tendv">lê phước thinh</h6>
                                                     
@@ -242,7 +91,7 @@
                                             <div class="mb-0">
                                                 <a href="genre.html">
                                                     <figure>
-                                                        <img class="img-fluid rounded-circle" src="assets/images/n4.jpg" alt="" style="width: 160px; height: 160px;">
+                                                        <img class="img-fluid rounded-circle" src="Upload/images/n4.jpg" alt="" style="width: 160px; height: 160px;">
                                                         </figure>
                                                         <h6 class="tendv">lê phước thinh</h6>
                                                     
@@ -257,7 +106,7 @@
                                             <div class="mb-0">
                                                 <a href="genre.html">
                                                     <figure>
-                                                        <img class="img-fluid rounded-circle" src="assets/images/n5.jpg" alt="" style="width: 160px; height: 160px;">
+                                                        <img class="img-fluid rounded-circle" src="Upload/images/n5.jpg" alt="" style="width: 160px; height: 160px;">
                                                         </figure>
                                                         <h6 class="tendv">lê phước thinh</h6>
                                                     
@@ -271,7 +120,7 @@
                                             <div class="mb-0">
                                                 <a href="genre.html">
                                                     <figure>
-                                                        <img class="img-fluid rounded-circle" src="assets/images/n6.jpg" alt="" style="width: 160px; height: 160px;">
+                                                        <img class="img-fluid rounded-circle" src="Upload/images/n6.jpg" alt="" style="width: 160px; height: 160px;">
                                                         </figure>
                                                         <h6 class="tendv">lê phước thinh</h6>
                                                     
@@ -322,7 +171,7 @@
                         </div>
                         <div class="anime__review__item">
                             <div class="anime__review__item__pic">
-                                <img src="/Proshowz-Starter/assets/images/review-1.jpg" alt="">
+                                <img src="Upload/images/review-1.jpg" alt="">
                             </div>
                             <div class="anime__review__item__text">
                                 <h6>Chris Curry - <span>1 Hour ago</span></h6>
@@ -332,7 +181,7 @@
                         </div>
                         <div class="anime__review__item">
                             <div class="anime__review__item__pic">
-                                <img src="/Proshowz-Starter/assets/images/review-2.jpg" alt="">
+                                <img src="Upload/images/review-2.jpg" alt="">
                             </div>
                             <div class="anime__review__item__text">
                                 <h6>Lewis Mann - <span>5 Hour ago</span></h6>
@@ -341,7 +190,7 @@
                         </div>
                         <div class="anime__review__item">
                             <div class="anime__review__item__pic">
-                                <img src="/Proshowz-Starter/assets/images/review-3.jpg" alt="">
+                                <img src="Upload/images/review-3.jpg" alt="">
                             </div>
                             <div class="anime__review__item__text">
                                 <h6>Louis Tyler - <span>20 Hour ago</span></h6>
@@ -350,7 +199,7 @@
                         </div>
                         <div class="anime__review__item">
                             <div class="anime__review__item__pic">
-                                <img src="/Proshowz-Starter/assets/images/review-4.jpg" alt="">
+                                <img src="Upload/images/review-4.jpg" alt="">
                             </div>
                             <div class="anime__review__item__text">
                                 <h6>Chris Curry - <span>1 Hour ago</span></h6>
@@ -360,7 +209,7 @@
                         </div>
                         <div class="anime__review__item">
                             <div class="anime__review__item__pic">
-                                <img src="/Proshowz-Starter/assets/images/review-5.jpg" alt="">
+                                <img src="Upload/images/review-5.jpg" alt="">
                             </div>
                             <div class="anime__review__item__text">
                                 <h6>Lewis Mann - <span>5 Hour ago</span></h6>
@@ -369,7 +218,7 @@
                         </div>
                         <div class="anime__review__item">
                             <div class="anime__review__item__pic">
-                                <img src="/Proshowz-Starter/assets/images/review-6.jpg" alt="">
+                                <img src="Upload/images/review-6.jpg" alt="">
                             </div>
                             <div class="anime__review__item__text">
                                 <h6>Louis Tyler - <span>20 Hour ago</span></h6>
@@ -392,169 +241,8 @@
     </section>
     <!-- Anime Section End -->
 <!-- //watch-video -->
-
-
-
-    <!-- footer-66 -->
-    <footer class="w3l-footer">
-        <section class="footer-inner-main">
-            <div class="footer-hny-grids py-5">
-                <div class="container py-lg-4">
-                    <div class="text-txt">
-                        <div class="right-side">
-                            <div class="row footer-about">
-                                <div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-                                    <a href="genre.html"><img class="img-fluid" src="assets/images/banner1.jpg"
-                                            alt=""></a>
-                                </div>
-                                <div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-                                    <a href="genre.html"><img class="img-fluid" src="assets/images/banner2.jpg"
-                                            alt=""></a>
-                                </div>
-                                <div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-                                    <a href="genre.html"><img class="img-fluid" src="assets/images/banner3.jpg"
-                                            alt=""></a>
-                                </div>
-                                <div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-                                    <a href="genre.html"><img class="img-fluid" src="assets/images/banner4.jpg"
-                                            alt=""></a>
-                                </div>
-                            </div>
-                            <div class="row footer-links">
-
-
-                                <div class="col-md-3 col-sm-6 sub-two-right mt-5">
-                                    <h6>Movies</h6>
-                                    <ul>
-                                        <li><a href="#">Movies</a></li>
-                                        <li><a href="#">Videos</a></li>
-                                        <li><a href="#">English Movies</a></li>
-                                        <li><a href="#">Tailor</a></li>
-                                        <li><a href="#">Upcoming Movies</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 col-sm-6 sub-two-right mt-5">
-                                    <h6>Information</h6>
-                                    <ul>
-                                        <li><a href="index.html">Home</a> </li>
-                                        <li><a href="about.html">About</a> </li>
-                                        <li><a href="#">Tv Series</a> </li>
-                                        <li><a href="#">Blogs</a> </li>
-                                        <li><a href="#">Login</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 col-sm-6 sub-two-right mt-5">
-                                    <h6>Locations</h6>
-                                    <ul>
-                                        <li><a href="genre.html">Asia</a></li>
-                                        <li><a href="genre.html">France</a></li>
-                                        <li><a href="genre.html">Taiwan</a></li>
-                                        <li><a href="genre.html">United States</a></li>
-                                        <li><a href="genre.html">Korea</a></li>
-                                        <li><a href="genre.html">United Kingdom</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 col-sm-6 sub-two-right mt-5">
-                                    <h6>Newsletter</h6>
-                                    <form action="#" class="subscribe mb-3" method="post">
-                                        <input type="email" name="email" placeholder="Your Email Address" required="">
-                                        <button><span class="fa fa-envelope-o"></span></button>
-                                    </form>
-                                    <p>Enter your email and receive the latest news, updates and special offers from us.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="below-section">
-                <div class="container">
-                    <div class="copyright-footer">
-                        <div class="columns text-lg-left">
-                            <p>&copy; 2020 ProShowz. All rights reserved | Designed by <a
-                                    href="https://w3layouts.com">W3layouts</a></p>
-                        </div>
-
-                        <ul class="social text-lg-right">
-                            <li><a href="#facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
-                            </li>
-                            <li><a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-                            </li>
-                            <li><a href="#twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
-                            </li>
-                            <li><a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- copyright -->
-            <!-- move top -->
-            <button onclick="topFunction()" id="movetop" title="Go to top">
-                <span class="fa fa-arrow-up" aria-hidden="true"></span>
-            </button>
-            <script>
-                // When the user scrolls down 20px from the top of the document, show the button
-                window.onscroll = function () {
-                    scrollFunction()
-                };
-
-                function scrollFunction() {
-                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                        document.getElementById("movetop").style.display = "block";
-                    } else {
-                        document.getElementById("movetop").style.display = "none";
-                    }
-                }
-
-                // When the user clicks on the button, scroll to the top of the document
-                function topFunction() {
-                    document.body.scrollTop = 0;
-                    document.documentElement.scrollTop = 0;
-                }
-            </script>
-            <!-- /move top -->
-
-        </section>
-    </footer>
-    <!--//footer-66 -->
-
-
-    <!-- 
-    - #GO TO TOP
-  -->
-
-    <a href="#top" class="go-top" data-go-top>
-        <ion-icon name="chevron-up"></ion-icon>
-    </a>
-
-
-
-
-
-    <!-- 
-    - custom js link
-  -->
-    <script src="./assets/js/script.js"></script>
-
-    <!-- 
-    - ionicon link
-  -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
-</html>
-
-<!-- responsive tabs -->
-<script src="assets/js/jquery-1.9.1.min.js"></script>
-<script src="assets/js/easyResponsiveTabs.js"></script>
+<script src="Layout/assets/js/jquery-1.9.1.min.js"></script>
+<script src="Layout/assets/js/easyResponsiveTabs.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         //Horizontal Tab
@@ -575,9 +263,9 @@
 </script>
 <!-- //responsive tabs -->
 <!--/theme-change-->
-<script src="assets/js/theme-change.js"></script>
+<script src="Layout/assets/js/theme-change.js"></script>
 <!-- //theme-change-->
-<script src="assets/js/owl.carousel.js"></script>
+<script src="Layout/assets/js/owl.carousel.js"></script>
 <!-- script for banner slider-->
 <script>
     $(document).ready(function () {
@@ -686,7 +374,7 @@
 
 <!-- script for owlcarousel -->
 <!-- Template JavaScript -->
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="Layout/assets/js/jquery.magnific-popup.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.popup-with-zoom-anim').magnificPopup({
@@ -762,4 +450,4 @@
 </script>
 <!--//MENU-JS-->
 
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="Layout/assets/js/bootstrap.min.js"></script>
