@@ -1,13 +1,25 @@
 <?php
 include_once "Dao/pdo.php";
+include_once "Dao/genre.php";
+$theloai=theloai_getAll();
+include_once "Dao/movie.php";
+include_once "Dao/config.php";
+
 include_once "View/header.php";
 
 if (!isset($_GET['pg'])) {
+    $movie=phimmoi();
+    $moviehd=hanhdong();
+    $movielx=phim_luotxem();
 
     include "View/home.php";
 } else {
     switch ($_GET['pg']) {
         case 'home':
+            $movie=phimmoi();
+            $moviehd=hanhdong();
+            $movielx=phim_luotxem();
+        
             include_once "View/home.php";
 
             break;
@@ -24,6 +36,12 @@ if (!isset($_GET['pg'])) {
             break;
 
         case 'detail':
+
+            $chitiet=chitietphim($_GET["id"]);
+            include_once "View/movie-detail.php";
+            break;
+
+
             include_once "View/movie-detail.php";
             break;
 

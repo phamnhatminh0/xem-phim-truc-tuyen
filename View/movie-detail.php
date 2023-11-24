@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="Layout/assets/css/chitietphim.css">
-   <!-- Breadcrumb Begin -->
-   <div class="w3l-breadcrumbs">
+    <!-- Breadcrumb Begin -->
+    <link rel="stylesheet" href="Layout/assets/css/chitietphim.css">
+    <div class="w3l-breadcrumbs">
         <nav id="breadcrumbs" class="breadcrumbs">
             <div class="container page-wrapper" style="display: flex; gap: 3px;">
-                <a href="index.html">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Chi tiết phim</span>
+                <a href="index.html">Home</a> » <span class="breadcrumb_last" aria-current="page">Chi tiết phim</span>
             </div>
         </nav>
     </div>
@@ -14,27 +14,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-fluid" src="Upload/images/movie-4.png" alt="Your Image">
+                    <img class="img-fluid" src="<?=$img?><?= $chitiet["img"]?>" alt="Your Image">
                 </div>
                 <div class="col-md-8 ">
-                    <h1 class="title">Pháp sư tinh linh</h1>
-                    <h2 class="subtitle">Sousou no Frieren</h2>
-                    <p class="bold-text">Thể loại: <span class="normal-text"><a class="alink" href="">Phiêu
-                                lưu</a>,<a class="alink" href="">Giả
-                                tưởng</a></span></p>
+                    <h1 class="title"><?=$chitiet["ten"]?></h1>
+                    <p class="bold-text">Thể loại: <span class="normal-text"><a class="alink" href=""><?= $chitiet["tentl"]?></a></span></p>
                     <div class="release-duration">
-                        <p class="bold-text">Phát hành: <span class="normal-text">2023</span></p>
+                        <p class="bold-text">Phát hành: <span class="normal-text"><?=$chitiet["namsx"]?></span></p>
                         <p class="bold-text">Thời lượng: <span class="normal-text">28 tập</span></p>
                     </div>
-                    <p class="normal-text">Khác với các câu truyện khác về cuộc hành trình tiêu diệt ma vương,
-                        câu truyện
-                        của Frieren lại diễn ra sau khi cuộc hành trình dũng giả của cô kết thúc. Bản thân là
-                        chủng tộc elf,
-                        quan niệm về thời gian của cô rất khác con người. Thấm thoát đã hơn một đời người và
-                        từng người bạn
-                        của cô sắp phải ra đi vì tuổi già, trong khi Frieren vẫn không hiểu được con người và
-                        mãi luyến tiếc
-                        vì cô đã không thể hiểu được bạn mình sớm hơn.</p>
+                    <p class="normal-text"><?= $chitiet["mota"]?></p>
                     <button class="watch-button2">Xem phim</button>
                     <button class="watch-button2" style="background-color: #25867d;">Yêu thích</button>
                 </div>
@@ -68,6 +57,8 @@
                                     <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
 
                                         </span>
+
+                                        <span class="post fa fa-heart text-right"></span>
                                     </h4>
                                 </div>
                                 <!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
@@ -85,6 +76,8 @@
                                     <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
 
                                         </span>
+
+                                        <span class="post fa fa-heart text-right"></span>
                                     </h4>
                                 </div>
                                 <!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
@@ -102,6 +95,8 @@
                                     <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
 
                                         </span>
+
+                                        <span class="post fa fa-heart text-right"></span>
                                     </h4>
                                 </div>
                                 <!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
@@ -119,6 +114,8 @@
                                     <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
 
                                         </span>
+
+                                        <span class="post fa fa-heart text-right"></span>
                                     </h4>
                                 </div>
                                 <!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
