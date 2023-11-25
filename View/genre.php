@@ -32,7 +32,7 @@
 						<div class="box16 mb-0">
 							<a href="#">
 								<figure>
-									<img class="img-fluid" src="<?=$img_p?><?=$pctl["img"]?>" alt="">
+									<img class="img-fluid" src="<?=$img?><?=$pctl["img"]?>" alt="">
 								</figure>
 								<div class="box-content">
 									<h3 class="title"><?=$pctl["ten"]?></h3>

@@ -2,6 +2,7 @@
 include_once "Dao/pdo.php";
 include_once "Dao/genre.php";
 $theloai=theloai_getAll();
+
 include_once "Dao/movie.php";
 include_once "Dao/config.php";
 include_once "Dao/actor.php";
@@ -9,9 +10,10 @@ include_once "Dao/comment.php";
 include_once "View/header.php";
 
 if (!isset($_GET['pg'])) {
-    $movie=phimmoi();
-    $moviehd=hanhdong();
-    $movielx=phim_role();
+   
+            $movie=phimmoi();
+            $moviehd=hanhdong();
+            $movielx=phim_luotxem();
 
     include "View/home.php";
 } else {

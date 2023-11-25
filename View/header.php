@@ -69,22 +69,15 @@
 								<form action="#" method="post" class="search-box">
 									<input type="search" placeholder="Nhập từ khóa" name="search" required="required"
 										autofocus="">
-									<button type="submit" class="btn"><span class="fa fa-search"
+									<button type="submit" name="submit" class="btn"><span class="fa fa-search"
 											aria-hidden="true"></span></button>
 								</form>
 								<div class="browse-items">
 									<h3 class="hny-title two mt-md-5 mt-4">Thể loại:</h3>
 									<ul class="search-items">
-										<li><a href="genre.html">Hành động</a></li>
-										<li><a href="genre.html">Tình cảm</a></li>
-										<li><a href="genre.html">Hài hước</a></li>
-										<li><a href="genre.html">Viễn tưởng</a></li>
-										<li><a href="genre.html">Hài hước</a></li>
-										<li><a href="genre.html">Viễn tưởng</a></li>
-										<li><a href="genre.html">Tâm lý</a></li>
-										<li><a href="genre.html">Kinh dị</a></li>
-										<li><a href="genre.html">Cổ trang</a></li>
-										<li><a href="genre.html">Phiêu lưu</a></li>
+									<?php foreach($theloai as $tl):?>
+										<li><a href="?pg=genre&id=<?=$tl["id_loai"]?>"><?=$tl["tentl"]?></a></li>
+										<?php endforeach;?>	
 									</ul>
 								</div>
 							</div>
