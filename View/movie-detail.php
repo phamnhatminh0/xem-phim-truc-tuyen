@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-fluid" src="<?=$img?><?= $chitiet["img"]?>" alt="Your Image">
+                    <img class="img-fluid" src="<?=$img_p?><?= $chitiet["img"]?>" alt="Your Image">
                 </div>
                 <div class="col-md-8 ">
                     <h1 class="title"><?=$chitiet["ten"]?></h1>
@@ -24,7 +24,7 @@
                         <p class="bold-text">Thời lượng: <span class="normal-text">28 tập</span></p>
                     </div>
                     <p class="normal-text"><?= $chitiet["mota"]?></p>
-                    <button class="watch-button2">Xem phim</button>
+                   <a href="?pg=watch&id=<?=$chitiet["id_phim"]?>"> <button class="watch-button2"> Xem phim </button></a>
                     <button class="watch-button2" style="background-color: #25867d;">Yêu thích</button>
                 </div>
             </div>
@@ -46,14 +46,15 @@
                     </div>
                 </div>
                 <div class="w3l-populohny-grids">
+                    <?php foreach($cungtheloai as $ctl):?>
                     <div class="item vhny-grid">
                         <div class="box16">
                             <a href="genre.html">
                                 <figure>
-                                    <img class="img-fluid" src="Upload/images/m7.jpg" alt="">
+                                    <img class="img-fluid" src="<?=$img_p?><?=$ctl["img"]?>" alt="">
                                 </figure>
                                 <div class="box-content">
-                                    <h3 class="title">Frozen 2</h3>
+                                    <h3 class="title"><?=$ctl["ten"]?></h3>
                                     <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
 
                                         </span>
@@ -65,63 +66,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="item vhny-grid">
-                        <div class="box16">
-                            <a href="genre.html">
-                                <figure>
-                                    <img class="img-fluid" src="Upload/images/m3.jpg" alt="">
-                                </figure>
-                                <div class="box-content">
-                                    <h3 class="title">Knives Out</h3>
-                                    <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-                                        </span>
-
-                                        <span class="post fa fa-heart text-right"></span>
-                                    </h4>
-                                </div>
-                                <!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item vhny-grid">
-                        <div class="box16">
-                            <a href="genre.html">
-                                <figure>
-                                    <img class="img-fluid" src="Upload/images/m4.jpg" alt="">
-                                </figure>
-                                <div class="box-content">
-                                    <h3 class="title">Little Women</h3>
-                                    <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-                                        </span>
-
-                                        <span class="post fa fa-heart text-right"></span>
-                                    </h4>
-                                </div>
-                                <!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item vhny-grid">
-                        <div class="box16">
-                            <a href="genre.html">
-                                <figure>
-                                    <img class="img-fluid" src="Upload/images/m5.jpg" alt="">
-                                </figure>
-                                <div class="box-content">
-                                    <h3 class="title">Jumanji</h3>
-                                    <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-                                        </span>
-
-                                        <span class="post fa fa-heart text-right"></span>
-                                    </h4>
-                                </div>
-                                <!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
-                            </a>
-                        </div>
-                    </div>
+                    <?php endforeach;?>
                 </div>
             </div>
         </div>

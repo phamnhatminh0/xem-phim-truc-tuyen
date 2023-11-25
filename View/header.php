@@ -45,14 +45,9 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link" href="genre.html" id="navbarDropdown">Thể loại</a>
 							<div class="dropdown-content">
-								<a class="dropdown-item" href="#">Hành động</a>
-								<a class="dropdown-item" href="#">Tình cảm</a>
-								<a class="dropdown-item" href="#">Hài hước</a>
-								<a class="dropdown-item" href="#">Viễn tưởng</a>
-								<a class="dropdown-item" href="#">Tâm lý</a>
-								<a class="dropdown-item" href="#">Kinh dị</a>
-								<a class="dropdown-item" href="#">Cổ trang</a>
-								<a class="dropdown-item" href="#">Phiêu lưu</a>
+							<?php foreach($theloai as $tl):?>
+											<a class="dropdown-item" href="?pg=genre&id=<?=$tl["id_loai"]?>"><?=$tl["tentl"]?></a>
+										<?php endforeach;?>	
 							</div>
 						</li>
 						<li class="nav-item">
