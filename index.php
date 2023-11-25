@@ -70,6 +70,9 @@ if (!isset($_GET['pg'])) {
         case 'lichsu':
             include_once "View/history.php";
             break;
+            case 'admin':
+                include_once "";
+                break;
 
         default:
             include_once "View/home.php";
