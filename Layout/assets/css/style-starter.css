@@ -14597,7 +14597,7 @@ p.title-para {
   padding: 15px 45px 15px 15px;
   border: none;
   background: #fff;
-  color: var(--theme-title);
+  color: black;
   font-size: 16px;
   border-radius: 6px;
   margin: 0;
