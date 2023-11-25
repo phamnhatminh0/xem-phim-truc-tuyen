@@ -10,18 +10,25 @@ include_once "Dao/comment.php";
 include_once "View/header.php";
 
 if (!isset($_GET['pg'])) {
-
+    $luotview=phim_luotxem();
+    $vip=phim_vip();
     $movie = phimmoi();
     $moviehd = hanhdong();
-    $movielx = phim_luotxem();
+    $movietc = tinhcam();
+    $moviekd = kinhdi();
+    $movierole = phim_role();
 
     include "View/home.php";
 } else {
     switch ($_GET['pg']) {
         case 'home':
+            $luotview=phim_luotxem();
+            $vip=phim_vip();
             $movie = phimmoi();
             $moviehd = hanhdong();
-            $movielx = phim_luotxem();
+            $movietc = tinhcam();
+            $moviekd = kinhdi();
+            $movierole = phim_role();
 
             include_once "View/home.php";
 
@@ -83,7 +90,12 @@ if (!isset($_GET['pg'])) {
         case 'login':
             include_once "View/login.php";
             break;
-
+            case 'search':
+            
+                $tim=tim_phim($_POST["search"]);
+                include_once "View/search.php";
+                break;
+    
         default:
             include_once "View/home.php";
             break;

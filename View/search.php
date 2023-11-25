@@ -14,8 +14,9 @@
 			<div class="container py-lg-4">
 				<div class="headerhny-title">
 					<div class="w3l-title-grids">
-						<div class="headerhny-left">
-							<h3 class="hny-title">PHIM MỚI NHẤT</h3>
+						<div class="headerhny-left"> 
+							
+							<h3 class="hny-title">Tìm kiếm "<?=$_POST["search"]?>" </h3>
 						</div>
 						<div class="headerhny-right text-lg-right">
 							<h4><a class="show-title" href="genre.html">Hiển thị tất cả</a></h4>
@@ -23,14 +24,15 @@
 					</div>
 				</div>
 				<div class="w3l-populohny-grids">
+					<?php foreach($tim as $tm):?>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="#">
+							<a href="?pg=detail&id=<?=$tm["id_phim"]?>">
 								<figure>
-									<img class="img-fluid" src="Upload/images/m7.jpg" alt="">
+									<img class="img-fluid" src="<?=$img_p?><?=$tm["img"]?>" alt="">
 								</figure>
 								<div class="box-content">
-									<h3 class="title">Frozen 2</h3>
+									<h3 class="title"><?=$tm["ten"]?></h3>
 									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
 
 										</span>
@@ -39,183 +41,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="#">
-								<figure>
-									<img class="img-fluid" src="Upload/images/m3.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Knives Out</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-									</h4>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="#">
-								<figure>
-									<img class="img-fluid" src="Upload/images/m4.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Little Women</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-									</h4>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="#">
-								<figure>
-									<img class="img-fluid" src="Upload/images/m5.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Jumanji</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-									</h4>
-								</div>
-							</a>
-						</div>
-					</div>
-
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="#">
-								<figure>
-									<img class="img-fluid" src="Upload/images/m1.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Rocketman</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-									</h4>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="#">
-								<figure>
-									<img class="img-fluid" src="Upload/images/m2.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Doctor Sleep</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-									</h4>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="#">
-								<figure>
-									<img class="img-fluid" src="Upload/images/m6.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Long Shot</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-									</h4>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="#">
-								<figure>
-									<img class="img-fluid" src="Upload/images/m9.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Joker</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-									</h4>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="#">
-								<figure>
-									<img class="img-fluid" src="Upload/images/m11.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">The Lego</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-									</h4>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="#">
-								<figure>
-									<img class="img-fluid" src="Upload/images/m10.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Alita</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-									</h4>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="#">
-								<figure>
-									<img class="img-fluid" src="Upload/images/m12.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Hustle</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-									</h4>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="#">
-								<figure>
-									<img class="img-fluid" src="Upload/images/m8.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Toy Story 4</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-									</h4>
-								</div>
-							</a>
-						</div>
-					</div>
+				<?php endforeach;?>
 
 				</div>
 			</div>

@@ -66,7 +66,7 @@
 						<!-- search popup -->
 						<div id="search" class="pop-overlay">
 							<div class="popup">
-								<form action="#" method="post" class="search-box">
+								<form action="?pg=search" method="post" class="search-box">
 									<input type="search" placeholder="Nhập từ khóa" name="search" required="required"
 										autofocus="">
 									<button type="submit" name="submit" class="btn"><span class="fa fa-search"
