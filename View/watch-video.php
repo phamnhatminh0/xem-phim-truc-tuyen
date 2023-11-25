@@ -22,17 +22,14 @@
                             <!-- Captions are optional -->
                             <track kind="captions" label="English captions" src="#" srclang="en" default />
                         </video>
-                        <h5 class="tieude">Pháp sư tinh linh</h5>
-                        <h7>Lượt xem: 3500.000</h7>
+                        <h5 class="tieude"><?=$xuatphim["ten"]?></h5>
+                        <h7>Lượt xem:<?=$xuatphim["luotxem"]?></h7>
                     </div>
                     <div class="anime__details__episodes">
                         <div class="section-title">
                             <h5>Giới thiệu</h5>
                         </div>
-                       <h7>2023|T16|Việt Nam|Anime
-                       </h7>
-                       <p class="mota">Đây là bộ phim kể về một pháp sư có cuộc sống bất tậng và từng ngày nhìn bạn mình ra đi vì tuổi già quá nhiều nên cổ đã chiệu không nôi nhưng đã có 1 
-                        người bạn đá động viên và giúp cô vượt qua</p>
+                       <p class="mota"><?=$xuatphim["mota"]?></p>
                     </div>
                         <section class="w3l-grids">
                             <div class="section-title">
@@ -41,13 +38,14 @@
                             <div class="grids-main">
                                 <div class="container">
                                     <div class="owl-three owl-carousel owl-theme">
+                                        <?php foreach($dienvien as $dv):?>
                                         <div class="item vhny-grid">
                                             <div class="mb-0">
                                                 <a href="genre.html">
                                                     <figure>
-                                                        <img class="img-fluid rounded-circle" src="Upload/images/n1.jpg" alt="" style="width: 160px; height: 160px;">
+                                                        <img class="img-fluid rounded-circle" src="<?=$img?><?=$dv["img"]?>" alt="" style="width: 160px; height: 160px;">
                                                         </figure>
-                                                        <h6 class="tendv">lê phước thinh</h6>
+                                                        <h6 class="tendv"><?=$dv["ten"]?></h6>
                                                     
                                                    
                                                 </a>
@@ -57,80 +55,7 @@
                                            
                     
                                         </div>
-                                        
-                                        <div class="item vhny-grid">
-                                            <div class="mb-0">
-                                                <a href="genre.html">
-                                                    <figure>
-                                                        <img class="img-fluid rounded-circle" src="Upload/images/n2.jpg" alt="" style="width: 160px; height: 160px;">
-                                                        </figure>
-                                                        <h6 class="tendv">lê phước thinh</h6>
-                                                    
-                                                   
-                                                </a>
-                                            </div>
-                                                                                  
-                                           
-                                        </div>
-                                        <div class="item vhny-grid">
-                                            <div class="mb-0">
-                                                <a href="genre.html">
-                                                    <figure>
-                                                        <img class="img-fluid rounded-circle" src="Upload/images/n3.jpg" alt="" style="width: 160px; height: 160px;">
-                                                        </figure>
-                                                        <h6 class="tendv">lê phước thinh</h6>
-                                                    
-                                                   
-                                                </a>
-                                            </div>
-                                            
-                                            
-                                           
-                                        </div>
-                                        <div class="item vhny-grid">
-                                            <div class="mb-0">
-                                                <a href="genre.html">
-                                                    <figure>
-                                                        <img class="img-fluid rounded-circle" src="Upload/images/n4.jpg" alt="" style="width: 160px; height: 160px;">
-                                                        </figure>
-                                                        <h6 class="tendv">lê phước thinh</h6>
-                                                    
-                                                   
-                                                </a>
-                                            </div>
-                                                                                       
-                                           
-                    
-                                        </div>
-                                        <div class="item vhny-grid">
-                                            <div class="mb-0">
-                                                <a href="genre.html">
-                                                    <figure>
-                                                        <img class="img-fluid rounded-circle" src="Upload/images/n5.jpg" alt="" style="width: 160px; height: 160px;">
-                                                        </figure>
-                                                        <h6 class="tendv">lê phước thinh</h6>
-                                                    
-                                                   
-                                                </a>
-                                            </div>
-                                                                                  
-                                           
-                                        </div>
-                                        <div class="item vhny-grid">
-                                            <div class="mb-0">
-                                                <a href="genre.html">
-                                                    <figure>
-                                                        <img class="img-fluid rounded-circle" src="Upload/images/n6.jpg" alt="" style="width: 160px; height: 160px;">
-                                                        </figure>
-                                                        <h6 class="tendv">lê phước thinh</h6>
-                                                    
-                                                   
-                                                </a>
-                                            </div>
-                                            
-                                            
-                                           
-                                        </div>
+                                        <?php endforeach;?>
                                     </div>
                                 </div>
                     
@@ -169,62 +94,17 @@
                         <div class="section-title">
                             <h5>Bình luận</h5>
                         </div>
+                        <?php foreach($binhluan as $bl):?>
                         <div class="anime__review__item">
                             <div class="anime__review__item__pic">
-                                <img src="Upload/images/review-1.jpg" alt="">
+                                <img src="<?=$img?><?=$bl["img"]?>" alt="">
                             </div>
                             <div class="anime__review__item__text">
-                                <h6>Chris Curry - <span>1 Hour ago</span></h6>
-                                <p>whachikan Just noticed that someone categorized this as belonging to the genre
-                                "demons" LOL</p>
+                                <h6><?=$bl["ten"]?> <span><?=$bl["ngaybl"]?></span></h6>
+                                <p><?=$bl["noidung"]?></p>
                             </div>
                         </div>
-                        <div class="anime__review__item">
-                            <div class="anime__review__item__pic">
-                                <img src="Upload/images/review-2.jpg" alt="">
-                            </div>
-                            <div class="anime__review__item__text">
-                                <h6>Lewis Mann - <span>5 Hour ago</span></h6>
-                                <p>Finally it came out ages ago</p>
-                            </div>
-                        </div>
-                        <div class="anime__review__item">
-                            <div class="anime__review__item__pic">
-                                <img src="Upload/images/review-3.jpg" alt="">
-                            </div>
-                            <div class="anime__review__item__text">
-                                <h6>Louis Tyler - <span>20 Hour ago</span></h6>
-                                <p>Where is the episode 15 ? Slow update! Tch</p>
-                            </div>
-                        </div>
-                        <div class="anime__review__item">
-                            <div class="anime__review__item__pic">
-                                <img src="Upload/images/review-4.jpg" alt="">
-                            </div>
-                            <div class="anime__review__item__text">
-                                <h6>Chris Curry - <span>1 Hour ago</span></h6>
-                                <p>whachikan Just noticed that someone categorized this as belonging to the genre
-                                "demons" LOL</p>
-                            </div>
-                        </div>
-                        <div class="anime__review__item">
-                            <div class="anime__review__item__pic">
-                                <img src="Upload/images/review-5.jpg" alt="">
-                            </div>
-                            <div class="anime__review__item__text">
-                                <h6>Lewis Mann - <span>5 Hour ago</span></h6>
-                                <p>Finally it came out ages ago</p>
-                            </div>
-                        </div>
-                        <div class="anime__review__item">
-                            <div class="anime__review__item__pic">
-                                <img src="Upload/images/review-6.jpg" alt="">
-                            </div>
-                            <div class="anime__review__item__text">
-                                <h6>Louis Tyler - <span>20 Hour ago</span></h6>
-                                <p>Where is the episode 15 ? Slow update! Tch</p>
-                            </div>
-                        </div>
+                    <?php endforeach;?>
                     </div>
                     <div class="anime__details__form">
                         <div class="section-title">

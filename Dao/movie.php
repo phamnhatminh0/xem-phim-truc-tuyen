@@ -57,4 +57,11 @@ function phimcungtheloai_luotxem($id_loai){
     WHERE theloai.id_loai=? ORDER BY phim.luotxem  DESC LIMIT 8";
     return pdo_query($sql,$id_loai);
 }
+function xuatphim($id_phim){
+    $sql="SELECT *
+    FROM phim
+    JOIN tap ON phim.id_phim=tap.id_phim 
+    WHERE phim.id_phim=? AND tap.sotap=1";
+    return pdo_query_one($sql,$id_phim);
+}
 ?>

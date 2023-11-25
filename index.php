@@ -4,7 +4,8 @@ include_once "Dao/genre.php";
 $theloai=theloai_getAll();
 include_once "Dao/movie.php";
 include_once "Dao/config.php";
-
+include_once "Dao/actor.php";
+include_once "Dao/comment.php";
 include_once "View/header.php";
 
 if (!isset($_GET['pg'])) {
@@ -26,7 +27,7 @@ if (!isset($_GET['pg'])) {
         case 'genre':
              $tencungtheloai=phimcungtheloai_ten($_GET["id"]);
             $cacphimcungloai=phimcungtheloai_all($_GET["id"]);
-            $theloailuotxem= phimcungtheloai_luotxem($_GET["id"])
+            $theloailuotxem= phimcungtheloai_luotxem($_GET["id"]);
 
             include_once "View/genre.php";
             break;
@@ -51,6 +52,10 @@ if (!isset($_GET['pg'])) {
             break;
 
         case 'watch':
+            $xuatphim=xuatphim($_GET["id"]);
+            $binhluan=binhluan($_GET["id"]);
+            $dienvien=dienvien($_GET["id"]);
+         
             include_once "View/watch-video.php";
             break;
 

@@ -24,7 +24,7 @@
                         <p class="bold-text">Thời lượng: <span class="normal-text">28 tập</span></p>
                     </div>
                     <p class="normal-text"><?= $chitiet["mota"]?></p>
-                    <button class="watch-button2">Xem phim</button>
+                   <a href="?pg=watch&id=<?=$chitiet["id_phim"]?>"> <button class="watch-button2"> Xem phim </button></a>
                     <button class="watch-button2" style="background-color: #25867d;">Yêu thích</button>
                 </div>
             </div>
