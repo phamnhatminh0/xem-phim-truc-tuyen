@@ -18,7 +18,7 @@
                 <div class="col-lg-12">
                     <div  class="anime__video__player ">
                         <video class="w-100"  id="player" playsinline controls data-poster="Layout/assets/videos/anime-watch.jpg">
-                            <source src="Layout/assets/videos/1.mp4" type="video/mp4" />
+                            <source src="<?=$img_v?><?=$xuatphim["video"]?>" type="video/mp4" />
                             <!-- Captions are optional -->
                             <track kind="captions" label="English captions" src="#" srclang="en" default />
                         </video>

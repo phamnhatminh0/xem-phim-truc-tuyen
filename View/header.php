@@ -22,7 +22,7 @@
 		<!--/nav-->
 		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 			<div class="container">
-				<a class="navbar-brand" href="index.html">
+				<a class="navbar-brand" href="?pg=home">
 					<img src="Upload/images/Banner/123.png" alt="Logo" style="height:65px;" />
 				</a>
 				<!-- if logo is image enable this   
@@ -40,7 +40,7 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Trang chủ</a>
+							<a class="nav-link" href="?pg=home">Trang chủ</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link" href="genre.html" id="navbarDropdown">Thể loại</a>
@@ -90,7 +90,7 @@
 					<ul class="navbar-nav ml-right">
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/login.html"><i class="fa-solid fa-user"></i></a>
+							<a class="nav-link" href="?pg=login"><i class="fa-solid fa-user"></i></a>
 						</li>
 					</ul>
 					<!--/phần user kèm đăng nhập đăng ký-->

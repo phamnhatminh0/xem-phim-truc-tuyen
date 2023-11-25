@@ -870,3 +870,67 @@
 <!--//MENU-JS-->
 
 <script src="Layout/assets/js/bootstrap.min.js"></script>
+<script>
+	// Hàm kiểm tra xem người dùng đã đăng ký chưa
+	function DK_isDKvip() {
+		return localStorage.getItem('DK_DKvip') === 'true';
+	}
+
+	// Khi trang web được tải xong
+	window.addEventListener('DOMContentLoaded', (event) => {
+		// Nếu người dùng chưa đăng ký
+		if (!DK_isDKvip()) {
+			// Hiển thị popup sau 2 giây
+			setTimeout(DK_showPopup, 2000);
+		}
+	});
+
+	// Khi người dùng nhấn vào nút đăng ký
+	document.getElementById('DK_dk_button').addEventListener('click', DK_showPopup);
+
+	// Khi người dùng nhấn vào vùng ngoài popup
+	document.getElementById('DK_popup_overlay').addEventListener('click', DK_hidePopup);
+
+	// Khi người dùng nhấn vào nút đóng popup
+	document.getElementById('DK_popup_close_button').addEventListener('click', DK_hidePopup);
+
+	// Khi người dùng đăng ký thành công
+	function DK_onSuccessfuldk() {
+		// Đặt giá trị của 'DKvip' trong localStorage thành 'true'
+		localStorage.setItem('DK_DKvip', 'true');
+		// Ẩn popup
+		DK_hidePopup();
+	}
+
+	// Hàm hiển thị popup
+	function DK_showPopup() {
+		var popup = document.getElementById('DK_popup_dkBox');
+		// Hiển thị popup
+		popup.style.display = 'block';
+		// Đặt độ trong suốt của popup thành 0
+		popup.style.opacity = 0;
+		setTimeout(function () {
+			// Thêm hiệu ứng cho popup
+			popup.style.transition = 'opacity 1s';
+			// Đặt độ trong suốt của popup thành 1, tạo hiệu ứng hiện dần
+			popup.style.opacity = 1;
+		}, 100);
+		// Hiển thị vùng ngoài popup
+		document.getElementById('DK_popup_overlay').style.display = 'block';
+	}
+
+	// Hàm ẩn popup
+	function DK_hidePopup() {
+		var popup = document.getElementById('DK_popup_dkBox');
+		// Thêm hiệu ứng cho popup
+		popup.style.transition = 'opacity 1s';
+		// Đặt độ trong suốt của popup thành 0, tạo hiệu ứng ẩn dần
+		popup.style.opacity = 0;
+		setTimeout(function () {
+			// Ẩn popup
+			popup.style.display = 'none';
+			// Ẩn vùng ngoài popup
+			document.getElementById('DK_popup_overlay').style.display = 'none';
+		}, 1000);
+	}
+</script>
