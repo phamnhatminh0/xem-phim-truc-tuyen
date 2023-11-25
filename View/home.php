@@ -317,7 +317,7 @@
 											<div class="img-circle">
 												<a href="genre.html">
 
-													<img src="<?=$img?><?=$hd["img"]?>" class="img-fluid"
+													<img src="<?=$img_p?><?=$hd["img"]?>" class="img-fluid"
 														alt="author image">
 												</a>
 											</div>

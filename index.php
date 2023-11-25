@@ -17,7 +17,6 @@ if (!isset($_GET['pg'])) {
 } else {
     switch ($_GET['pg']) {
         case 'home':
-            $theloai=theloai();
             $movie=phimmoi();
             $moviehd=hanhdong();
             $movielx=phim_luotxem();

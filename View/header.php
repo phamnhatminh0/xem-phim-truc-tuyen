@@ -51,10 +51,10 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="about.html">Giới thiệu</a>
+							<a class="nav-link" href="?pg=about">Giới thiệu</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Liên hệ</a>
+							<a class="nav-link" href="?pg=contact">Liên hệ</a>
 						</li>
 					</ul>
 
