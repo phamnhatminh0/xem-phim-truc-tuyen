@@ -23,7 +23,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 			<div class="container">
 				<a class="navbar-brand" href="index.html">
-					<img src="Upload/images/123.png" alt="Logo" style="height:65px;" />
+					<img src="Upload/images/Banner/123.png" alt="Logo" style="height:65px;" />
 				</a>
 				<!-- if logo is image enable this   
 						<a class="navbar-brand" href="#index.html">
@@ -119,22 +119,16 @@
 							<!-- Update IDs and function calls accordingly -->
 							<div class="DK_popup_pricing-card">
 								<h3 class="DK_popup_pricing-card-header">Bình thường</h3>
-								<div class="DK_popup_price"><sup>VND</sup>0<span>/tháng</span></div>
+								<div class="DK_popup_price"><sup>VND</sup>0</div>
 								<ul>
-									<li><strong>1</strong> Giới hạn những bộ phim</li>
-									<li><strong>2</strong> Có quản cáo</li>
-									<li><strong>3</strong> Không xem phim trên 720p</li>
-									<li><strong>4</strong> giới hạn lưu phim</li>
+									<li><strong>1</strong>Không xem được những bộ phim vip</li>
 								</ul>
 							</div>
 							<div class="DK_popup_pricing-card">
 								<h3 class="DK_popup_pricing-card-header">ĐĂNG KÝ VIP</h3>
 								<div class="DK_popup_price"><sup>VND</sup>99.000<span>/Tháng</span></div>
 								<ul>
-									<li><strong>1</strong> Khống giới hạn xem các bộ phim</li>
-									<li><strong>2</strong> Không quản cáo</li>
-									<li><strong>3</strong> Xem phim trên 720p</li>
-									<li><strong>4</strong> không giới hạn lưu phim</li>
+									<li><strong>1</strong> Không giới hạn xem các bộ phim</li>
 								</ul>
 								<a href="#" class="DK_popup_order-btn">Đăng ký ngay</a>
 							</div>
