@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-fluid" src="<?=$img?><?= $chitiet["img"]?>" alt="Your Image">
+                    <img class="img-fluid" src="<?=$img_p?><?= $chitiet["img"]?>" alt="Your Image">
                 </div>
                 <div class="col-md-8 ">
                     <h1 class="title"><?=$chitiet["ten"]?></h1>
@@ -51,7 +51,7 @@
                         <div class="box16">
                             <a href="genre.html">
                                 <figure>
-                                    <img class="img-fluid" src="<?=$img?><?=$ctl["img"]?>" alt="">
+                                    <img class="img-fluid" src="<?=$img_p?><?=$ctl["img"]?>" alt="">
                                 </figure>
                                 <div class="box-content">
                                     <h3 class="title"><?=$ctl["ten"]?></h3>

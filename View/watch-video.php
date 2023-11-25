@@ -43,9 +43,9 @@
                                             <div class="mb-0">
                                                 <a href="genre.html">
                                                     <figure>
-                                                        <img class="img-fluid rounded-circle" src="<?=$img?><?=$dv["img"]?>" alt="" style="width: 160px; height: 160px;">
+                                                        <img class="img-fluid rounded-circle" src="<?=$img_d?><?=$dv["img_dv"]?>" alt="" style="width: 160px; height: 160px;">
                                                         </figure>
-                                                        <h6 class="tendv"><?=$dv["ten"]?></h6>
+                                                        <h6 class="tendv"><?=$dv["ten_dv"]?></h6>
                                                     
                                                    
                                                 </a>
@@ -66,25 +66,9 @@
                         <div class="section-title">
                             <h5>Tập phim</h5>
                         </div>
-                        <a href="#">Ep 01</a>
-                        <a href="#">Ep 02</a>
-                        <a href="#">Ep 03</a>
-                        <a href="#">Ep 04</a>
-                        <a href="#">Ep 05</a>
-                        <a href="#">Ep 06</a>
-                        <a href="#">Ep 07</a>
-                        <a href="#">Ep 08</a>
-                        <a href="#">Ep 09</a>
-                        <a href="#">Ep 10</a>
-                        <a href="#">Ep 11</a>
-                        <a href="#">Ep 12</a>
-                        <a href="#">Ep 13</a>
-                        <a href="#">Ep 14</a>
-                        <a href="#">Ep 15</a>
-                        <a href="#">Ep 16</a>
-                        <a href="#">Ep 17</a>
-                        <a href="#">Ep 18</a>
-                        <a href="#">Ep 19</a>
+                        <?php foreach($tap as $t):?>
+                        <a href="?pg=watch&id=<?=$t["id_phim"]?>&tap=<?=$t["id_tap"]?>"><?=$t["tapphim"]?></a>
+                     <?php endforeach;?>
                     </div>
                 </div>
             </div>
@@ -97,10 +81,10 @@
                         <?php foreach($binhluan as $bl):?>
                         <div class="anime__review__item">
                             <div class="anime__review__item__pic">
-                                <img src="<?=$img?><?=$bl["img"]?>" alt="">
+                                <img src="<?=$img_u?><?=$bl["img_user"]?>" alt="">
                             </div>
                             <div class="anime__review__item__text">
-                                <h6><?=$bl["ten"]?> <span><?=$bl["ngaybl"]?></span></h6>
+                                <h6><?=$bl["ten_user"]?> <span><?=$bl["ngaybl"]?></span></h6>
                                 <p><?=$bl["noidung"]?></p>
                             </div>
                         </div>

@@ -5,7 +5,7 @@
 				<?php foreach($movielx as $lx):?>
 				<div class="item">
 					<li>
-						<div class="slider-info banner-view bg bg2" style="background: url(<?=$img?><?=$lx["img"]?>) no-repeat center;"   >
+						<div class="slider-info banner-view bg bg2" style="background: url(<?=$img_p?><?=$lx["img"]?>) no-repeat center;"   >
 							<div class="banner-info" >
 								<h3><?=$lx["ten"]?></h3>
 								<p><?=$lx["mota"]?></p>
@@ -50,7 +50,7 @@
 						<div class="box16">
 							<a href="?pg=detail&id=<?=$mv["id_phim"]?>">
 								<figure>
-									<img class="img-fluid" src="<?=$img?><?=$mv["img"]?>" alt="">
+									<img class="img-fluid" src="<?=$img_p?><?=$mv["img"]?>" alt="">
 								</figure>
 								<div class="box-content">
 									<h3 class="title"><?=$mv["ten"]?></h3>

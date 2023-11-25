@@ -11,12 +11,13 @@ include_once "View/header.php";
 if (!isset($_GET['pg'])) {
     $movie=phimmoi();
     $moviehd=hanhdong();
-    $movielx=phim_luotxem();
+    $movielx=phim_role();
 
     include "View/home.php";
 } else {
     switch ($_GET['pg']) {
         case 'home':
+            $theloai=theloai();
             $movie=phimmoi();
             $moviehd=hanhdong();
             $movielx=phim_luotxem();
@@ -52,9 +53,16 @@ if (!isset($_GET['pg'])) {
             break;
 
         case 'watch':
-            $xuatphim=xuatphim($_GET["id"]);
+             if($_GET["tap"]){
+                $xuatphim=xuat_phimtap($_GET["id"],$_GET["tap"]);
+             }else{
+                $xuatphim=xuatphim($_GET["id"]);
+             }
+           
             $binhluan=binhluan($_GET["id"]);
             $dienvien=dienvien($_GET["id"]);
+            $tap=xuat_tap($_GET["id"]);
+           
          
             include_once "View/watch-video.php";
             break;
@@ -71,7 +79,7 @@ if (!isset($_GET['pg'])) {
             include_once "View/history.php";
             break;
             case 'admin':
-                include_once "";
+                include_once "adminmovieon/index.php";
                 break;
 
         default:
