@@ -54,12 +54,6 @@
 								</figure>
 								<div class="box-content">
 									<h3 class="title"><?=$mv["ten"]?></h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-
-										
-									</h4>
 								</div>
 								<!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
 							</a>
@@ -93,14 +87,6 @@
 								<figure>
 									<img class="img-fluid" src="<?=$img_p?><?=$vp["img"]?>" alt=""  style="width: 214px; height: 342px;">
 								</figure>
-								<div class="box-content">
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
 								<!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
 							</a>
 						</div>
@@ -130,7 +116,7 @@
 								<div class="mid-info">
 									<span class="sub-text"><?=$lv["tentl"]?></span>
 									<h3><?=$lv["ten"]?></h3>
-									<p><?=$lv["namsx"]?> ‧ <?=$lv["tentl"]?> ‧ 2h 3m</p>
+									<p><?=$lv["namsx"]?> ‧ <?=$lv["tentl"]?></p>
 									<a class="watch" href="?pg=detail&id=<?=$lv["id_phim"]?>"><span class="fa fa-play"
 											aria-hidden="true"></span>
 										Xem Phim</a>
@@ -175,12 +161,6 @@
 											<div class="message">
 												<p>English</p>
 												<a class="author-book-title" href="?pg=detail&id=<?=$hd["id_phim"]?>"><?=$hd["ten"]?></a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													
-												</h4>
 											</div>
 										</div>
 
