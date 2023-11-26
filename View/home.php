@@ -118,8 +118,7 @@
 									<h3><?=$lv["ten"]?></h3>
 									<p><?=$lv["namsx"]?> ‧ <?=$lv["tentl"]?></p>
 									<a class="watch" href="?pg=detail&id=<?=$lv["id_phim"]?>"><span class="fa fa-play"
-											aria-hidden="true"></span>
-										Xem Phim</a>
+											aria-hidden="true"></span>Xem ngay</a>
 								</div>
 							</div>
 						</div>
@@ -159,7 +158,6 @@
 												</a>
 											</div>
 											<div class="message">
-												<p>English</p>
 												<a class="author-book-title" href="?pg=detail&id=<?=$hd["id_phim"]?>"><?=$hd["ten"]?></a>
 											</div>
 										</div>
@@ -182,14 +180,8 @@
 												</a>
 											</div>
 											<div class="message">
-												<p>English</p>
+												
 												<a class="author-book-title" href="?pg=detail&id=<?=$tc["id_phim"]?>"><?=$tc["ten"]?></a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													
-												</h4>
 											</div>
 										</div>
 
@@ -215,14 +207,8 @@
 												</a>
 											</div>
 											<div class="message">
-												<p>English</p>
+												
 												<a class="author-book-title" href="?pg=detail&id=<?=$kd["id_phim"]?>"><?=$kd["ten"]?></a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													
-												</h4>
 											</div>
 										</div>
 
