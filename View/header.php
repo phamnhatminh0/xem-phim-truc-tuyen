@@ -29,9 +29,7 @@
 						<a class="navbar-brand" href="#index.html">
 							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
 						</a> -->
-				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<!-- <span class="navbar-toggler-icon"></span> -->
 					<span class="fa icon-expand fa-bars"></span>
 					<span class="fa icon-close fa-times"></span>
@@ -66,16 +64,13 @@
 					<!--/search-right-->
 					<!--/search-right-->
 					<div class="search-right">
-						<a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">Tìm kiếm<span
-								class="fa fa-search ml-3" aria-hidden="true"></span></a>
+						<a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">Tìm kiếm<span class="fa fa-search ml-3" aria-hidden="true"></span></a>
 						<!-- search popup -->
 						<div id="search" class="pop-overlay">
 							<div class="popup">
 								<form action="#" method="post" class="search-box">
-									<input type="search" placeholder="Nhập từ khóa" name="search" required="required"
-										autofocus="">
-									<button type="submit" class="btn"><span class="fa fa-search"
-											aria-hidden="true"></span></button>
+									<input type="search" placeholder="Nhập từ khóa" name="search" required="required" autofocus="">
+									<button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
 								</form>
 								<div class="browse-items">
 									<h3 class="hny-title two mt-md-5 mt-4">Thể loại:</h3>
