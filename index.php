@@ -84,6 +84,10 @@ if (!isset($_GET['pg'])) {
             include_once "View/login.php";
             break;
 
+        case 'signup':
+            include_once "View/signup.php";
+            break;
+
         default:
             include_once "View/home.php";
             break;

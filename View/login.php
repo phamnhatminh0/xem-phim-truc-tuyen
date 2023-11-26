@@ -1,15 +1,13 @@
-<link rel="stylesheet" href="Layout/assets/css/style.css">
+<link rel="stylesheet" href="Layout/assets/css/style1.css" type="text/css">
     <!-- Breadcrumb Begin -->
     <div class="w3l-breadcrumbs">
         <nav id="breadcrumbs" class="breadcrumbs">
             <div class="container page-wrapper" style="display: flex; gap: 3px;">
-                <a href="index.html">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Đăng nhập</span>
+                <a href="?pg=home">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Đăng nhập</span>
             </div>
         </nav>
     </div>
-    <!-- Breadcrumb End -->
-    <!-- Normal Breadcrumb Begin -->
-    <section class="normal-breadcrumb set-bg" data-setbg="assets/images/banner1.jpg">
+    <section class="normal-breadcrumb set-bg" data-setbg="Upload/images/Banner/banner1.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -20,9 +18,6 @@
             </div>
         </div>
     </section>
-    <!-- Normal Breadcrumb End -->
-
-    <!-- Login Section Begin -->
     <section class="login spad">
         <div class="container">
             <div class="row">
@@ -51,8 +46,8 @@
             </div>
         </div>
     </section>
-
-    <script src="Layout/assets/js/jquery-1.9.1.min.js"></script>
+    <!-- Breadcrumb End -->
+<script src="Layout/assets/js/jquery-1.9.1.min.js"></script>
 <script src="Layout/assets/js/easyResponsiveTabs.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
