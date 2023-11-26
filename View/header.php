@@ -109,14 +109,14 @@
 								<h3 class="DK_popup_pricing-card-header">Bình thường</h3>
 								<div class="DK_popup_price"><sup>VND</sup>0</div>
 								<ul>
-									<li><strong>1</strong>Không xem được những bộ phim vip</li>
+									<li><strong></strong>Không xem được những bộ phim VIP</li>
 								</ul>
 							</div>
 							<div class="DK_popup_pricing-card">
 								<h3 class="DK_popup_pricing-card-header">ĐĂNG KÝ VIP</h3>
 								<div class="DK_popup_price"><sup>VND</sup>99.000<span>/Tháng</span></div>
 								<ul>
-									<li><strong>1</strong> Không giới hạn xem các bộ phim</li>
+									<li><strong></strong>Không giới hạn xem tất cả các bộ phim</li>
 								</ul>
 								<a href="#" class="DK_popup_order-btn">Đăng ký ngay</a>
 							</div>

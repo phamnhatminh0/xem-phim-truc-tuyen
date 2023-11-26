@@ -13,7 +13,7 @@
 									<span class="video-play-icon">
 										<span class="fa fa-play"></span>
 									</span>
-									<h6>Watch Trailer</h6>
+									<h6>Xem Trailer</h6>
 								</a>
 								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
 								<div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
