@@ -30,7 +30,7 @@
 					<?php foreach($cacphimcungloai as $pctl):?>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="#">
+							<a href="?pg=detail&id=<?=$pctl["id_phim"]?>">
 								<figure>
 									<img class="img-fluid" src="<?=$img_p?><?=$pctl["img"]?>" alt="">
 								</figure>

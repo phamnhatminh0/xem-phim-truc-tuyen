@@ -49,7 +49,7 @@
                     <?php foreach($cungtheloai as $ctl):?>
                     <div class="item vhny-grid">
                         <div class="box16">
-                            <a href="genre.html">
+                            <a href="?pg=detail&id=<?=$ctl["id_phim"]?>">
                                 <figure>
                                     <img class="img-fluid" src="<?=$img_p?><?=$ctl["img"]?>" alt="">
                                 </figure>
