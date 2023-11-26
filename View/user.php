@@ -1,97 +1,108 @@
 <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- themify icons -->
+<!-- themify icons -->
 <link href='Layout/assets/fonts user/themify-icons/themify-icons.css' rel='stylesheet'>
-    <!-- app css -->
+<!-- app css -->
 <link rel="stylesheet" href="Layout/assets/css/styleuser.css">
 <div class="w3l-breadcrumbs">
-            <nav id="breadcrumbs" class="breadcrumbs">
-                <div class="container page-wrapper">
-                    <a href="index.html">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">User</span>
-                </div>
-            </nav>
-        </div>
-        <section>
-            <div>
-                <div class="containerr">
-                    <div class="box">
-                        <div class="rowa">
-                            <div class="col-4">
-                                <div class="account">
-                                    <ul class="account__list">
-                                        <li class="account__item">
-                                            <img src="Upload/images/avatar.png" alt="avatar" class="account__img">
-                                            <div class="account-info">
-                                                <h3>Tài khoản của</h3>
-                                                <p>Tan Dai</p>
-                                            </div>
-                                        </li>
-                                        <li class="account__item">
-                                            <a href="user.html" class="account__link account__link-active">
-                                                <i class="account__icon ti-user"></i>
-                                                Thông tin cá nhân
-                                            </a>
-                                        </li>
-                                        <li class="account__item">
-                                            <a href="lichsuxem.html" class="account__link">
-                                                <i class="account__icon ti-briefcase"></i>
-                                                Lịch sử xem
-                                            </a>
-                                        </li>
-                                        <li class="account__item">
-                                            <a href="bosuutap.html" class="account__link">
-                                                <i class="account__icon ti-location-pin"></i>
-                                                Bộ sưu tập
-                                            </a>
-                                        </li>
-                                        <li class="account__item">
-                                            <a href="" class="account__link">
-                                                Đăng xuất
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+	<nav id="breadcrumbs" class="breadcrumbs">
+		<div class="container page-wrapper">
+			<a href="index.html">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">User</span>
+		</div>
+	</nav>
+</div>
+<section>
+	<div>
+		<div class="containerr">
+			<div class="box">
+				<div class="rowa">
+					<div class="col-4">
+						<div class="account">
+							<ul class="account__list">
+								<li class="account__item">
+									<img src="Upload/images/avatar.png" alt="avatar" class="account__img">
+									<div class="account-info">
+										<h3>Tài khoản của</h3>
+										<p><?= $hienthi["ten"] ?></p>
+									</div>
+								</li>
+								<li class="account__item">
+									<a href="user.html" class="account__link account__link-active">
+										<i class="account__icon ti-user"></i>
+										Thông tin cá nhân
+									</a>
+								</li>
+								<li class="account__item">
+									<a href="lichsuxem.html" class="account__link">
+										<i class="account__icon ti-briefcase"></i>
+										Lịch sử xem
+									</a>
+								</li>
+								<li class="account__item">
+									<a href="bosuutap.html" class="account__link">
+										<i class="account__icon ti-location-pin"></i>
+										Bộ sưu tập
+									</a>
+								</li>
+								<li class="account__item">
+									<a href="?pg=dangxuat" class="account__link" onclick="return confirmLogout();">
+										Đăng xuất
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 
-                            <div class="col-8 col-sm-12">
-                                <div class="profile">
-                                    <h1 style="color: #00dc5a;">Thông tin tài khoản</h1>
-                                    <div class="box-group f-height">
-                                        <div class="col-12">
-                                            <form action="">
-                                                <div class="form-group-profile">
-                                                    <label for="" class="profile-label">Tên tài khoản:</label>
-                                                    <span style="color: #9c9c9c;">Tandai1202</span>
-                                                </div>
-                                                <div class="form-group-profile">
-                                                    <label for="name" class="profile-label">Tên:</label>
-                                                    <span style="color: #9c9c9c;">Tandai</span>
-                                                </div>
-                                                <div class="form-group-profile">
-                                                    <label for="email" class="profile-label">Email:</label>
-                                                    <span style="color: #9c9c9c;">Phamhongphuong0712@gmail.com</span>
-                                                </div>
-                                                <div class="form-group-profile">
-                                                    <label for="phone" class="profile-label">Trạng thái VIP:</label>
-                                                    <span style="color: #9c9c9c;">Chưa đăng ký</span>
-                                                </div>
-                                        </div>
-                                        </form>
+					<div class="col-8 col-sm-12">
+						<div class="profile">
+							<h1 style="color: #00dc5a;">Thông tin tài khoản</h1>
+							<div class="box-group f-height">
+								<div class="col-12">
+									<form action="">
+										<div class="form-group-profile">
+											<label for="" class="profile-label">Tên tài khoản:</label>
+											<span style="color: #9c9c9c;"><?= $hienthi["ten"] ?></span>
+										</div>
+										<div class="form-group-profile">
+											<label for="name" class="profile-label">Tên:</label>
+											<span style="color: #9c9c9c;"><?= $hienthi["ten"] ?></span>
+										</div>
+										<div class="form-group-profile">
+											<label for="email" class="profile-label">Email:</label>
+											<span style="color: #9c9c9c;"><?= $hienthi["email"] ?></span>
+										</div>
+										<style>
+											.text {
+												font-size: 15px;
+											}
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <!-- footer-66 -->
-        <script src="Layout/assets/js/jquery-3.3.1.min.js"></script>
+											.text:hover {
+												color: #00DC5A;
+												;
+											}
+										</style>
+
+										<div class="form-group-profile">
+											<label for="phone" class="profile-label">Trạng thái VIP:</label>
+											<span style="color: #9c9c9c;"><?= $ten_role ?></span>
+										</div>
+								</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+<!-- footer-66 -->
+<script src="Layout/assets/js/jquery-3.3.1.min.js"></script>
 <!--/theme-change-->
 <script src="Layout/assets/js/theme-change.js"></script>
 <!-- //theme-change-->
 <script src="Layout/assets/js/owl.carousel.js"></script>
 <script>
-	$(document).ready(function () {
+	$(document).ready(function() {
 		$('.owl-four').owlCarousel({
 			loop: true,
 			margin: 20,
@@ -123,7 +134,7 @@
 	})
 </script>
 <script>
-	$(document).ready(function () {
+	$(document).ready(function() {
 		$('.owl-two').owlCarousel({
 			loop: true,
 			margin: 40,
@@ -160,8 +171,8 @@
 <!-- script for owlcarousel -->
 <!-- disable body scroll which navbar is in active -->
 <script>
-	$(function () {
-		$('.navbar-toggler').click(function () {
+	$(function() {
+		$('.navbar-toggler').click(function() {
 			$('body').toggleClass('noscroll');
 		})
 	});
@@ -170,7 +181,7 @@
 
 <!--/MENU-JS-->
 <script>
-	$(window).on("scroll", function () {
+	$(window).on("scroll", function() {
 		var scroll = $(window).scrollTop();
 
 		if (scroll >= 80) {
@@ -181,14 +192,14 @@
 	});
 
 	//Main navigation Active Class Add Remove
-	$(".navbar-toggler").on("click", function () {
+	$(".navbar-toggler").on("click", function() {
 		$("header").toggleClass("active");
 	});
-	$(document).on("ready", function () {
+	$(document).on("ready", function() {
 		if ($(window).width() > 991) {
 			$("header").removeClass("active");
 		}
-		$(window).on("resize", function () {
+		$(window).on("resize", function() {
 			if ($(window).width() > 991) {
 				$("header").removeClass("active");
 			}
@@ -197,3 +208,13 @@
 </script>
 <!--//MENU-JS-->
 <script src="Layout/assets/js/bootstrap.min.js"></script>
+<script>
+	function confirmLogout() {
+		var r = confirm("Bạn muốn đăng xuất chứ?");
+		if (r == true) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+</script>

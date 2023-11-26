@@ -94,10 +94,20 @@
 						<!--/search-right-->
 					</div>
 					<!--/phần user kèm đăng nhập đăng ký-->
+					<?php
+					// Kiểm tra nếu người dùng đã đăng nhập
+					if (isset($_SESSION['user'])) {
+						// Nếu đã đăng nhập, thay đổi đường dẫn thành ?pg=user
+						$link = "/Movieon-main/?pg=user";
+					} else {
+						// Nếu chưa đăng nhập, giữ nguyên đường dẫn là ?pg=dangnhap
+						$link = "/Movieon-main/?pg=dangnhap";
+					}
+					?>
 					<ul class="navbar-nav ml-right">
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/login.html"><i class="fa-solid fa-user"></i></a>
+							<a class="nav-link" href="<?= $link ?>"><i class="fa-solid fa-user"></i></a>
 						</li>
 					</ul>
 					<!--/phần user kèm đăng nhập đăng ký-->
