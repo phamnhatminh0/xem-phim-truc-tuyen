@@ -116,7 +116,7 @@
 								<h3 class="DK_popup_pricing-card-header">ĐĂNG KÝ VIP</h3>
 								<div class="DK_popup_price"><sup>VND</sup>99.000<span>/Tháng</span></div>
 								<ul>
-									<li><strong></strong>Không giới hạn xem tất cả các bộ phim</li>
+									<li><strong></strong>Xem tất cả các bộ phim yêu thích</li>
 								</ul>
 								<a href="#" class="DK_popup_order-btn">Đăng ký ngay</a>
 							</div>
