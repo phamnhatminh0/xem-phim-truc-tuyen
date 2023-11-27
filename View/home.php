@@ -91,7 +91,6 @@
 							</a>
 						</div>
 						<h3> <a class="title-gd" href="?pg=detail&id=<?=$vp["id_phim"]?>" style="height: 54px;"><?=$vp["ten"]?></a></h3>
-						<p><?=$vp["mota"]?></p>
 						<div class="button-center text-center mt-4">
 							<a href="?pg=detail&id=<?=$vp["id_phim"]?>" class="btn watch-button">Xem ngay</a>
 						</div>
