@@ -4,7 +4,7 @@ ob_start();
 include_once "Dao/pdo.php";
 include_once "Dao/genre.php";
 $theloai = theloai_getAll();
-
+// include_once "view/index.php";
 include_once "Dao/movie.php";
 include_once "Dao/config.php";
 include_once "Dao/actor.php";
@@ -32,10 +32,20 @@ if (!isset($_GET['pg'])) {
             $movietc = tinhcam();
             $moviekd = kinhdi();
             $movierole = phim_role();
-
+            // Kiểm tra xem biến $_SESSION['user'] có tồn tại và có giá trị hay không
+            if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
+                $popup = $_SESSION['user']['id_user'];
+                $anhien = hienuser($popup);
+                // Gán giá trị mặc định cho biến $role là 0 nếu biến $anhien không có giá trị hoặc không có chỉ mục 'role'
+                $role = $anhien['role'] ?? 0;
+            } else {
+                // Nếu biến $_SESSION['user'] không tồn tại hoặc không có giá trị, gán giá trị mặc định cho các biến $popup và $role là 0
+                $popup = 0;
+                $role = 0;
+            }
             include_once "View/home.php";
-
             break;
+
         case 'genre':
             $tencungtheloai = phimcungtheloai_ten($_GET["id"]);
             $cacphimcungloai = phimcungtheloai_all($_GET["id"]);
