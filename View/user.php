@@ -19,7 +19,7 @@
 						<div class="account">
 							<ul class="account__list">
 								<li class="account__item">
-									<img src="Upload/images/avatar.png" alt="avatar" class="account__img">
+									<img src="Upload/images/user/<?= $hienthi["img_user"] ?>" alt="avatar" class="account__img">
 									<div class="account-info">
 										<h3>Tài khoản của</h3>
 										<p><?= $hienthi["ten_user"] ?></p>
@@ -63,10 +63,6 @@
 											<span style="color: #9c9c9c;"><?= $hienthi["ten_user"] ?></span>
 										</div>
 										<div class="form-group-profile">
-											<label for="name" class="profile-label">Tên:</label>
-											<span style="color: #9c9c9c;"><?= $hienthi["ten_user"] ?></span>
-										</div>
-										<div class="form-group-profile">
 											<label for="email" class="profile-label">Email:</label>
 											<span style="color: #9c9c9c;"><?= $hienthi["email"] ?></span>
 										</div>
@@ -84,6 +80,9 @@
 										<div class="form-group-profile">
 											<label for="phone" class="profile-label">Trạng thái VIP:</label>
 											<span style="color: #9c9c9c;"><?= $ten_role ?></span>
+										</div>
+										<div class="form-group-profile">
+											<label for="phone" class="profile-label"><a href="">chỉnh sửa</a></label>
 										</div>
 								</div>
 								</form>

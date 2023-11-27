@@ -85,17 +85,22 @@
 					<?php
 					// Kiểm tra nếu người dùng đã đăng nhập
 					if (isset($_SESSION['user'])) {
+						$hienthi = array(); // Khởi tạo mảng $hienthi
+						$hienthi["img_user"] = $_SESSION['user']['img_user']; // Gán giá trị từ session cho $hienthi["img_user"]
+
 						// Nếu đã đăng nhập, thay đổi đường dẫn thành ?pg=user
 						$link = "?pg=user";
+						$hinh = '<img src="Upload/images/user/' . $hienthi["img_user"] . '" style="border-radius: 50%; width: 30px; height: 30px;">';
 					} else {
 						// Nếu chưa đăng nhập, giữ nguyên đường dẫn là ?pg=dangnhap
 						$link = "?pg=dangnhap";
+						$hinh = '<i class="fa-solid fa-user"></i>';
 					}
 					?>
 					<ul class="navbar-nav ml-right">
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="<?= $link ?>"><i class="fa-solid fa-user"></i></a>
+							<a class="nav-link" href="<?= $link ?>"><?= $hinh ?></a>
 						</li>
 					</ul>
 					<!--/phần user kèm đăng nhập đăng ký-->

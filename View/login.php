@@ -40,12 +40,12 @@
 
                     <form action="" method="POST">
                         <div class="input__item">
-                            <input type="text" placeholder="Email của bạn" name="email">
-                            <span><i class="fas fa-envelope"></i></span>
+                            <input type="text" placeholder="Email của bạn" name="email" style="color: black;">
+                            <span><i class="fas fa-envelope" style="color: black;"></i></span>
                         </div>
                         <div class="input__item">
-                            <input type="password" placeholder="Mật khẩu" name="pass">
-                            <span><i class="fas fa-lock"></i></span>
+                            <input type="password" placeholder="Mật khẩu" name="pass" style="color: black;">
+                            <span><i class="fas fa-lock" style="color: black;"></i></span>
                         </div>
                         <button type="submit" class="site-btn" name="login" style="background-color: #00DC5A;">Đăng nhập</button>
                     </form>
