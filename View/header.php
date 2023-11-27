@@ -22,8 +22,8 @@
 		<!--/nav-->
 		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 			<div class="container">
-				<a class="navbar-brand" href="index.html">
-					<img src="Upload/images/123.png" alt="Logo" style="height:65px;" />
+				<a class="navbar-brand" href="?pg=home">
+					<img src="Upload/images/Banner/123.png" alt="Logo" style="height:65px;" />
 				</a>
 				<!-- if logo is image enable this   
 						<a class="navbar-brand" href="#index.html">
@@ -38,26 +38,21 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Trang chủ</a>
+							<a class="nav-link" href="?pg=home">Trang chủ</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link" href="genre.html" id="navbarDropdown">Thể loại</a>
 							<div class="dropdown-content">
-								<a class="dropdown-item" href="#">Hành động</a>
-								<a class="dropdown-item" href="#">Tình cảm</a>
-								<a class="dropdown-item" href="#">Hài hước</a>
-								<a class="dropdown-item" href="#">Viễn tưởng</a>
-								<a class="dropdown-item" href="#">Tâm lý</a>
-								<a class="dropdown-item" href="#">Kinh dị</a>
-								<a class="dropdown-item" href="#">Cổ trang</a>
-								<a class="dropdown-item" href="#">Phiêu lưu</a>
+								<?php foreach ($theloai as $tl) : ?>
+									<a class="dropdown-item" href="?pg=genre&id=<?= $tl["id_loai"] ?>"><?= $tl["tentl"] ?></a>
+								<?php endforeach; ?>
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="about.html">Giới thiệu</a>
+							<a class="nav-link" href="?pg=about">Giới thiệu</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Liên hệ</a>
+							<a class="nav-link" href="?pg=contact">Liên hệ</a>
 						</li>
 					</ul>
 
@@ -68,23 +63,16 @@
 						<!-- search popup -->
 						<div id="search" class="pop-overlay">
 							<div class="popup">
-								<form action="#" method="post" class="search-box">
+								<form action="?pg=search" method="post" class="search-box">
 									<input type="search" placeholder="Nhập từ khóa" name="search" required="required" autofocus="">
-									<button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
+									<button type="submit" name="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
 								</form>
 								<div class="browse-items">
 									<h3 class="hny-title two mt-md-5 mt-4">Thể loại:</h3>
 									<ul class="search-items">
-										<li><a href="genre.html">Hành động</a></li>
-										<li><a href="genre.html">Tình cảm</a></li>
-										<li><a href="genre.html">Hài hước</a></li>
-										<li><a href="genre.html">Viễn tưởng</a></li>
-										<li><a href="genre.html">Hài hước</a></li>
-										<li><a href="genre.html">Viễn tưởng</a></li>
-										<li><a href="genre.html">Tâm lý</a></li>
-										<li><a href="genre.html">Kinh dị</a></li>
-										<li><a href="genre.html">Cổ trang</a></li>
-										<li><a href="genre.html">Phiêu lưu</a></li>
+										<?php foreach ($theloai as $tl) : ?>
+											<li><a href="?pg=genre&id=<?= $tl["id_loai"] ?>"><?= $tl["tentl"] ?></a></li>
+										<?php endforeach; ?>
 									</ul>
 								</div>
 							</div>
@@ -107,7 +95,7 @@
 					<ul class="navbar-nav ml-right">
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="<?= $link ?>"><i class="fa-solid fa-user"></i></a>
+							<a class="nav-link" href="?pg=login"><i class="fa-solid fa-user"></i></a>
 						</li>
 					</ul>
 					<!--/phần user kèm đăng nhập đăng ký-->
@@ -124,22 +112,16 @@
 							<!-- Update IDs and function calls accordingly -->
 							<div class="DK_popup_pricing-card">
 								<h3 class="DK_popup_pricing-card-header">Bình thường</h3>
-								<div class="DK_popup_price"><sup>VND</sup>0<span>/tháng</span></div>
+								<div class="DK_popup_price"><sup>VND</sup>0</div>
 								<ul>
-									<li><strong>1</strong> Giới hạn những bộ phim</li>
-									<li><strong>2</strong> Có quản cáo</li>
-									<li><strong>3</strong> Không xem phim trên 720p</li>
-									<li><strong>4</strong> giới hạn lưu phim</li>
+									<li><strong></strong>Không xem được những bộ phim VIP</li>
 								</ul>
 							</div>
 							<div class="DK_popup_pricing-card">
 								<h3 class="DK_popup_pricing-card-header">ĐĂNG KÝ VIP</h3>
 								<div class="DK_popup_price"><sup>VND</sup>99.000<span>/Tháng</span></div>
 								<ul>
-									<li><strong>1</strong> Khống giới hạn xem các bộ phim</li>
-									<li><strong>2</strong> Không quản cáo</li>
-									<li><strong>3</strong> Xem phim trên 720p</li>
-									<li><strong>4</strong> không giới hạn lưu phim</li>
+									<li><strong></strong>Xem tất cả các bộ phim yêu thích</li>
 								</ul>
 								<a href="#" class="DK_popup_order-btn">Đăng ký ngay</a>
 							</div>

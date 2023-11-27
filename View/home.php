@@ -2,10 +2,10 @@
 	<section class="w3l-main-slider position-relative" id="home">
 		<div class="companies20-content">
 			<div class="owl-one owl-carousel owl-theme">
-				<?php foreach($movielx as $lx):?>
+				<?php foreach($movierole as $lx):?>
 				<div class="item">
 					<li>
-						<div class="slider-info banner-view bg bg2" style="background: url(<?=$img?><?=$lx["img"]?>) no-repeat center;"   >
+						<div class="slider-info banner-view bg bg2" style="background: url(<?=$img_p?><?=$lx["img"]?>) no-repeat center;"   >
 							<div class="banner-info" >
 								<h3><?=$lx["ten"]?></h3>
 								<p><?=$lx["mota"]?></p>
@@ -13,7 +13,7 @@
 									<span class="video-play-icon">
 										<span class="fa fa-play"></span>
 									</span>
-									<h6>Watch Trailer</h6>
+									<h6>Xem Trailer</h6>
 								</a>
 								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
 								<div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
@@ -50,16 +50,10 @@
 						<div class="box16">
 							<a href="?pg=detail&id=<?=$mv["id_phim"]?>">
 								<figure>
-									<img class="img-fluid" src="<?=$img?><?=$mv["img"]?>" alt="">
+									<img class="img-fluid" src="<?=$img_p?><?=$mv["img"]?>" alt="">
 								</figure>
 								<div class="box-content">
 									<h3 class="title"><?=$mv["ten"]?></h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-
-										
-									</h4>
 								</div>
 								<!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
 							</a>
@@ -86,151 +80,24 @@
 					</div>
 				</div>
 				<div class="owl-three owl-carousel owl-theme">
+					<?php foreach($vip as $vp):?>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="genre.html">
+							<a href="?pg=detail&id=<?=$vp["id_phim"]?>">
 								<figure>
-									<img class="img-fluid" src="Upload/images/n1.jpg" alt="">
+									<img class="img-fluid" src="<?=$img_p?><?=$vp["img"]?>" alt=""  style="width: 214px; height: 342px;">
 								</figure>
-								<div class="box-content">
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
 								<!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="genre.html">No Time to Die</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<h3> <a class="title-gd" href="?pg=detail&id=<?=$vp["id_phim"]?>" style="height: 54px;"><?=$vp["ten"]?></a></h3>
+						<p><?=$vp["mota"]?></p>
 						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Xem ngay</a>
+							<a href="?pg=detail&id=<?=$vp["id_phim"]?>" class="btn watch-button">Xem ngay</a>
 						</div>
 
 					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="Upload/images/n2.jpg" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">Mulan</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="Upload/images/n3.jpg" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">Free Guy</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="Upload/images/n4.jpg" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">My Spy</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="Upload/images/n5.jpg" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">Scoob</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="Upload/images/n6.jpg" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">Downhill</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-					</div>
+					<?php endforeach;?>
 				</div>
 			</div>
 
@@ -241,54 +108,23 @@
 	<section class="w3l-mid-slider position-relative">
 		<div class="companies20-content">
 			<div class="owl-mid owl-carousel owl-theme">
+               <?php foreach($luotview as $lv):?>
 				<div class="item">
 					<li>
-						<div class="slider-info mid-view bg bg2">
+						<div class="slider-info mid-view bg bg2 " style="background: url(<?=$img_p?><?=$lv["img"]?>) no-repeat center;">
 							<div class="container">
 								<div class="mid-info">
-									<span class="sub-text">Comedy</span>
-									<h3>Jumanji: The Next Level</h3>
-									<p>2019 ‧ Comedy/Action ‧ 2h 3m</p>
-									<a class="watch" href="genre.html"><span class="fa fa-play"
-											aria-hidden="true"></span>
-										Watch Trailer</a>
+									<span class="sub-text"><?=$lv["tentl"]?></span>
+									<h3><?=$lv["ten"]?></h3>
+									<p><?=$lv["namsx"]?> ‧ <?=$lv["tentl"]?></p>
+									<a class="watch" href="?pg=detail&id=<?=$lv["id_phim"]?>"><span class="fa fa-play"
+											aria-hidden="true"></span>Xem ngay</a>
 								</div>
 							</div>
 						</div>
 					</li>
 				</div>
-				<div class="item">
-					<li>
-						<div class="slider-info mid-view mid-top1 bg bg2">
-							<div class="container">
-								<div class="mid-info">
-									<span class="sub-text">Adventure</span>
-									<h3>Dolittle</h3>
-									<p>2020 ‧ Family/Adventure ‧ 1h 41m</p>
-									<a class="watch" href="genre.html"><span class="fa fa-play"
-											aria-hidden="true"></span>
-										Watch Trailer</a>
-								</div>
-							</div>
-						</div>
-					</li>
-				</div>
-				<div class="item">
-					<li>
-						<div class="slider-info mid-view mid-top2 bg bg2">
-							<div class="container">
-								<div class="mid-info">
-									<span class="sub-text">Action</span>
-									<h3>Bad Boys for Life</h3>
-									<p>2020 ‧ Comedy/Action ‧ 2h 4m</p>
-									<a class="watch" href="genre.html"><span class="fa fa-play"
-											aria-hidden="true"></span>
-										Watch Trailer</a>
-								</div>
-							</div>
-						</div>
-					</li>
-				</div>
+				<?php endforeach;?>
 			</div>
 		</div>
 	</section>
@@ -315,21 +151,14 @@
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="genre.html">
+												<a href="?pg=detail&id=<?=$hd["id_phim"]?>">
 
-													<img src="<?=$img?><?=$hd["img"]?>" class="img-fluid"
+													<img src="<?=$img_p?><?=$hd["img"]?>" class="img-fluid"
 														alt="author image">
 												</a>
 											</div>
 											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html"><?=$hd["ten"]?></a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													
-												</h4>
+												<a class="author-book-title" href="?pg=detail&id=<?=$hd["id_phim"]?>"><?=$hd["ten"]?></a>
 											</div>
 										</div>
 
@@ -339,317 +168,53 @@
 							</div>
 							<div class="albums-content">
 								<div class="row">
-									<!--/set1-->
+								<?php foreach ($movietc as $tc):?>
+									
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m1.jpg" class="img-fluid"
+												<a href="?pg=detail&id=<?=$tc["id_phim"]?>">
+
+													<img src="<?=$img_p?><?=$tc["img"]?>" class="img-fluid"
 														alt="author image">
 												</a>
 											</div>
 											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Rocketman</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
+												
+												<a class="author-book-title" href="?pg=detail&id=<?=$tc["id_phim"]?>"><?=$tc["ten"]?></a>
 											</div>
 										</div>
 
 									</div>
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m2.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Doctor Sleep</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m3.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Knives Out</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
+								<?php endforeach;?>
 									<!--//set1-->
 									<!--/set2-->
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m7.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Frozen 2</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m8.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Toy Story 4</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m9.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Joker</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m9.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Joker</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m9.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Joker</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m9.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Joker</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
 									<!--//set2-->
 								</div>
 							</div>
 							<div class="albums-content">
 								<div class="row">
 									<!--/set3-->
+									<?php foreach ($moviekd as $kd):?>
+									
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m7.jpg" class="img-fluid"
+												<a href="?pg=detail&id=<?=$kd["id_phim"]?>">
+
+													<img src="<?=$img_p?><?=$kd["img"]?>" class="img-fluid"
 														alt="author image">
 												</a>
 											</div>
 											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Frozen 2</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
+												
+												<a class="author-book-title" href="?pg=detail&id=<?=$kd["id_phim"]?>"><?=$kd["ten"]?></a>
 											</div>
 										</div>
 
 									</div>
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m8.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Toy Story 4</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m9.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Joker</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
-									<!--//set3-->
-									<!--/set3-->
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m10.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">Alita</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m11.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">The Lego</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
-									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-										<div class="slider-info">
-											<div class="img-circle">
-												<a href="genre.html"><img src="Upload/images/m12.jpg" class="img-fluid"
-														alt="author image">
-												</a>
-											</div>
-											<div class="message">
-												<p>English</p>
-												<a class="author-book-title" href="genre.html">The Hustle</a>
-												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-													</span>
-
-													<span class="post fa fa-heart text-right"></span>
-												</h4>
-											</div>
-										</div>
-
-									</div>
+								<?php endforeach;?>
+								
 									<!--//set3-->
 								</div>
 							</div>
@@ -870,3 +435,67 @@
 <!--//MENU-JS-->
 
 <script src="Layout/assets/js/bootstrap.min.js"></script>
+<script>
+	// Hàm kiểm tra xem người dùng đã đăng ký chưa
+	function DK_isDKvip() {
+		return localStorage.getItem('DK_DKvip') === 'true';
+	}
+
+	// Khi trang web được tải xong
+	window.addEventListener('DOMContentLoaded', (event) => {
+		// Nếu người dùng chưa đăng ký
+		if (!DK_isDKvip()) {
+			// Hiển thị popup sau 2 giây
+			setTimeout(DK_showPopup, 2000);
+		}
+	});
+
+	// Khi người dùng nhấn vào nút đăng ký
+	document.getElementById('DK_dk_button').addEventListener('click', DK_showPopup);
+
+	// Khi người dùng nhấn vào vùng ngoài popup
+	document.getElementById('DK_popup_overlay').addEventListener('click', DK_hidePopup);
+
+	// Khi người dùng nhấn vào nút đóng popup
+	document.getElementById('DK_popup_close_button').addEventListener('click', DK_hidePopup);
+
+	// Khi người dùng đăng ký thành công
+	function DK_onSuccessfuldk() {
+		// Đặt giá trị của 'DKvip' trong localStorage thành 'true'
+		localStorage.setItem('DK_DKvip', 'true');
+		// Ẩn popup
+		DK_hidePopup();
+	}
+
+	// Hàm hiển thị popup
+	function DK_showPopup() {
+		var popup = document.getElementById('DK_popup_dkBox');
+		// Hiển thị popup
+		popup.style.display = 'block';
+		// Đặt độ trong suốt của popup thành 0
+		popup.style.opacity = 0;
+		setTimeout(function () {
+			// Thêm hiệu ứng cho popup
+			popup.style.transition = 'opacity 1s';
+			// Đặt độ trong suốt của popup thành 1, tạo hiệu ứng hiện dần
+			popup.style.opacity = 1;
+		}, 100);
+		// Hiển thị vùng ngoài popup
+		document.getElementById('DK_popup_overlay').style.display = 'block';
+	}
+
+	// Hàm ẩn popup
+	function DK_hidePopup() {
+		var popup = document.getElementById('DK_popup_dkBox');
+		// Thêm hiệu ứng cho popup
+		popup.style.transition = 'opacity 1s';
+		// Đặt độ trong suốt của popup thành 0, tạo hiệu ứng ẩn dần
+		popup.style.opacity = 0;
+		setTimeout(function () {
+			// Ẩn popup
+			popup.style.display = 'none';
+			// Ẩn vùng ngoài popup
+			document.getElementById('DK_popup_overlay').style.display = 'none';
+		}, 1000);
+	}
+</script>

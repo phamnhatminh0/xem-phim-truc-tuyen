@@ -3,28 +3,43 @@ ob_start();
 include_once "Dao/pdo.php";
 include_once "Dao/genre.php";
 $theloai = theloai_getAll();
+
 include_once "Dao/movie.php";
 include_once "Dao/config.php";
-include_once "dao/d_user.php";
+include_once "Dao/actor.php";
+include_once "Dao/comment.php";
 include_once "View/header.php";
+include_once "dao/d_user.php";
 
 if (!isset($_GET['pg'])) {
+    $luotview = phim_luotxem();
+    $vip = phim_vip();
     $movie = phimmoi();
     $moviehd = hanhdong();
-    $movielx = phim_luotxem();
+    $movietc = tinhcam();
+    $moviekd = kinhdi();
+    $movierole = phim_role();
 
     include "View/home.php";
 } else {
     switch ($_GET['pg']) {
         case 'home':
+            $luotview = phim_luotxem();
+            $vip = phim_vip();
             $movie = phimmoi();
             $moviehd = hanhdong();
-            $movielx = phim_luotxem();
+            $movietc = tinhcam();
+            $moviekd = kinhdi();
+            $movierole = phim_role();
 
             include_once "View/home.php";
 
             break;
         case 'genre':
+            $tencungtheloai = phimcungtheloai_ten($_GET["id"]);
+            $cacphimcungloai = phimcungtheloai_all($_GET["id"]);
+            $theloailuotxem = phimcungtheloai_luotxem($_GET["id"]);
+
             include_once "View/genre.php";
             break;
 
@@ -39,6 +54,7 @@ if (!isset($_GET['pg'])) {
         case 'detail':
 
             $chitiet = chitietphim($_GET["id"]);
+            $cungtheloai = phimcungtheloai($chitiet["tentl"], $chitiet["id_phim"]);
             include_once "View/movie-detail.php";
             break;
 
@@ -47,6 +63,17 @@ if (!isset($_GET['pg'])) {
             break;
 
         case 'watch':
+            if ($_GET["tap"]) {
+                $xuatphim = xuat_phimtap($_GET["id"], $_GET["tap"]);
+            } else {
+                $xuatphim = xuatphim($_GET["id"]);
+            }
+
+            $binhluan = binhluan($_GET["id"]);
+            $dienvien = dienvien($_GET["id"]);
+            $tap = xuat_tap($_GET["id"]);
+
+
             include_once "View/watch-video.php";
             break;
 
@@ -119,6 +146,18 @@ if (!isset($_GET['pg'])) {
                 }
             }
             include_once "view/signup.php";
+            break;
+
+        case 'login':
+            include_once "View/login.php";
+            break;
+
+        case 'signup':
+            include_once "View/signup.php";
+            break;
+        case 'search':
+            $tim = tim_phim($_POST["search"]);
+            include_once "View/search.php";
             break;
 
         default:
