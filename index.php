@@ -1,4 +1,5 @@
 <?php
+session_start();
 ob_start();
 include_once "Dao/pdo.php";
 include_once "Dao/genre.php";
@@ -133,27 +134,19 @@ if (!isset($_GET['pg'])) {
         case 'dangky':
             if (isset($_POST['submit'])) {
                 $email = $_POST['email'];
-                $ten = $_POST['ten'];
+                $ten_user = $_POST['ten_user'];
                 $pass = $_POST['pass'];
                 $check = checkdk($email);
                 if ($check) {
                     $_SESSION['loi'] = 'email của bạn đã tồn tại';
                 } else {
-                    dangky($email, $pass, $ten);
+                    dangky($email, $pass, $ten_user);
                     // Sau khi đăng ký thành công, đăng nhập ngay lập tức
                     $_SESSION['user'] = dangnhap($email, $pass);
                     header('Location: ?pg=home');
                 }
             }
             include_once "view/signup.php";
-            break;
-
-        case 'login':
-            include_once "View/login.php";
-            break;
-
-        case 'signup':
-            include_once "View/signup.php";
             break;
         case 'search':
             $tim = tim_phim($_POST["search"]);

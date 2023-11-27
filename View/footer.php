@@ -63,7 +63,7 @@
 			</button>
 			<script>
 				// When the user scrolls down 20px from the top of the document, show the button
-				window.onscroll = function () {
+				window.onscroll = function() {
 					scrollFunction()
 				};
 
@@ -86,6 +86,6 @@
 		</section>
 	</footer>
 	<!--//footer-66 -->
-</body>
+	</body>
 
-</html>
+	</html>

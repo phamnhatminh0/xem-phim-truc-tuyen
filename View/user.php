@@ -22,7 +22,7 @@
 									<img src="Upload/images/avatar.png" alt="avatar" class="account__img">
 									<div class="account-info">
 										<h3>Tài khoản của</h3>
-										<p><?= $hienthi["ten"] ?></p>
+										<p><?= $hienthi["ten_user"] ?></p>
 									</div>
 								</li>
 								<li class="account__item">
@@ -60,11 +60,11 @@
 									<form action="">
 										<div class="form-group-profile">
 											<label for="" class="profile-label">Tên tài khoản:</label>
-											<span style="color: #9c9c9c;"><?= $hienthi["ten"] ?></span>
+											<span style="color: #9c9c9c;"><?= $hienthi["ten_user"] ?></span>
 										</div>
 										<div class="form-group-profile">
 											<label for="name" class="profile-label">Tên:</label>
-											<span style="color: #9c9c9c;"><?= $hienthi["ten"] ?></span>
+											<span style="color: #9c9c9c;"><?= $hienthi["ten_user"] ?></span>
 										</div>
 										<div class="form-group-profile">
 											<label for="email" class="profile-label">Email:</label>

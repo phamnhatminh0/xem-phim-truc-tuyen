@@ -1,15 +1,16 @@
 <link rel="stylesheet" href="Layout/assets/css/style1.css" type="text/css">
+<!-- //watch-video -->
 <!-- Breadcrumb Begin -->
 <div class="w3l-breadcrumbs">
     <nav id="breadcrumbs" class="breadcrumbs">
         <div class="container page-wrapper" style="display: flex; gap: 3px;">
-            <a href="?pg=home">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Đăng ký</span>
+            <a href="index.html">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Đăng ký</span>
         </div>
     </nav>
 </div>
 <!-- Breadcrumb End -->
 <!-- Normal Breadcrumb Begin -->
-<section class="normal-breadcrumb set-bg" data-setbg="Upload/images/Banner/banner1.jpg">
+<section class="normal-breadcrumb set-bg" data-setbg="upload/images/banner/banner1.jpg">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -29,33 +30,42 @@
             <div class="col-lg-6">
                 <div class="login__form">
                     <h3>Đăng ký</h3>
-                    <form action="#">
+                    <?php if (isset($_SESSION['loi'])) : ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?= $_SESSION['loi'] ?>
+                        </div>
+                    <?php endif;
+                    unset($_SESSION['loi']); ?>
+                    <form action="" method="POST">
                         <div class="input__item">
                             <input type="text" placeholder="Email của bạn" name="email">
                             <span><i class="fas fa-envelope"></i></span>
                         </div>
                         <div class="input__item">
-                            <input type="text" placeholder="Tên của bạn" name="user">
+                            <input type="text" placeholder="Tên của bạn" name="ten_user">
                             <span><i class="fas fa-user"></i></span>
                         </div>
                         <div class="input__item">
-                            <input type="text" placeholder="Mật khẩu" name="password">
+                            <input type="text" placeholder="Mật khẩu" name="pass">
                             <span><i class="fas fa-lock"></i></span>
                         </div>
-                        <button type="submit" class="site-btn" name="login" style="background-color: #00DC5A;">Đăng ký</button>
+                        <button type="submit" class="site-btn" name="submit" style="background-color: #00DC5A;">Đăng ký</button>
                     </form>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="login__register">
                     <h3>Bạn đã có tài khoản?</h3>
-                    <a href="/login.html" class="primary-btn" style="background-color: #00DC5A; color: #fff" ;>Đăng nhập ngay</a>
+                    <a href="?pg=dangnhap" class="primary-btn" style="background-color: #00DC5A; color: #fff" ;>Đăng nhập ngay</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!-- Signup Section End -->
+
+
+<!-- responsive tabs -->
 <script src="Layout/assets/js/jquery-1.9.1.min.js"></script>
 <script src="Layout/assets/js/easyResponsiveTabs.js"></script>
 <script type="text/javascript">
@@ -78,7 +88,6 @@
 </script>
 <!-- //responsive tabs -->
 <!--/theme-change-->
-<script src="Layout/assets/js/theme-change.js"></script>
 <!-- //theme-change-->
 <script src="Layout/assets/js/owl.carousel.js"></script>
 <!-- script for banner slider-->
@@ -266,6 +275,7 @@
 <!--//MENU-JS-->
 
 <script src="Layout/assets/js/bootstrap.min.js"></script>
+
 <script src="Layout/assets/js/jquery-3.3.1.min.js"></script>
 <script src="Layout/assets/js/bootstrap.min.js"></script>
 <script src="Layout/assets/js/player.js"></script>
@@ -282,3 +292,4 @@
         });
     });
 </script>
+<script src="layout/assets/js/theme-change.js"></script>
