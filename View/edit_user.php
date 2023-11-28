@@ -96,11 +96,11 @@
                                             <span><input type="text" name="ten_user" id="" class="text-input" value="<?= $hienthi["ten_user"] ?>"></span>
                                         </div>
                                         <div class="form-group-profile">
-                                            <label for="email" class="profile-label">hình ảnh</label>
+                                            <label for="email" class="profile-label">Hình ảnh</label>
                                             <span><input type="file" name="img_user" id="" class="text-input"></span>
                                         </div>
                                         <div class="form-group-profile">
-                                            <label for="phone" class="profile-label"><button class="button-input" name="submit">lưu thay đổi</button></label>
+                                            <label for="phone" class="profile-label"><button class="button-input" name="submit">Lưu</button></label>
                                         </div>
                                     </form>
                                 </div>

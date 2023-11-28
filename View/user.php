@@ -89,7 +89,7 @@
 											<span style="color: #9c9c9c;"><?= $ten_role ?></span>
 										</div>
 										<div class="form-group-profile">
-											<label for="phone" class="profile-label"><a href="?pg=edit_user">chỉnh sửa</a></label>
+											<label for="phone" class="profile-label"><a href="?pg=edit_user">Chỉnh sửa</a></label>
 										</div>
 								</div>
 								</form>
