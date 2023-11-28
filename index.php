@@ -117,6 +117,44 @@ if (!isset($_GET['pg'])) {
 
             include_once "View/user.php";
             break;
+        case 'edit_user':
+            if (!isset($_SESSION['user'])) {
+                $_SESSION['loi'] = 'bạn cần đăng nhập để chỉnh sửa thông tin tài khoản';
+                header('Location:?pg=dangnhap');
+                return;
+            }
+            $maTK = $_SESSION['user']['id_user'];
+            // Lấy ra thông tin của người dùng đã đăng nhập
+            $hienthi = hienuser($maTK);
+
+            if (isset($_POST['submit'])) {
+                $ten_user = $_POST['ten_user'];
+                $img_user = $_FILES['img_user'];
+
+                // Xử lý việc tải lên tệp
+                if ($img_user['error'] === 0) {
+                    $anhuser = "Upload/images/user/";
+                    $user_file = $anhuser . basename($img_user["name"]);
+                    move_uploaded_file($img_user["tmp_name"], $user_file);
+                    // Xóa tệp ảnh cũ
+                    if (file_exists($anhuser . $hienthi["img_user"])) {
+                        unlink($anhuser . $hienthi["img_user"]);
+                    }
+                    edit_User($maTK, $ten_user, $img_user["name"]);
+                    $_SESSION['user']['img_user'] = $img_user["name"]; // Cập nhật hình ảnh trong session
+                    $_SESSION['loi'] = 'Thông tin tài khoản đã được cập nhật';
+                } else {
+                    edit_User($maTK, $ten_user, $hienthi["img_user"]);
+                    $_SESSION['loi'] = 'Thông tin tài khoản đã được cập nhật';
+                }
+                header('Location:?pg=user');
+                return;
+            }
+
+            include_once "view/edit_user.php";
+            break;
+
+
 
         case 'bosuutap':
             include_once "View/collection.php";

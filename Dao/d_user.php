@@ -16,6 +16,11 @@ function dangky($email, $pass, $ten_user)
     $sql = "INSERT INTO user(email, pass, ten_user) VALUES (?, ?, ?)";
     return pdo_execute($sql, $email, $pass, $ten_user);
 }
+function edit_User($id_user, $ten_user, $img_user)
+{
+    $sql = "UPDATE user SET ten_user = ?, img_user = ? WHERE id_user = ?";
+    return pdo_execute($sql, $ten_user, $img_user, $id_user);
+}
 function checkdk($email)
 {
     $sql = "SELECT * FROM user WHERE email = ?";

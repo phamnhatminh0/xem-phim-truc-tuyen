@@ -57,6 +57,13 @@
 							<h1 style="color: #00dc5a;">Thông tin tài khoản</h1>
 							<div class="box-group f-height">
 								<div class="col-12">
+									<?php if (isset($_SESSION['loi'])) : ?>
+										<div class="alert alert-danger" role="alert">
+											<?= $_SESSION['loi'] ?>
+										</div>
+									<?php endif;
+									unset($_SESSION['loi']); ?>
+
 									<form action="">
 										<div class="form-group-profile">
 											<label for="" class="profile-label">Tên tài khoản:</label>
@@ -82,7 +89,7 @@
 											<span style="color: #9c9c9c;"><?= $ten_role ?></span>
 										</div>
 										<div class="form-group-profile">
-											<label for="phone" class="profile-label"><a href="">chỉnh sửa</a></label>
+											<label for="phone" class="profile-label"><a href="?pg=edit_user">chỉnh sửa</a></label>
 										</div>
 								</div>
 								</form>
