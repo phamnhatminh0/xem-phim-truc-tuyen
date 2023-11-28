@@ -36,10 +36,6 @@
 								</figure>
 								<div class="box-content">
 									<h3 class="title"><?=$pctl["ten"]?></h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-									</h4>
 								</div>
 							</a>
 						</div>
