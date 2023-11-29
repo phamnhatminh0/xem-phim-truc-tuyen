@@ -9,16 +9,13 @@
 								<div class="banner-info">
 									<h3><?= $lx["ten"] ?></h3>
 									<p><?= $lx["mota"] ?></p>
-									<a href="#small-dialog1" class="popup-with-zoom-anim play-view1">
+									<a href="?pg=watch&id=<?=$lx["id_phim"]?>" class="with-zoom-anim play-view1">
 										<span class="video-play-icon">
 											<span class="fa fa-play"></span>
 										</span>
 										<h6>Xem Trailer</h6>
 									</a>
 									<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-									<div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
-										<iframe src="https://player.vimeo.com/video/358205676" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
-									</div>
 								</div>
 							</div>
 						</li>
