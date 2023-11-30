@@ -45,11 +45,13 @@ function phim_vip(){
     return pdo_query($sql);
 }
 function chitietphim($id_phim){
-   $sql="SELECT *
+   $sql="SELECT SUM(tap.tapphim) AS tongsotap, phim.ten,phim.namsx,phim.mota,phim.id_phim,phim.img,theloai.tentl
    FROM phim
    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
    JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
-   WHERE phim.id_phim=?";
+   JOIN tap ON phim.id_phim = tap.id_phim
+   WHERE phim.id_phim =?
+   GROUP BY phim.ten,phim.namsx,phim.mota,phim.id_phim,theloai.tentl,phim.img";
    return pdo_query_one($sql,$id_phim);
 }
 function phimcungtheloai($tentl,$id_phim){
