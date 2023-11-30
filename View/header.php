@@ -41,7 +41,7 @@
 							<a class="nav-link" href="?pg=home">Trang chủ</a>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link" href="genre.html" id="navbarDropdown">Thể loại</a>
+							<a class="nav-link" href="?pg=home" id="navbarDropdown">Thể loại</a>
 							<div class="dropdown-content">
 								<?php foreach ($theloai as $tl) : ?>
 									<a class="dropdown-item" href="?pg=genre&id=<?= $tl["id_loai"] ?>"><?= $tl["tentl"] ?></a>
