@@ -118,7 +118,7 @@ if (!isset($_GET['pg'])) {
             break;
         case 'edit_user':
             if (!isset($_SESSION['user'])) {
-                $_SESSION['loi'] = 'bạn cần đăng nhập để chỉnh sửa thông tin tài khoản';
+                $_SESSION['loi'] = 'Bạn cần đăng nhập để chỉnh sửa thông tin tài khoản';
                 header('Location:?pg=dangnhap');
                 return;
             }
