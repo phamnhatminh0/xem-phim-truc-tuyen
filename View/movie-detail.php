@@ -21,7 +21,7 @@
                     <p class="bold-text">Thể loại: <span class="normal-text"><a class="alink" href=""><?= $chitiet["tentl"]?></a></span></p>
                     <div class="release-duration">
                         <p class="bold-text">Phát hành: <span class="normal-text"><?=$chitiet["namsx"]?></span></p>
-                        <p class="bold-text">Thời lượng: <span class="normal-text">28 tập</span></p>
+                        <p class="bold-text">Thời lượng: <span class="normal-text"><?=$chitiet["tongsotap"]?></span></p>
                     </div>
                     <p class="normal-text"><?= $chitiet["mota"]?></p>
                    <a href="?pg=watch&id=<?=$chitiet["id_phim"]?>"> <button class="watch-button2"> Xem phim </button></a>
