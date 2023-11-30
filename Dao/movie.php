@@ -8,7 +8,7 @@ function hanhdong(){
     FROM phim P
     JOIN loaiphim LP ON P.id_phim = LP.id_phim
     JOIN theloai TL ON LP.id_loai = TL.id_loai
-    WHERE TL.tentl = 'hành động';";
+    WHERE TL.tentl = 'hành động' AND P.trangthai != 1";
     return pdo_query($sql);
 }
 function tinhcam(){
@@ -16,7 +16,7 @@ function tinhcam(){
     FROM phim P
     JOIN loaiphim LP ON P.id_phim = LP.id_phim
     JOIN theloai TL ON LP.id_loai = TL.id_loai
-    WHERE TL.tentl = 'tình cảm';";
+    WHERE TL.tentl = 'tình cảm' AND P.trangthai != 1";
     return pdo_query($sql);
 }
 function kinhdi(){
@@ -24,7 +24,7 @@ function kinhdi(){
     FROM phim P
     JOIN loaiphim LP ON P.id_phim = LP.id_phim
     JOIN theloai TL ON LP.id_loai = TL.id_loai
-    WHERE TL.tentl = 'kinh dị';";
+    WHERE TL.tentl = 'kinh dị' AND P.trangthai != 1";
     return pdo_query($sql);
 }
 // hàm chưa sài
