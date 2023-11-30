@@ -58,7 +58,7 @@
 							<div class="box-group f-height">
 								<div class="col-12">
 									<?php if (isset($_SESSION['loi'])) : ?>
-										<div class="alert alert-danger" role="alert">
+										<div class="alert alert-success" role="alert">
 											<?= $_SESSION['loi'] ?>
 										</div>
 									<?php endif;
@@ -90,6 +90,9 @@
 										</div>
 										<div class="form-group-profile">
 											<label for="phone" class="profile-label"><a href="?pg=edit_user">Chỉnh sửa</a></label>
+										</div>
+										<div class="form-group-profile">
+											<label for="phone" class="profile-label"><a href="?pg=doimatkhau">đổi mật khẩu</a></label>
 										</div>
 								</div>
 								</form>

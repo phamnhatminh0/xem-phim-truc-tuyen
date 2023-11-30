@@ -4,7 +4,6 @@ ob_start();
 include_once "Dao/pdo.php";
 include_once "Dao/genre.php";
 $theloai = theloai_getAll();
-// include_once "view/index.php";
 include_once "Dao/movie.php";
 include_once "Dao/config.php";
 include_once "Dao/actor.php";
@@ -138,7 +137,11 @@ if (!isset($_GET['pg'])) {
                     move_uploaded_file($img_user["tmp_name"], $user_file);
                     // Xóa tệp ảnh cũ
                     if (file_exists($anhuser . $hienthi["img_user"])) {
-                        unlink($anhuser . $hienthi["img_user"]);
+                        // Kiểm tra xem tệp có phải là avatar.png hay không
+                        if ($hienthi["img_user"] != "avatar.png") {
+                            // Nếu không phải, xóa tệp
+                            unlink($anhuser . $hienthi["img_user"]);
+                        }
                     }
                     edit_User($maTK, $ten_user, $img_user["name"]);
                     $_SESSION['user']['img_user'] = $img_user["name"]; // Cập nhật hình ảnh trong session
@@ -153,8 +156,6 @@ if (!isset($_GET['pg'])) {
 
             include_once "view/edit_user.php";
             break;
-
-
 
         case 'bosuutap':
             include_once "View/collection.php";
@@ -184,18 +185,61 @@ if (!isset($_GET['pg'])) {
                 $email = $_POST['email'];
                 $ten_user = $_POST['ten_user'];
                 $pass = $_POST['pass'];
-                $check = checkdk($email);
-                if ($check) {
-                    $_SESSION['loi'] = 'email của bạn đã tồn tại';
+                // Gọi hàm kiểm tra email hợp lệ
+                $valid_email = check_email($email);
+                // Nếu email không hợp lệ, gán giá trị cho biến $_SESSION['loi']
+                if (!$valid_email) {
+                    $_SESSION['loi'] = 'Mail của bạn không đúng cú pháp';
                 } else {
-                    dangky($email, $pass, $ten_user);
-                    // Sau khi đăng ký thành công, đăng nhập ngay lập tức
-                    $_SESSION['user'] = dangnhap($email, $pass);
-                    header('Location: ?pg=home');
+                    // Nếu email hợp lệ, kiểm tra email đã tồn tại hay chưa
+                    $check = checkdk($email);
+                    if ($check) {
+                        $_SESSION['loi'] = 'Mail của bạn đã tồn tại';
+                    } else {
+                        // Nếu email chưa tồn tại, thực hiện đăng ký
+                        dangky($email, $pass, $ten_user);
+                        // Sau khi đăng ký thành công, đăng nhập ngay lập tức
+                        $_SESSION['user'] = dangnhap($email, $pass);
+                        header('Location: ?pg=home');
+                    }
                 }
             }
             include_once "view/signup.php";
             break;
+        case 'doimatkhau':
+            if (!isset($_SESSION['user'])) {
+                $_SESSION['loi'] = 'Bạn cần đăng nhập để chỉnh sửa thông tin tài khoản';
+                header('Location:?pg=dangnhap');
+                return;
+            }
+            $maTK = $_SESSION['user']['id_user'];
+            // Lấy ra thông tin của người dùng đã đăng nhập
+            $hienthi = hienuser($maTK);
+
+            if (isset($_POST['submit'])) {
+                $pass = $_POST['pass'];
+                $mkmoi = $_POST['mkmoi'];
+                $nlmk = $_POST['nlmk'];
+
+                $checkPass = checkmk($pass);
+                if ($checkPass) {
+                    if ($mkmoi === $nlmk) {
+                        // Passwords match, update the password
+                        doiMatKhau($maTK, $mkmoi);
+                        $_SESSION['loi'] = 'Thông tin tài khoản đã được cập nhật';
+                        header('Location:?pg=user');
+                        return;
+                    } else {
+                        $_SESSION['loi'] = 'Mật khẩu mới và nhập lại mật khẩu mới không giống nhau';
+                    }
+                } else {
+                    $_SESSION['loi'] = 'Bạn đã nhập sai mật khẩu';
+                }
+            }
+
+            include_once "view/changePassword.php";
+            break;
+
         case 'search':
             $tim = tim_phim($_POST["search"]);
             include_once "View/search.php";

@@ -26,6 +26,30 @@ function checkdk($email)
     $sql = "SELECT * FROM user WHERE email = ?";
     return pdo_query_one($sql, $email);
 }
+function doiMatKhau($id_user, $pass)
+{
+    $sql = "UPDATE user SET pass = ? WHERE id_user = ?";
+    return pdo_execute($sql, $pass, $id_user);
+}
+
+function checkmk($pass)
+{
+    $sql = "SELECT * FROM user WHERE pass = ?";
+    return pdo_query_one($sql, $pass);
+}
+function check_email($email)
+{
+    // Kiểm tra email có chứa ký tự @ và có ít nhất một dấu chấm
+    if (!strpos($email, "@") || !strpos($email, ".")) {
+        return false;
+    }
+    // Kiểm tra email có đúng định dạng theo chuẩn RFC 822
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        return false;
+    }
+    // Nếu email hợp lệ, trả về true
+    return true;
+}
 // function hienuser(){
 //     $sql = "SELECT * FROM user";
 //     return pdo_query($sql);
