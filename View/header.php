@@ -128,7 +128,7 @@
 								<ul>
 									<li><strong></strong>Xem tất cả các bộ phim yêu thích</li>
 								</ul>
-								<a href="#" class="DK_popup_order-btn">Đăng ký ngay</a>
+								<a href="vnpay_php/vnpay_pay.php" class="DK_popup_order-btn">Đăng ký ngay</a>
 							</div>
 						</div>
 					</div>

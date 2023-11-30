@@ -107,7 +107,7 @@ if (!isset($_GET['pg'])) {
                     $ten_role = "Đã đăng ký";
                     break;
                 case 2:
-                    $ten_role = "<a href='' class='text'>admin</a>";
+                    $ten_role = "<a href='?pg=admin' class='text'>admin</a>";
                     break;
                 default:
                     $ten_role = "Không xác định";
@@ -244,6 +244,10 @@ if (!isset($_GET['pg'])) {
             $tim = tim_phim($_POST["search"]);
             include_once "View/search.php";
             break;
+
+            case 'admin':
+                header('Location: admin/index.php');
+                break;
 
         default:
             include_once "View/home.php";
