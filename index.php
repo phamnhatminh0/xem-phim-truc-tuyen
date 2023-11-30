@@ -226,7 +226,7 @@ if (!isset($_GET['pg'])) {
                     if ($mkmoi === $nlmk) {
                         // Passwords match, update the password
                         doiMatKhau($maTK, $mkmoi);
-                        $_SESSION['loi'] = 'Thông tin tài khoản đã được cập nhật';
+                        $_SESSION['loi'] = 'Đổi mật khẩu thành công';
                         header('Location:?pg=user');
                         return;
                     } else {

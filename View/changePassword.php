@@ -98,15 +98,15 @@
                                     unset($_SESSION['loi']); ?>
                                     <form id="profile-form" action="" method="POST" enctype="multipart/form-data">
                                         <div class="form-group-profile">
-                                            <label for="" class="profile-label">mật khẩu củ</label>
+                                            <label for="" class="profile-label">Mật khẩu cũ</label>
                                             <span><input type="text" name="pass" id="" class="text-input"></span>
                                         </div>
                                         <div class="form-group-profile">
-                                            <label for="" class="profile-label">mật khẩu mới</label>
+                                            <label for="" class="profile-label">Mật khẩu mới</label>
                                             <span><input type="text" name="mkmoi" id="" class="text-input"></span>
                                         </div>
                                         <div class="form-group-profile">
-                                            <label for="" class="profile-label">nhập lại mật khẩu mới</label>
+                                            <label for="" class="profile-label">Nhập lại mật khẩu mới</label>
                                             <span><input type="text" name="nlmk" id="" class="text-input"></span>
                                         </div>
                                         <div class="form-group-profile">

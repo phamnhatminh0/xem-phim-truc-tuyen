@@ -92,7 +92,7 @@
 											<label for="phone" class="profile-label"><a href="?pg=edit_user">Chỉnh sửa</a></label>
 										</div>
 										<div class="form-group-profile">
-											<label for="phone" class="profile-label"><a href="?pg=doimatkhau">đổi mật khẩu</a></label>
+											<label for="phone" class="profile-label"><a href="?pg=doimatkhau">Đổi mật khẩu</a></label>
 										</div>
 								</div>
 								</form>
