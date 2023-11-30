@@ -5,7 +5,7 @@
 				<?php foreach ($movierole as $lx) : ?>
 					<div class="item">
 						<li>
-							<div class="slider-info banner-view bg bg2" style="background: url(<?= $img_p ?><?= $lx["img"] ?>) no-repeat center;">
+							<div class="slider-info banner-view bg bg2" style="background: url(<?= $img_b ?><?= $lx["img"] ?>) no-repeat center;">
 								<div class="banner-info">
 									<h3><?= $lx["ten"] ?></h3>
 									<p><?= $lx["mota"] ?></p>
