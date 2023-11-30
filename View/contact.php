@@ -14,10 +14,10 @@
 				<div class="headerhny-title text-center">
 					<h3 class="hny-title mb-0">ĐỂ LẠI TIN NHẮN</h3>
 					<p class="hny-title mb-lg-5 mb-4">Nếu bạn có câu hỏi liên quan đến dịch vụ của chúng tôi, vui lòng
-						liên hệ với chúng tôi bằng cách sử dụng mẫu dưới đây.</p>
+						liên hệ với chúng tôi bằng cách liên hệ một trong các phương thức sau</p>
 				</div>
 				<div class="contact-view mt-lg-5 mt-4">
-					<div class="conhny-form-section">
+					<!-- <div class="conhny-form-section">
 						<form action="https://sendmail.w3layouts.com/submitForm" method="post" class="formhny-sec">
 							<div class="form-grids">
 								<div class="form-input">
@@ -43,7 +43,7 @@
 								<button class="btn read-button">Gửi</button>
 							</div>
 						</form>
-					</div>
+					</div> -->
 
 					<div class="d-grid contact-addres-inf mt-5 pt-lg-4">
 						<div class="contact-info-left d-grid">
