@@ -18,7 +18,10 @@
                 <div class="col-lg-12">
                     <div  class="anime__video__player ">
                         <video class="w-100"  id="player" playsinline controls data-poster="Layout/assets/videos/anime-watch.jpg">
-                            <source src="<?=$img_w?><?=$xuatphim["video"]?>" type="video/mp4" />
+                        <?php
+    $img = ($xuatphim["trangthai"] == 1) ? $img_v : $img_w;
+    echo '<source src="' . $img . $xuatphim["video"] . '" type="video/mp4" />';
+?>
                             <!-- Captions are optional -->
                             <track kind="captions" label="English captions" src="#" srclang="en" default />
                         </video>
@@ -35,32 +38,22 @@
                             <div class="section-title">
                                 <h5>Diễn viên</h5>
                             </div>
-                            <div class="grids-main">
-                                <div class="container">
-                                    <div class="owl-three owl-carousel owl-theme">
-                                        <?php foreach($dienvien as $dv):?>
-                                        <div class="item vhny-grid">
-                                            <div class="mb-0">
-                                                <a href="genre.html">
-                                                    <figure>
-                                                        <img class="img-fluid rounded-circle" src="<?=$img_d?><?=$dv["img_dv"]?>" alt="" style="width: 160px; height: 160px;">
-                                                        </figure>
-                                                        <h6 class="tendv"><?=$dv["ten_dv"]?></h6>
-                                                    
-                                                   
-                                                </a>
-                                            </div>
-                                    
-                                            
-                                           
-                    
-                                        </div>
-                                        <?php endforeach;?>
-                                    </div>
-                                </div>
-                    
-                            </div>
-                        </section>          
+                            <div class="w3l-populohny-grids">
+                            <?php foreach($dienvien as $dv):?>
+						<div class="item vhny-grid">
+							<div class="box16">
+								<a href="">
+									<figure>
+										<img class="img-fluid " src="<?= $img_d ?><?= $dv["img_dv"] ?>" alt="" style="width: 160px; height: 200px;">
+									</figure>
+									<h6 class="tendv"><?=$dv["ten_dv"]?></h6>
+									<!-- <span class="fa fa-play video-icon" aria-hidden="true"></span> -->
+								</a>
+							</div>
+						</div>
+					<?php endforeach; ?>
+				</div>
+                        </section>      
                     
                     <div class="anime__details__episodes">
                         <div class="section-title">
@@ -193,7 +186,7 @@
                     nav: true
                 },
                 1000: {
-                    items: 6,
+                    items: 4,
                     nav: true
                 }
             }
