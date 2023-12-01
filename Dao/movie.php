@@ -59,7 +59,7 @@ function phimcungtheloai($tentl,$id_phim){
     FROM phim
     JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
     JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
-    WHERE theloai.tentl=? AND phim.id_phim!=? LIMIT 4;";
+    WHERE theloai.tentl=? AND phim.id_phim!=?LIMIT 4;";
     return pdo_query($sql,$tentl,$id_phim);
 }
 function phimcungtheloai_all($id_loai){
@@ -67,7 +67,7 @@ function phimcungtheloai_all($id_loai){
     FROM phim
     JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
     JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
-    WHERE theloai.id_loai=?";
+    WHERE theloai.id_loai=? AND phim.trangthai!=1";
     return pdo_query($sql,$id_loai);
 }
 function phimcungtheloai_ten($id_loai){
