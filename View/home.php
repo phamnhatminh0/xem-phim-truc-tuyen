@@ -88,7 +88,20 @@
 							</div>
 							<h3> <a class="title-gd" href="?pg=detail&id=<?= $vp["id_phim"] ?>" style="height: 54px;"><?= $vp["ten"] ?></a></h3>
 							<div class="button-center text-center mt-4">
-								<a href="?pg=detail&id=<?= $vp["id_phim"] ?>" class="btn watch-button">Xem ngay</a>
+							<?php
+        if (isset($_SESSION['user'])) {
+			if ($_SESSION['user']['role'] == 1) {
+				echo "<a href=?pg=detail&id=" . $vp['id_phim'] . " class='btn watch-button'>Xem ngay</a>";
+			} else {
+				echo "<a class='btn watch-button' id='DK_dk_button'>Đăng ký VIP</a>";
+			}
+			
+
+        } else {
+            echo "<a href=?pg=dangnhap class='btn watch-button'>Xem ngay</a>";
+
+        }
+    ?>						
 							</div>
 
 						</div>
@@ -448,8 +461,12 @@
 			}
 		});
 
-		// Khi người dùng nhấn vào nút đăng ký
-		document.getElementById('DK_dk_button').addEventListener('click', DK_showPopup);
+		var buttons = document.querySelectorAll('#DK_dk_button');
+
+// Thêm sự kiện cho từng nút button
+for (var i = 0; i < buttons.length; i++) {
+	buttons[i].addEventListener('click', DK_showPopup);
+}
 
 		// Khi người dùng nhấn vào vùng ngoài popup
 		document.getElementById('DK_popup_overlay').addEventListener('click', DK_hidePopup);

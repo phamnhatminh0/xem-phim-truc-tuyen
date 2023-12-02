@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="normal__breadcrumb__text">
-                    <h2 style="color: #00dc5a;">ĐĂNG NHẬP</h2>
+                    <h2 style="color: #00dc5a;">QUÊN MẬT KHẨU</h2>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="login__form">
-                    <h3>Đăng nhập</h3>
+                    <h3>Nhập email của bạn</h3>
 
                     <?php if (isset($_SESSION['loi'])) : ?>
                         <div class="alert alert-danger" role="alert">
@@ -43,19 +43,17 @@
                             <input type="text" placeholder="Email của bạn" name="email" style="color: black;">
                             <span><i class="fas fa-envelope" style="color: black;"></i></span>
                         </div>
-                        <div class="input__item">
-                            <input type="password" placeholder="Mật khẩu" name="pass" style="color: black;">
-                            <span><i class="fas fa-lock" style="color: black;"></i></span>
-                        </div>
-                        <button type="submit" class="site-btn" name="login" style="background-color: #00DC5A;">Đăng nhập</button>
+                        <button type="submit" class="site-btn" name="login" style="background-color: #00DC5A;">Gửi</button>
                     </form>
-                    <a href="?pg=Forgotpassword" class="forget_pass">bạn quên mật khẩu</a>
+                    <?php
+                    
+                    ?>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="login__register">
-                    <h3>Bạn chưa có tài khoản?</h3>
-                    <a href="?pg=dangky" class="primary-btn" style="background-color: #00DC5A; color: #fff" ;>Đăng ký ngay</a>
+                    <h3>Dùng tài khoản khác để đăng nhập</h3>
+                    <a href="?pg=dangky" class="primary-btn" style="background-color: #00DC5A; color: #fff" ;>Đăng nhập ngay</a>
                 </div>
             </div>
         </div>
@@ -271,7 +269,6 @@
         });
     });
 </script>
-
 <!--//MENU-JS-->
 
 <script src="Layout/assets/js/bootstrap.min.js"></script>
