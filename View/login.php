@@ -49,7 +49,7 @@
                         </div>
                         <button type="submit" class="site-btn" name="login" style="background-color: #00DC5A;">Đăng nhập</button>
                     </form>
-                    <a href="?pg=Forgotpassword" class="forget_pass">bạn quên mật khẩu</a>
+                    <a href="?pg=Forgotpassword" class="forget_pass">Quên mật khẩu</a>
                 </div>
             </div>
             <div class="col-lg-6">

@@ -45,7 +45,7 @@
 								</li>
 								<li class="account__item">
 									<a href="?pg=dangxuat" class="account__link" onclick="return confirmLogout();">
-									<i class="fa-solid fa-right-from-bracket" style="margin-right: 20px;"></i>
+									<i class="fa-solid fa-right-from-bracket"></i>
 										Đăng xuất
 									</a>
 								</li>
@@ -86,7 +86,7 @@
 										</style>
 
 										<div class="form-group-profile">
-											<label for="phone" class="profile-label">Trạng thái VIP:</label>
+											<label for="phone" class="profile-label">Trạng thái</label>
 											<span style="color: #9c9c9c;"><?= $ten_role ?></span>
 										</div>
 										<div class="form-group-profile">

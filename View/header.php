@@ -59,7 +59,7 @@
 					<!--/search-right-->
 					<!--/search-right-->
 					<div class="search-right">
-						<a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search"><span class="fa fa-search ml-3" aria-hidden="true" style="margin-left: 5rem !important;"></span></a>
+						<a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search"><span class="fa fa-search ml-3" aria-hidden="true"></span></a>
 						<!-- search popup -->
 						<div id="search" class="pop-overlay">
 							<div class="popup">

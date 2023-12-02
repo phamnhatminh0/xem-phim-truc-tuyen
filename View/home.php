@@ -93,7 +93,7 @@
 			if ($_SESSION['user']['role'] == 1) {
 				echo "<a href=?pg=detail&id=" . $vp['id_phim'] . " class='btn watch-button'>Xem ngay</a>";
 			} else {
-				echo "<a class='btn watch-button' id='DK_dk_button'>Đăng ký VIP</a>";
+				echo "<a class='btn watch-button' id='DK_dk_button'>Xem ngay</a>";
 			}
 			
 

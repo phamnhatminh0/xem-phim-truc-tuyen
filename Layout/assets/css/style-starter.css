@@ -184,12 +184,12 @@ a:hover {
 }
 
 a:not([href]) {
-  color: inherit;
+  /* color: inherit; */
   text-decoration: none;
 }
 
 a:not([href]):hover {
-  color: inherit;
+  /* color: inherit; */
   text-decoration: none;
 }
 
@@ -8559,7 +8559,7 @@ button.bg-dark:focus {
 
 .ml-3,
 .mx-3 {
-  margin-left: 1rem !important;
+  margin-left: 5rem !important;
 }
 
 .m-4 {

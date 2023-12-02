@@ -3,7 +3,7 @@
     <div class="w3l-breadcrumbs">
         <nav id="breadcrumbs" class="breadcrumbs">
             <div class="container page-wrapper" style="display: flex; gap: 3px;">
-                <a href="index.html">Home</a> » <span class="breadcrumb_last" aria-current="page">Chi tiết phim</span>
+                <a href="index.html">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Chi tiết phim</span>
             </div>
         </nav>
     </div>
