@@ -10,7 +10,6 @@ include_once "Dao/actor.php";
 include_once "Dao/comment.php";
 include_once "View/header.php";
 include_once "dao/d_user.php";
-
 if (!isset($_GET['pg'])) {
     $luotview = phim_luotxem();
     $vip = phim_vip();
@@ -165,6 +164,10 @@ if (!isset($_GET['pg'])) {
             include_once "View/history.php";
             break;
         case 'dangnhap':
+            if ($_SESSION["dagui"] == 1) {
+                echo "<script type='text/javascript'>alert('Mật khẩu của bạn đã được gửi. Vui lòng kiểm tra email và đổi mật khẩu.');</script>";
+                unset($_SESSION["dagui"]);
+              }
             if (isset($_POST['email']) && isset($_POST['pass'])) {
                 $kq = dangnhap($_POST['email'], $_POST['pass']);
                 if ($kq) {
@@ -176,6 +179,16 @@ if (!isset($_GET['pg'])) {
             }
             include_once "View/login.php";
             break;
+            case 'Forgotpassword':
+                $kq=checkdk($_POST['email']);
+                if($kq){
+                $_SESSION['gmail'] = $kq;
+                    header('Location:PHPMailer/index.php'); 
+                }else {
+                    $_SESSION['lổi'] = "email không tồn tại";
+                }
+                include_once "View/Forgotpassword.php";
+                break;
         case 'dangxuat':
             unset($_SESSION['user']);
             header('Location:?pg=home');

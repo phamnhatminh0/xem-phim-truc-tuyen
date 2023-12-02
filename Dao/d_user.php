@@ -31,6 +31,13 @@ function doiMatKhau($id_user, $pass)
     $sql = "UPDATE user SET pass = ? WHERE id_user = ?";
     return pdo_execute($sql, $pass, $id_user);
 }
+function upload($pass,$email)
+{
+    $sql = "UPDATE user
+    SET pass =?
+    WHERE email =?  ";
+    return pdo_execute($sql,$pass,$email);
+}
 
 function checkmk($pass)
 {
