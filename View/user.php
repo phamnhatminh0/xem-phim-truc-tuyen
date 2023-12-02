@@ -45,6 +45,7 @@
 								</li>
 								<li class="account__item">
 									<a href="?pg=dangxuat" class="account__link" onclick="return confirmLogout();">
+									<i class="fa-solid fa-right-from-bracket" style="margin-right: 20px;"></i>
 										Đăng xuất
 									</a>
 								</li>
