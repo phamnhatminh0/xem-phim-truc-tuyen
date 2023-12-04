@@ -169,11 +169,15 @@ if (!isset($_GET['pg'])) {
                 unset($_SESSION["dagui"]);
               }
             if (isset($_POST['email']) && isset($_POST['pass'])) {
-                $kq = dangnhap($_POST['email'], $_POST['pass']);
-                if ($kq) {
+                $kq = check_admin($_POST['email'], $_POST['pass']);
+                
+                if ($kq['role'] == 2) {
                     $_SESSION['user'] = $kq;
-                    header('Location: ?pg=home');
-                } else {
+                    header('Location: admin/index.php?pg=home');
+                }elseif ($kq['role'] == 3) {
+                    
+                }
+                 else {
                     $_SESSION['loi'] = 'Đăng nhập không thành công';
                 }
             }
