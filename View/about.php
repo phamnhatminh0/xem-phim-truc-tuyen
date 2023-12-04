@@ -12,7 +12,7 @@
 		<div class="container py-lg-4">
 			<div class="row ab-grids-sec align-items-center">
 				<div class="col-lg-6 ab-right">
-					<img class="img-fluid" src="Upload/images/banner1.jpg">
+					<img class="img-fluid" src="Upload/images/Banner/banner1.jpg">
 				</div>
 				<div class="col-lg-6 ab-left pl-lg-4 mt-lg-0 mt-5">
 					<h3 class="hny-title">GIẢI TRÍ TUYỆT VỜI</h3>
@@ -75,11 +75,11 @@
 					<div class="item vhny-grid">
 						<div class="d-grid team-info">
 							<div class="column position-relative">
-								<a href="#url"><img src="Upload/images/a1.jpg" alt=""
+								<a href="#url"><img src="Upload/images/User/us1.jpg" alt=""
 										class="img-fluid rounded team-image" /></a>
 							</div>
 							<div class="column text-center">
-								<h3 class="name-pos"><a href="#url">Dwayne johnson</a></h3>
+								<h3 class="name-pos"><a href="#url">Lại Gia Kiên</a></h3>
 
 							</div>
 						</div>
@@ -89,26 +89,11 @@
 						<div class="box16">
 							<div class="d-grid team-info">
 								<div class="column position-relative">
-									<a href="#url"><img src="Upload/images/a2.jpg" alt=""
+									<a href="#url"><img src="Upload/images/User/us2.jpg" alt=""
 											class="img-fluid rounded team-image" /></a>
 								</div>
 								<div class="column text-center">
-									<h3 class="name-pos"><a href="#url">Karen Gillan</a></h3>
-
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16">
-							<div class="d-grid team-info">
-								<div class="column position-relative">
-									<a href="#url"><img src="Upload/images/a3.jpg" alt=""
-											class="img-fluid rounded team-image" /></a>
-								</div>
-								<div class="column text-center">
-									<h3 class="name-pos"><a href="#url">Chris Hemsworth</a></h3>
+									<h3 class="name-pos"><a href="#url">Lê Phước Thịnh</a></h3>
 
 								</div>
 							</div>
@@ -119,11 +104,11 @@
 						<div class="box16">
 							<div class="d-grid team-info">
 								<div class="column position-relative">
-									<a href="#url"><img src="Upload/images/a4.jpg" alt=""
+									<a href="#url"><img src="Upload/images/User/us3.jpg" alt=""
 											class="img-fluid rounded team-image" /></a>
 								</div>
 								<div class="column text-center">
-									<h3 class="name-pos"><a href="#url">Elton John</a></h3>
+									<h3 class="name-pos"><a href="#url">Phạm Nhật Minh</a></h3>
 
 								</div>
 							</div>
@@ -134,11 +119,12 @@
 						<div class="box16">
 							<div class="d-grid team-info">
 								<div class="column position-relative">
-									<a href="#url"><img src="Upload/images/a5.jpg" alt=""
+									<a href="#url"><img src="Upload/images/User/us4.jpg" alt=""
 											class="img-fluid rounded team-image" /></a>
 								</div>
 								<div class="column text-center">
-									<h3 class="name-pos"><a href="#url">Liu Yifei</a></h3>
+									<h3 class="name-pos"><a href="#url">Nguyễn Quang trí</a></h3>
+
 								</div>
 							</div>
 						</div>
@@ -148,12 +134,11 @@
 						<div class="box16">
 							<div class="d-grid team-info">
 								<div class="column position-relative">
-									<a href="#url"><img src="Upload/images/a3.jpg" alt=""
+									<a href="#url"><img src="Upload/images/User/us5.jpg" alt=""
 											class="img-fluid rounded team-image" /></a>
 								</div>
 								<div class="column text-center">
-									<h3 class="name-pos"><a href="#url">Chris Hemsworth</a></h3>
-
+									<h3 class="name-pos"><a href="#url">Phạm Hồng Phước</a></h3>
 								</div>
 							</div>
 						</div>
@@ -185,7 +170,7 @@
 										<q>Chất lượng phim rất tốt và có rất nhiều bộ phim hay</q>
 									</blockquote>
 									<div class="testi-des">
-										<div class="test-img"><img src="Upload/images/team1.jpg" class="img-fluid"
+										<div class="test-img"><img src="Upload/images/User/us1.jpg" class="img-fluid"
 												alt="/">
 										</div>
 										<div class="peopl align-self">
@@ -203,7 +188,7 @@
 										<q>Chất lượng phim rất tốt và có rất nhiều bộ phim hay</q>
 									</blockquote>
 									<div class="testi-des">
-										<div class="test-img"><img src="Upload/images/team2.jpg" class="img-fluid"
+										<div class="test-img"><img src="Upload/images/User/us2.jpg" class="img-fluid"
 												alt="/">
 										</div>
 										<div class="peopl align-self">
@@ -221,7 +206,7 @@
 										<q>Chất lượng phim rất tốt và có rất nhiều bộ phim hay</q>
 									</blockquote>
 									<div class="testi-des">
-										<div class="test-img"><img src="Upload/images/team3.jpg" class="img-fluid"
+										<div class="test-img"><img src="Upload/images/User/us3.jpg" class="img-fluid"
 												alt="/">
 										</div>
 										<div class="peopl align-self">
@@ -239,7 +224,7 @@
 										<q>Chất lượng phim rất tốt và có rất nhiều bộ phim hay</q>
 									</blockquote>
 									<div class="testi-des">
-										<div class="test-img"><img src="Upload/images/team4.jpg" class="img-fluid"
+										<div class="test-img"><img src="Upload/images/User/us4.jpg" class="img-fluid"
 												alt="/">
 										</div>
 										<div class="peopl align-self">
@@ -257,7 +242,7 @@
 										<q>Chất lượng phim rất tốt và có rất nhiều bộ phim hay</q>
 									</blockquote>
 									<div class="testi-des">
-										<div class="test-img"><img src="Upload/images/team2.jpg" class="img-fluid"
+										<div class="test-img"><img src="Upload/images/User/us5.jpg" class="img-fluid"
 												alt="/">
 										</div>
 										<div class="peopl align-self">
@@ -275,7 +260,7 @@
 										<q>Chất lượng phim rất tốt và có rất nhiều bộ phim hay</q>
 									</blockquote>
 									<div class="testi-des">
-										<div class="test-img"><img src="Upload/images/team3.jpg" class="img-fluid"
+										<div class="test-img"><img src="Upload/images/User/us6.jpg" class="img-fluid"
 												alt="/">
 										</div>
 										<div class="peopl align-self">
