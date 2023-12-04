@@ -80,15 +80,13 @@
                      if(isset($_POST['btnadd'])){
                         $name=$_POST['name'];
                         $namsx=$_POST['namsx'];
-                        $luotxem=$_POST['luotxem'];
-                        $trangthai=$_POST['trangthai'];
                         $mota=$_POST['mota'];
                         $img=$_FILES['img']['name'];
                         $kq=movie_checkName($name);
                         if($kq){
                            $loi="Phim bạn nhập  đã tồn tại vui lòng nhập lại phim";
                         }else{
-                           movie_insert($name,$namsx,$luotxem,$trangthai,$mota,$img);
+                           movie_insert($name,$namsx,$mota,$img);
                            $target_dir = "images/movie/";
                            $target_file = $target_dir . basename($_FILES["img"]["name"]);
                            move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);             

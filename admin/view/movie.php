@@ -41,17 +41,6 @@
          </tr>
             <?php endforeach;?>
       </tbody>
-      <tfoot>
-         <tr>
-         <th>Name</th>
-         <th>Năm sản xuất</th>
-         <th>img</th>
-         <th>trạng thái</th>
-         <th>lượt xem</th>
-         <th>Mô tả</th>
-         <th>Chức năng</th>
-         </tr>
-      </tfoot>
    </table>
 </div>
 </div>

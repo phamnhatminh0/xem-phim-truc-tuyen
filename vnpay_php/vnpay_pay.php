@@ -55,8 +55,23 @@
                 </form> -->
 
          <form action="vnpay_create_payment.php" id="frmCreateOrder" method="post">     
+         <div >
+            <label for="name">Họ và tên:</label>
+             <input type="text" class="option-input" id="name" name="name" > 
+            </div>
+      
+            <div >
+                <label for="name">Địa chỉ:</label>
+                <input type="text" class="option-input" id="name" name="name"  > 
+            </div>
+            <div class="option-input">
+                <label for="name">Email:</label>
+                <input type="email" class="option-input" id="name" name="name"  > 
+            </div>
+
+
           <label for="amount">Số tiền</label>
-         <input class="form-control" data-val="true" data-val-number="The field Amount must be a number." 
+         <input class="option-input" data-val="true" data-val-number="The field Amount must be a number." 
          data-val-required="The Amount field is required." id="amount"  name="amount" type="number" value="99000" />
         <div class="class-form">
             <input type="radio" Checked="True" id="bankCode" name="bankCode" value="">

@@ -10,9 +10,9 @@ require_once 'pdo.php';
 //     $sql = "INSERT INTO theloai(ten,mota) VALUES(?,?)";
 //     pdo_execute($sql, $name,$mota);
 // }
-function movie_insert($name,$namsx,$luotxem,$trangthai,$mota,$img){
-    $sql = "INSERT INTO phim(ten,namsx,luotxem,trangthai,mota,img) VALUES(?,?,?,?,?,?)";
-    pdo_execute($sql, $name,$namsx,$luotxem,$trangthai,$mota,$img);
+function movie_insert($name,$namsx,$mota,$img){
+    $sql = "INSERT INTO phim(ten,namsx,mota,img) VALUES(?,?,?,?)";
+    pdo_execute($sql, $name,$namsx,$mota,$img);
 }
 function movie_update($id,$name,$namsx,$luotxem,$trangthai,$mota,$img){
     $sql = "UPDATE phim SET  ten=?,namsx=?,luotxem=?,trangthai=?,mota=?,img=? WHERE id_phim=?";

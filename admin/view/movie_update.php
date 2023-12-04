@@ -21,7 +21,7 @@
          </div>
          <div class="form-group">
             <label for="name">Năm sản xuất:</label>
-            <input type="text" class="form-control" value="<?=$movie_getId['namsx']?>" name="namsx" id="namsx" placeholder="">
+            <input type="number" class="form-control" value="<?=$movie_getId['namsx']?>" name="namsx" id="namsx" placeholder="">
          </div>
          <div class="form-group">
             <label for="name">Lượt xem:</label>
@@ -29,7 +29,8 @@
          </div>
          <div class="form-group">
             <label for="name">Mô tả:</label>
-            <input type="text" class="form-control" value="<?=$movie_getId['mota']?>" name="mota" id="mota" placeholder="">
+            <textarea class="form-control" name="mota" value="<?=$movie_getId['mota']?>"  id="mota" cols="10" rows="3"></textarea>
+            <!-- <input type="text" class="form-control" value="<?=$movie_getId['mota']?>" name="mota" id="mota" placeholder=""> -->
          </div>
          <div class="form-group">
             <label for="name">trangthai:</label>
@@ -46,7 +47,7 @@
          </div>
 
          <div class="form-group">
-            <button type="submit" name="btnupdate" class="btn btn-primary">Sửa</button>
+            <button type="submit" onclick="return check_form()" name="btnupdate" class="btn btn-primary">Sửa</button>
          </div>
          <?php
             if(isset($tb)&&($tb!="")){ echo $tb;}
@@ -54,3 +55,32 @@
       </form>
    </div>
 </div>
+<script>
+  function check_form(){
+        var ten = document.getElementById("name");
+        if(ten.value==""){
+            alert("Bạn cần nhập tên phim");
+            ten.focus();
+            return false;
+        }
+        var input = document.getElementById("name").value;
+         var check = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
+        if(check.test(input)){
+            alert("Tên phim bạn nhập có chứa ký tự đặc biệt!");
+            ten.focus();
+            return false;
+        }
+        var namsx = document.getElementById("namsx");
+        if(namsx.value==""){
+            alert("Bạn cần nhập năm sản xuất");
+            namsx.focus();
+            return false;
+        } 
+        var img = document.getElementById("img");
+        if(img.value==""){
+            alert("Bạn cần thêm hình");
+            ten.focus();
+            return false;
+        }
+    }
+</script>
