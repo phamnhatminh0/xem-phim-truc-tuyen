@@ -3,6 +3,23 @@ function phimmoi(){
     $sql= "SELECT * FROM phim WHERE namsx = (SELECT MAX(namsx) FROM phim) LIMIT 4;";
     return pdo_query($sql);
 }
+function phimmoicapnhat(){
+    $sql= "SELECT *
+    FROM phim
+    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
+    JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
+    WHERE phim.namsx = 2023 AND phim.trangthai != 1";
+    return pdo_query($sql);
+}
+function phimvip(){
+    $sql= "SELECT *
+    FROM phim
+    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
+    JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
+    WHERE phim.trangthai = 2 AND phim.trangthai != 1";
+    return pdo_query($sql);
+}
+
 function hanhdong(){
     $sql= "SELECT *
     FROM phim P
@@ -111,4 +128,101 @@ function tim_phim($ten){
 $sql="SELECT * FROM phim WHERE ten LIKE '%$ten%'";
 return pdo_query($sql);
 }
+function movie_count(){
+    $sql="SELECT count(id_phim) FROM phim";
+    return pdo_query_value($sql);
+}
+function theloai_count(){
+    $sql="SELECT count(id_loai) FROM theloai";
+    return pdo_query_value($sql);
+}
+function TVDK_count(){
+    $sql="SELECT count(id_user) FROM user Where role = 1";
+    return pdo_query_value($sql);
+}
+function luotxem_SUM(){
+    $sql="SELECT SUM(luotxem) FROM phim";
+    return pdo_query_value($sql);
+}
+function phimtheloai1(){
+    $sql= "SELECT COUNT(tap.tapphim) AS tongsotap, phim.ten, phim.namsx, phim.mota, phim.id_phim, phim.img, theloai.tentl
+    FROM phim
+    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
+    JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
+    JOIN tap ON phim.id_phim = tap.id_phim
+    WHERE loaiphim.id_loai = 1
+    GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img LIMIT 4";
+    return pdo_query($sql);
+}
+function phimtheloai2(){
+    $sql= "SELECT COUNT(tap.tapphim) AS tongsotap, phim.ten, phim.namsx, phim.mota, phim.id_phim, phim.img, theloai.tentl
+    FROM phim
+    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
+    JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
+    JOIN tap ON phim.id_phim = tap.id_phim
+    WHERE loaiphim.id_loai = 2
+    GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img LIMIT 4";
+    return pdo_query($sql);
+}
+function phimtheloai3(){
+    $sql= "SELECT COUNT(tap.tapphim) AS tongsotap, phim.ten, phim.namsx, phim.mota, phim.id_phim, phim.img, theloai.tentl
+    FROM phim
+    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
+    JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
+    JOIN tap ON phim.id_phim = tap.id_phim
+    WHERE loaiphim.id_loai = 3
+    GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img LIMIT 4";
+    return pdo_query($sql);
+}
+function phimtheloai4(){
+    $sql= "SELECT COUNT(tap.tapphim) AS tongsotap, phim.ten, phim.namsx, phim.mota, phim.id_phim, phim.img, theloai.tentl
+    FROM phim
+    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
+    JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
+    JOIN tap ON phim.id_phim = tap.id_phim
+    WHERE loaiphim.id_loai = 4
+    GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img LIMIT 4";
+    return pdo_query($sql);
+}
+function phimtheloai5(){
+    $sql= "SELECT COUNT(tap.tapphim) AS tongsotap, phim.ten, phim.namsx, phim.mota, phim.id_phim, phim.img, theloai.tentl
+    FROM phim
+    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
+    JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
+    JOIN tap ON phim.id_phim = tap.id_phim
+    WHERE loaiphim.id_loai = 5
+    GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img LIMIT 4";
+    return pdo_query($sql);
+}
+function phimtheloai6(){
+    $sql= "SELECT COUNT(tap.tapphim) AS tongsotap, phim.ten, phim.namsx, phim.mota, phim.id_phim, phim.img, theloai.tentl
+    FROM phim
+    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
+    JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
+    JOIN tap ON phim.id_phim = tap.id_phim
+    WHERE loaiphim.id_loai = 6
+    GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img LIMIT 4";
+    return pdo_query($sql);
+}
+function phimtheloai7(){
+    $sql= "SELECT COUNT(tap.tapphim) AS tongsotap, phim.ten, phim.namsx, phim.mota, phim.id_phim, phim.img, theloai.tentl
+    FROM phim
+    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
+    JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
+    JOIN tap ON phim.id_phim = tap.id_phim
+    WHERE loaiphim.id_loai = 7
+    GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img LIMIT 4";
+    return pdo_query($sql);
+}
+function phimtheloai8(){
+    $sql= "SELECT COUNT(tap.tapphim) AS tongsotap, phim.ten, phim.namsx, phim.mota, phim.id_phim, phim.img, theloai.tentl
+    FROM phim
+    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
+    JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
+    JOIN tap ON phim.id_phim = tap.id_phim
+    WHERE loaiphim.id_loai = 8
+    GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img LIMIT 4";
+    return pdo_query($sql);
+}
 ?>
+

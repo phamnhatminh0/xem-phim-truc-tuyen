@@ -16,13 +16,9 @@
 				</div>
 				<div class="col-lg-6 ab-left pl-lg-4 mt-lg-0 mt-5">
 					<h3 class="hny-title">GIẢI TRÍ TUYỆT VỜI</h3>
-					<p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam id quisquam ipsam
-						molestiae ad eius accusantium? Nulla dolorem perferendis inventore! posuere cubilia Curae;
-						Nunc non risus in justo convallis feugiat.</p>
-					<div class="ready-more mt-4">
-						<a href="#" class="btn read-button">Tìm hiểu thêm <span class="fa fa-angle-double-right ml-2"
-								aria-hidden="true"></span></a>
-					</div>
+					<p class="mt-3">Với trang web xem phim của chúng tôi, bạn có thể thoải mái thưởng thức những 
+					bộ phim yêu thích của mình ngay tại nhà, vào bất kỳ lúc nào và bất kỳ nơi đâu chỉ
+					với một kết nối internet.</p>
 				</div>
 			</div>
 
@@ -30,7 +26,7 @@
 				<div class="stats_left">
 					<div class="counter_grid">
 						<div class="icon_info">
-							<p class="counter">65</p>
+							<p class="counter"><?=$tongphim?></p>
 							<h4>Bộ phim</h4>
 
 						</div>
@@ -39,8 +35,8 @@
 				<div class="stats_left">
 					<div class="counter_grid">
 						<div class="icon_info">
-							<p class="counter">165</p>
-							<h4>Phim bộ</h4>
+							<p class="counter"><?=$tongtheloai?></p>
+							<h4>Thể loại</h4>
 
 						</div>
 					</div>
@@ -48,8 +44,8 @@
 				<div class="stats_left">
 					<div class="counter_grid">
 						<div class="icon_info">
-							<p class="counter">463</p>
-							<h4>Hội viên</h4>
+							<p class="counter"><?=$luotxem?></p>
+							<h4>Lượt xem</h4>
 
 						</div>
 					</div>
@@ -57,8 +53,8 @@
 				<div class="stats_left">
 					<div class="counter_grid">
 						<div class="icon_info">
-							<p class="counter">5063</p>
-							<h4>Năm hoạt động</h4>
+							<p class="counter"><?=$tongTVDK?></p>
+							<h4>Thành viên mua gói</h4>
 
 						</div>
 					</div>
