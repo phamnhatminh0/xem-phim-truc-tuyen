@@ -10,17 +10,31 @@
 </div>
 <!-- Breadcrumb End -->
 <!-- Normal Breadcrumb Begin -->
-<section class="normal-breadcrumb set-bg" data-setbg="upload/images/banner/banner1.jpg">
+<section class="normal-breadcrumb set-bg" data-setbg="upload/images/banner/banner1.jpg" style="position: relative; opacity:0.3" >
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="normal__breadcrumb__text">
-                    <h2 style="color: #00dc5a;">ĐĂNG NHẬP</h2>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<div class="h2">
+<h2 class="h2_login" style="color: #00dc5a; "><strong>ĐĂNG NHẬP</strong></h2>
+
+</div>
+
+<style>
+    .h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 300px;
+        width: 100%;   
+    }
+</style>
 <!-- Normal Breadcrumb End -->
 
 <!-- Login Section Begin -->

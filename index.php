@@ -10,14 +10,27 @@ include_once "Dao/actor.php";
 include_once "Dao/comment.php";
 include_once "View/header.php";
 include_once "dao/d_user.php";
+include_once "Dao/history.php";
+include_once "Dao/favorite.php";
 if (!isset($_GET['pg'])) {
     $luotview = phim_luotxem();
-    $vip = phim_vip();
-    $movie = phimmoi();
-    $moviehd = hanhdong();
-    $movietc = tinhcam();
-    $moviekd = kinhdi();
-    $movierole = phim_role();
+            $vip = phim_vip();
+            $movie = phimmoi();
+            $moviehd = hanhdong();
+            $movietc = tinhcam();
+            $moviekd = kinhdi();
+            $movierole = phim_role();
+            // Kiểm tra xem biến $_SESSION['user'] có tồn tại và có giá trị hay không
+            if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
+                $popup = $_SESSION['user']['id_user'];
+                $anhien = hienuser($popup);
+                // Gán giá trị mặc định cho biến $role là 0 nếu biến $anhien không có giá trị hoặc không có chỉ mục 'role'
+                $role = $anhien['role'] ?? 0;
+            } else {
+                // Nếu biến $_SESSION['user'] không tồn tại hoặc không có giá trị, gán giá trị mặc định cho các biến $popup và $role là 0
+                $popup = 0;
+                $role = 0;
+            }
 
     include "View/home.php";
 } else {
@@ -64,26 +77,31 @@ if (!isset($_GET['pg'])) {
 
             $chitiet = chitietphim($_GET["id"]);
             $cungtheloai = phimcungtheloai($chitiet["tentl"], $chitiet["id_phim"]);
-            include_once "View/movie-detail.php";
-            break;
-
-
+            
+            if (isset($_POST["submit"])) {
+                yeuthich($_GET["id"],$_SESSION["user"]["id_user"]);
+            }
             include_once "View/movie-detail.php";
             break;
 
         case 'watch':
-            if ($_GET["tap"]) {
+            if (isset($_GET["tap"])&& ($_GET["tap"]>0) ) {
                 $xuatphim = xuat_phimtap($_GET["id"], $_GET["tap"]);
-            } else {
-                $xuatphim = xuatphim($_GET["id"]);
+                lichsu($_GET["id"],$_SESSION["user"]["id_user"],$_GET["tap"]);
+                luotxem($_GET["id"]);
             }
-
+           
             $binhluan = binhluan($_GET["id"]);
             $dienvien = dienvien($_GET["id"]);
             $tap = xuat_tap($_GET["id"]);
-
+            
+            if(isset($_POST["submit"])&&($_POST["submit"])){
+                them_bl($_SESSION["user"]["id_user"],$_GET["id"],$_POST["thembl"]);
+                header('Location:?pg=watch&id='.$_POST['id']);
+            }
 
             include_once "View/watch-video.php";
+
             break;
 
         case 'user':

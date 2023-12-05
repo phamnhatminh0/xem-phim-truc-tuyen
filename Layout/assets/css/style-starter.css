@@ -14494,7 +14494,7 @@ p.title-para {
 }
 
 .w3l-header .navbar-nav .nav-item.active a.nav-link {
-  color: var(--theme-rose);
+  color: #fff;
 }
 
 .dropdown.active .dropdown-item.active {
