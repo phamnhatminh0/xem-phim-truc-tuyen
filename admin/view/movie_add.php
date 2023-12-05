@@ -24,6 +24,14 @@
             <input type="number" class="form-control" name="namsx" id="namsx" placeholder="">
          </div>
          <div class="form-group">
+            <label for="name">Tập phim:</label>
+            <input type="number" class="form-control" name="tap" id="tap" placeholder="">
+         </div>
+         <div class="form-group">
+            <label for="name">video:</label>
+            <input type="text" class="form-control" name="video" id="video" placeholder="">
+         </div>
+         <div class="form-group">
             <label for="name">Mô tả:</label>
             <textarea class="form-control" name="mota" id="mota" cols="10" rows="3"></textarea>
          </div>

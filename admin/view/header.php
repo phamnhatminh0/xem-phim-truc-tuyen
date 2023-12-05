@@ -47,6 +47,10 @@
                <li>
                   <a href="index.php?pg=comment"><i class="fa-solid fa-comments ico-side"></i>Quản lí Bình luận</a>
                </li>
+               <li>
+                  <a href="../index.php"><i class="fa-solid fa-right-from-bracket ico-side"></i>đăng xuất</a>
+               </li>
+             
              
             </ul>
          </nav>

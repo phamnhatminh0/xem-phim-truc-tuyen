@@ -8,7 +8,7 @@
    <table id="example" class="table table-striped" style="width:100%">
       <thead>
          <tr>
-            <th>STT</th>
+        
             <th>Giá trị</th>
             <th>Nội dung</th>
             <th>Tên gói</th>
@@ -18,7 +18,7 @@
       <tbody>
          <?php foreach($dsgoi as $ds):?>
          <tr>
-            <td><?=$ds['id_goi']?></td>
+         
             <td><?=$ds['giatri']?></td>
             <td><?=$ds['noidung']?></td>
             <td><?=$ds['ten_goi']?></td>

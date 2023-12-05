@@ -10,25 +10,43 @@ require_once 'pdo.php';
 //     $sql = "INSERT INTO theloai(ten,mota) VALUES(?,?)";
 //     pdo_execute($sql, $name,$mota);
 // }
-function movie_insert($name,$namsx,$mota,$img){
-    $sql = "INSERT INTO phim(ten,namsx,mota,img) VALUES(?,?,?,?)";
-    pdo_execute($sql, $name,$namsx,$mota,$img);
+function movie_insert($name, $namsx, $mota, $img,$video,$tap) {
+    $sql = "INSERT INTO phim (ten, namsx, mota, img) VALUES (?, ?, ?, ?);
+            INSERT INTO tap (id_phim, video, tapphim) VALUES (LAST_INSERT_ID(), ?, ?)";
+    pdo_execute($sql, $name, $namsx,  $mota, $img, $video, $tap);
 }
-function movie_update($id,$name,$namsx,$luotxem,$trangthai,$mota,$img){
-    $sql = "UPDATE phim SET  ten=?,namsx=?,luotxem=?,trangthai=?,mota=?,img=? WHERE id_phim=?";
-    pdo_execute($sql,$name,$namsx,$luotxem,$trangthai,$mota,$img ,$id);
+function movie_update($name,$namsx,$luotxem,$trangthai,$mota,$img, $video, $tap, $id){
+    $sql = "UPDATE phim 
+    INNER JOIN tap ON phim.id_phim = tap.id_phim
+    SET phim.ten = ?,
+        phim.namsx = ?,
+        phim.luotxem = ?,
+        phim.trangthai = ?,
+        phim.mota = ?,
+        phim.img = ?,
+        tap.video = ?,
+        tap.tapphim = ?
+    WHERE phim.id_phim = ?";
+    pdo_execute($sql,$name,$namsx,$luotxem,$trangthai,$mota,$img, $video, $tap, $id);
 }
 function movie_select_by_id($id){
-    $sql = "SELECT * FROM phim WHERE id_phim=?";
+    $sql = "SELECT * FROM phim join  tap on phim.id_phim=tap.id_phim  WHERE phim.id_phim=? ";
     return pdo_query_one($sql, $id);
+
 }
-function movie_all(){
-    $sql = "SELECT * FROM phim ";
+function movie_all($page=1){
+    $batdau=($page-1)*8;
+    $sql = "SELECT * FROM phim join  tap on phim.id_phim=tap.id_phim limit $batdau,8";
     return pdo_query($sql);
 }
-function movie_delete($id){
-    $sql = "DELETE FROM phim WHERE id_phim=?";
-    return pdo_execute($sql,$id);
+function movie_delete($id) {
+    // Nếu có quan hệ khóa ngoại, bạn có thể cần xóa các bản ghi từ bảng 'tap' trước
+    $sqlDeleteTap = "DELETE FROM tap WHERE id_phim=?";
+    pdo_execute($sqlDeleteTap, $id);
+
+    // Sau đó, xóa bản ghi từ bảng 'phim'
+    $sqlDeletePhim = "DELETE FROM phim WHERE id_phim=?";
+    return pdo_execute($sqlDeletePhim, $id);
 }
 function movie_get_img($id){
     $sql = "SELECT img FROM phim  WHERE id_phim=?";
@@ -46,6 +64,15 @@ function movie_Pagination($keyword){
 }
 function movie_checkName($name){
     return pdo_query_one("SELECT * from phim where ten=?",$name);
+}
+function movie_Pagination2($page=1){
+    $batdau=($page-1)*8;
+    $sql="SELECT * FROM phim  limit $batdau,8";
+    return pdo_query($sql);
+}
+function movie_Pagination2b(){
+    $sql="SELECT count(*) FROM phim ";
+    return pdo_query_value($sql);
 }
 // function movietype_select_by_id($id){
 //     $sql = "SELECT * FROM theloai WHERE id_loai=?";

@@ -19,7 +19,7 @@
     <body>
         <?php require_once("./config.php"); ?>             
         <div class="container">
-        <h3>Tạo mới đơn hàng</h3>
+       
             <div class="table-responsive">
                 <!-- <form action="/vnpay_php/vnpay_create_payment.php" id="frmCreateOrder" method="post">        
                     <div class="form-group">
@@ -56,6 +56,7 @@
 
          <form action="vnpay_create_payment.php" id="frmCreateOrder" method="post">     
          <div >
+    
             <label for="name">Họ và tên:</label>
              <input type="text" class="option-input" id="name" name="name" > 
             </div>
@@ -114,9 +115,7 @@
             <p>
                 &nbsp;
             </p>
-            <footer class="footer">
-                <p>&copy; VNPAY 2023</p>
-            </footer>
+         
         </div>  
     </body>
 </html>

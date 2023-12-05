@@ -8,7 +8,7 @@
    <table id="example" class="table table-striped" style="width:100%">
       <thead>
          <tr>
-            <th>STT</th>
+           
             <th>Tên diễn viên</th>
             <th>ảnh</th>
             <th>Chức năng</th>
@@ -17,7 +17,7 @@
       <tbody>
       <?php foreach($dsdv as $dv):?>
          <tr>
-            <td><?=$dv['id_dienvien']?></td>
+           
             <td><?=$dv['ten_dv']?></td>
             <td><img src="images/actor/<?=$dv['img_dv']?>" class="rounded-2" style="width: 100px; height: 100px;" alt=""></td>
             <td>

@@ -9,9 +9,9 @@ include_once "Dao/config.php";
 include_once "Dao/actor.php";
 include_once "Dao/comment.php";
 include_once "View/header.php";
-include_once "dao/d_user.php";
+include_once "Dao/d_user.php";
 if (!isset($_GET['pg'])) {
-    $luotview = phim_luotxem();
+    // $luotview = phim_luotxem();
     $vip = phim_vip();
     $movie = phimmoi();
     $moviehd = hanhdong();
@@ -20,10 +20,10 @@ if (!isset($_GET['pg'])) {
     $movierole = phim_role();
 
     include "View/home.php";
-} else {
+} else{
     switch ($_GET['pg']) {
         case 'home':
-            $luotview = phim_luotxem();
+            // $luotview = phim_luotxem();
             $vip = phim_vip();
             $movie = phimmoi();
             $moviehd = hanhdong();
@@ -169,13 +169,11 @@ if (!isset($_GET['pg'])) {
                 unset($_SESSION["dagui"]);
               }
             if (isset($_POST['email']) && isset($_POST['pass'])) {
-                $kq = check_admin($_POST['email'], $_POST['pass']);
+                $kq = dangnhap($_POST['email'], $_POST['pass']);
                 
-                if ($kq['role'] == 2) {
+                if ($kq) {
                     $_SESSION['user'] = $kq;
-                    header('Location: admin/index.php?pg=home');
-                }elseif ($kq['role'] == 3) {
-                    
+                    header('Location: ?pg=home');
                 }
                  else {
                     $_SESSION['loi'] = 'Đăng nhập không thành công';

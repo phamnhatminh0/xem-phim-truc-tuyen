@@ -22,6 +22,7 @@
             <th>trạng thái</th>
             <th>lượt xem</th>
             <th>Mô tả</th>
+            <th>tập phim</th>
             <th>Chức năng</th>
          </tr>
       </thead>
@@ -34,6 +35,8 @@
             <td><?=$ds['trangthai']?></td>
             <td><?=$ds['luotxem']?></td>
             <td><?=$ds['mota']?></td>
+            <td><?=$ds['tapphim']?></td>
+
             <td>
                <a href="index.php?pg=movie_update&id=<?=$ds['id_phim']?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i> Sửa</a>
                <button onclick="delmovie(<?=$ds['id_phim']?>)" class="btn btn-danger" ><i class="fa-solid fa-trash"></i> Xóa</button>
@@ -42,6 +45,43 @@
             <?php endforeach;?>
       </tbody>
    </table>
+      <!-- Pagination -->
+      <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item <?=($page<=1)?'disabled':''?> ">
+      <a class="page-link" href="index.php?pg=movie&page=<?=$page-1?>" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <?php for($i=1;$i<=$sotrang2;$i++):?>
+    <li class="page-item <?=($page==$i)?'active':''?>"><a class="page-link" href="index.php?pg=movie&page=<?=$i?>"><?=$i?></a></li>
+     <?php endfor;?> 
+    <li class="page-item <?=($page>=$sotrang2)?'disabled':''?> ">
+      <a class="page-link" href="index.php?pg=movie&page=<?=$page+1?>" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+   <!-- Pagination -->
+   <!-- <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav> -->
 </div>
 </div>
 </div>

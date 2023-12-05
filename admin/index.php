@@ -8,7 +8,7 @@
    include "../Dao/phim.php";
    include "../Dao/binh-luan.php";
    include "../Dao/goi.php";
-   // if(isset($_SESSION['user'])&& $_SESSION['user']==2){
+  // if(isset($_SESSION['user'])&& $_SESSION['user']==2){
       if(isset($_GET['pg'])){
          switch ($_GET['pg']) {
             case 'home':
@@ -72,57 +72,69 @@
                        // chức năng thêm sửa xóa loại phim
            
             case 'movie':
-               $dsMovie=movie_all();
+               $page = isset($_GET['page']) ? $_GET['page'] : 1;
+               $dsMovie=movie_all($page);
+               $sotrang2=ceil(movie_Pagination2b()/8);
                include "view/header.php";
                include "view/movie.php";
                break;
-                  case 'movie_add':
-                     if(isset($_POST['btnadd'])){
-                        $name=$_POST['name'];
-                        $namsx=$_POST['namsx'];
-                        $mota=$_POST['mota'];
-                        $img=$_FILES['img']['name'];
-                        $kq=movie_checkName($name);
-                        if($kq){
-                           $loi="Phim bạn nhập  đã tồn tại vui lòng nhập lại phim";
-                        }else{
-                           movie_insert($name,$namsx,$mota,$img);
-                           $target_dir = "images/movie/";
-                           $target_file = $target_dir . basename($_FILES["img"]["name"]);
-                           move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);             
-                           $tbMovieAdd="Bạn đã thêm phim thành công vào danh sách phim!";
-                        }
-                     }
-                     include "view/header.php";
-                     include "view/movie_add.php";
-                     break;
-                  case 'movie_update':
-                        if(isset($_GET['id'])&&($_GET['id'])>0){
-                           $id=$_GET['id'];
-                              if(isset($_POST['btnupdate'])){
+                     case 'movie_add':
+                        if(isset($_POST['btnadd'])){
                            $name=$_POST['name'];
                            $namsx=$_POST['namsx'];
-                           $luotxem=$_POST['luotxem'];
-                           $trangthai=$_POST['trangthai'];
                            $mota=$_POST['mota'];
+                           if (isset($_POST['tap']) && ($_POST['tap'])) {
+                              $tap=$_POST['tap'];
+                           }
+                           $video=$_POST['video'];
                            $img=$_FILES['img']['name'];
                            $kq=movie_checkName($name);
                            if($kq){
                               $loi="Phim bạn nhập  đã tồn tại vui lòng nhập lại phim";
-                           }else{     
-                              
-                              movie_update($id,$name,$namsx,$luotxem,$trangthai,$mota,$img);
+                           }else{
+                              movie_insert($name,$namsx,$mota,$img, $video, $tap);
                               $target_dir = "images/movie/";
                               $target_file = $target_dir . basename($_FILES["img"]["name"]);
                               move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);             
-                              $tbMovieEdit="Bạn đã sửa thông tin phim thành công thành công!";
+                              $tbMovieAdd="Bạn đã thêm phim thành công vào danh sách phim!";
                            }
                         }
-                       $movie_getId= movie_select_by_id($id);
-                        }
                         include "view/header.php";
-                        include "view/movie_update.php";
+                        include "view/movie_add.php";
                         break;
+                     case 'movie_update':
+                           if(isset($_GET['id'])&&($_GET['id'])>0){
+                              $id=$_GET['id'];
+                              
+                                 if(isset($_POST['btnupdate'])){
+                              $name=$_POST['name'];
+                              $namsx=$_POST['namsx'];
+                              $luotxem=$_POST['luotxem'];
+                              $trangthai=$_POST['trangthai'];
+                              $mota=$_POST['mota'];
+                              if (isset($_POST['tap']) && ($_POST['tap'])) {
+                                 $tap=$_POST['tap'];
+                              }
+                              $video=$_POST['video'];
+                              $img=$_FILES['img']['name'];
+                              $kq=movie_checkName($name);
+                              if($kq){
+                                 $loi="Phim bạn nhập  đã tồn tại vui lòng nhập lại phim";
+                              }else{     
+                                 // movie_update_tap($id,$tap,$video); //tap
+                                 movie_update($name,$namsx,$luotxem,$trangthai,$mota,$img, $video, $tap, $id); //phim
+                                 $target_dir = "images/movie/";
+                                 $target_file = $target_dir . basename($_FILES["img"]["name"]);
+                                 move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);             
+                                 $tbMovieEdit="Bạn đã sửa thông tin phim thành công thành công!";
+                              }
+                           }
+                           $movie_getId= movie_select_by_id($id);
+                       
+                           }
+                           include "view/header.php";
+                           include "view/movie_update.php";
+                           break;
                   case 'delmovie':
                            if(isset($_GET['id'])&&($_GET['id'])>0){
                               $id=$_GET['id'];
@@ -147,11 +159,12 @@
                               if(isset($_GET['page'])){
                                  $page=$_GET['page'];
                               }
-                              $sotrang=ceil(movie_Pagination($_GET['keyword'])/8);
+                              $sotrang=ceil( movie_pagination($_GET['keyword'])/8);
                               $kq=movie_search($_GET['keyword'],$page);
                               include "view/header.php";
                               include "view/movie_search.php";
                               break;
+                         
             case 'actor':
               $dsdv= dienvien_all();
               include "view/header.php";
@@ -335,7 +348,7 @@
       }
       
    
-   // }
+   //}
   
    
 ?>

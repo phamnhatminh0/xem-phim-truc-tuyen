@@ -30,7 +30,13 @@
          <div class="form-group">
             <label for="name">Mô tả:</label>
             <textarea class="form-control" name="mota" value="<?=$movie_getId['mota']?>"  id="mota" cols="10" rows="3"></textarea>
-            <!-- <input type="text" class="form-control" value="<?=$movie_getId['mota']?>" name="mota" id="mota" placeholder=""> -->
+         </div>
+         <div class="form-group">
+            <label for="name">Tập:</label>
+            <input type="text" class="form-control" value="<?=$movie_getId['tapphim']?>" name="tap" id="tap" placeholder="">
+         </div> <div class="form-group">
+            <label for="name">Video:</label>
+            <input type="text" class="form-control" value="<?=$movie_getId['video']?>" name="video" id="video" placeholder="">
          </div>
          <div class="form-group">
             <label for="name">trangthai:</label>
