@@ -36,7 +36,7 @@
 							<h3 class="hny-title">Phim mới cập nhật</h3>
 						</div>
 						<div class="headerhny-right text-lg-right">
-							<h4><a class="show-title" href="genre.html">Hiển thị tất cả</a></h4>
+							<h4><a class="show-title" href="?pg=genrenew">Hiển thị tất cả</a></h4>
 						</div>
 					</div>
 				</div>
@@ -71,7 +71,7 @@
 							<h3 class="hny-title" style="color: #f4cb9b;">Độc quyền trên movieon</h3>
 						</div>
 						<div class="headerhny-right text-lg-right">
-							<h4><a class="show-title" href="genre.html">Hiển thị tất cả</a></h4>
+							<h4><a class="show-title" href="?pg=genrevip">Hiển thị tất cả</a></h4>
 						</div>
 					</div>
 				</div>

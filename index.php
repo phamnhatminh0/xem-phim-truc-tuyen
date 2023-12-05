@@ -64,8 +64,30 @@ if (!isset($_GET['pg'])) {
 
             include_once "View/genre.php";
             break;
-
+            case 'genrechinh' :
+                $phimtheloai1 = phimtheloai1();
+                $phimtheloai2 = phimtheloai2();
+                $phimtheloai3 = phimtheloai3();
+                $phimtheloai4 = phimtheloai4();
+                $phimtheloai5 = phimtheloai5();
+                $phimtheloai6 = phimtheloai6();
+                $phimtheloai7 = phimtheloai7();
+                $phimtheloai8 = phimtheloai8();
+                include_once "View/genrechinh.php";
+                break;
+        case 'genrenew' :
+            $phimmoicapnhat = phimmoicapnhat();
+            include_once "View/genrenew.php";
+            break;
+        case 'genrevip' :
+                $phimvip = phimvip();
+                include_once "View/genrevip.php";
+                break;
         case 'about':
+            $tongphim = movie_count();
+            $tongtheloai = theloai_count();
+            $tongTVDK = TVDK_count();
+            $luotxem = luotxem_SUM();
             include_once "View/about.php";
             break;
 
