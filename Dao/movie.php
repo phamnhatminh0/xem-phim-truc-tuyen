@@ -51,7 +51,7 @@ function chitietphim($id_phim){
    JOIN theLoai ON loaiphim.id_loai = theloai.id_loai
    JOIN tap ON phim.id_phim = tap.id_phim
    WHERE phim.id_phim =?
-   GROUP BY phim.ten,phim.namsx,phim.mota,phim.id_phim,theloai.tentl,phim.img";
+   GROUP BY phim.ten,phim.namsx,phim.mota,phim.id_phim,theloai.tentl,phim.img,tap.id_tap";
    return pdo_query_one($sql,$id_phim);
 }
 function phimcungtheloai($tentl,$id_phim){
