@@ -28,9 +28,32 @@
          </div>
 
          <div class="form-group">
-            <button type="submit" name="btnedit" class="btn btn-primary">Sửa </button>
+            <button type="submit" onclick="return check_form()" name="btnedit" class="btn btn-primary">Sửa </button>
          </div>
          
       </form>
    </div>
 </div>
+<script>
+  function check_form(){
+        var ten = document.getElementById("name");
+        if(ten.value==""){
+            alert("Bạn cần nhập tên gói");
+            ten.focus();
+            return false;
+        }
+        var input = document.getElementById("name").value;
+      var check = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
+        if(check.test(input)){
+            alert("Tên gói bạn nhập có chứa ký tự đặc biệt!");
+            ten.focus();
+            return false;
+        }
+        var giatri = document.getElementById("giatri");
+        if(giatri.value==""){
+            alert("Bạn cần nhập giá trị");
+            giatri.focus();
+            return false;
+        } 
+    }
+</script>

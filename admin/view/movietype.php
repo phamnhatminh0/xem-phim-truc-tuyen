@@ -8,7 +8,7 @@
    <table id="example" class="table table-striped" style="width:100%">
       <thead>
          <tr>
-            <th>STT</th>
+           
             <th>Tên loại</th>
             <th>Mô tả</th>
             <th>Chức năng</th>
@@ -17,7 +17,7 @@
       <tbody>
          <?php foreach($dstl as $dm):?>
          <tr>
-            <td><?=$dm['id_loai']?></td>
+          
             <td><?=$dm['tentl']?></td>
             <td><?=$dm['mota']?></td>
             <td>

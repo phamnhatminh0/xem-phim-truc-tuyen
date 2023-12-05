@@ -25,9 +25,32 @@
          </div>
 
          <div class="form-group">
-            <button type="submit" name="btnupdate" class="btn btn-primary">Sửa </button>
+            <button type="submit" onclick="return check_form()" name="btnupdate" class="btn btn-primary">Sửa </button>
          </div>
 
       </form>
    </div>
 </div>
+<script>
+  function check_form(){
+        var ten = document.getElementById("name");
+        if(ten.value==""){
+            alert("Bạn cần nhập tên diễn viên");
+            ten.focus();
+            return false;
+        }
+        var input = document.getElementById("name").value;
+          var check = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
+        if(check.test(input)){
+            alert("Tên diễn viên bạn nhập có chứa ký tự đặc biệt!");
+            ten.focus();
+            return false;
+        }
+        var img = document.getElementById("img");
+        if(img.value==""){
+            alert("Bạn cần thêm hình");
+            ten.focus();
+            return false;
+        }
+    }
+</script>

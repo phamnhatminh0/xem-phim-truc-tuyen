@@ -33,7 +33,7 @@ if (!isset($_GET['pg'])) {
             }
 
     include "View/home.php";
-} else {
+} else{
     switch ($_GET['pg']) {
         case 'home':
             $luotview = phim_luotxem();
@@ -225,10 +225,12 @@ if (!isset($_GET['pg'])) {
               }
             if (isset($_POST['email']) && isset($_POST['pass'])) {
                 $kq = dangnhap($_POST['email'], $_POST['pass']);
+                
                 if ($kq) {
                     $_SESSION['user'] = $kq;
                     header('Location: ?pg=home');
-                } else {
+                }
+                 else {
                     $_SESSION['loi'] = 'Đăng nhập không thành công';
                 }
             }

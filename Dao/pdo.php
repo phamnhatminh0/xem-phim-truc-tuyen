@@ -5,7 +5,7 @@
  */
 function pdo_get_connection()
 {
-    $dburl = "mysql:host=localhost:3307;dbname=movieon;charset=utf8";
+    $dburl = "mysql:host=localhost;dbname=movieon;charset=utf8";
     $username = 'root';
     $password = '';
 
@@ -95,6 +95,30 @@ function pdo_query_value($sql)
     } catch (PDOException $e) {
         throw $e;
     } finally {
+        unset($conn);
+    }
+}
+function pdo_query_exists($sql){
+    $sql_args = array_slice(func_get_args(), 1);
+
+    try {
+        $conn = pdo_get_connection();
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($sql_args);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        // Check if the row exists (not empty)
+        if ($row) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    catch(PDOException $e){
+        // Handle the exception (you might want to log or do something else)
+        throw $e;
+    }
+    finally{
+        // Close the database connection
         unset($conn);
     }
 }
