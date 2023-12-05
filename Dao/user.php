@@ -5,17 +5,47 @@ function user_insert($username,$password){
     pdo_execute($sql,$username,$password);
 }
 
-function user_select_all(){
-    $sql = "SELECT * FROM user";
+function user_select_all()
+{
+    $sql = "SELECT user.*, lsgiaodich.ngaydk, lsgiaodich.ngayhethan FROM user 
+            LEFT JOIN lsgiaodich ON user.id_user = lsgiaodich.id_user";
     return pdo_query($sql);
 }
-function user_select_by_id($id){
-    $sql = "SELECT * FROM user WHERE id_user=?";
+function user_select_by_id($id)
+{
+    $sql = "SELECT user.*, lsgiaodich.ngaydk, lsgiaodich.ngayhethan FROM user 
+            LEFT JOIN lsgiaodich ON user.id_user = lsgiaodich.id_user WHERE user.id_user=?";
     return pdo_query_one($sql, $id);
 }
-function user_update($name,$pass,$email,$role,$img,$id){
-    $sql = "UPDATE user SET ten_user=?,pass=?,email=?,role=?,img_user=? WHERE id_user=?";
-    pdo_execute($sql,$name,$pass,$email,$role,$img,$id,);    
+function user_update($role, $id, $ngaydk, $ngayhethan)
+{
+    // kiểm tra ngày
+    $ngaydk = date('Y-m-d');
+    $ngayhethan = $_POST['ngayhethan'];
+
+    $date1 = new DateTime($ngaydk);
+    $date2 = new DateTime($ngayhethan);
+    $set_ngay = $date1->diff($date2);
+
+    if ($ngaydk == $ngayhethan) {
+        $role = 0;
+    } elseif ($set_ngay->days > 1) {
+        $role = 1;
+    }
+
+    $sql = "UPDATE user SET role=? WHERE id_user=?";
+    pdo_execute($sql,  $role, $id);
+
+    $sql = "SELECT * FROM lsgiaodich WHERE id_user=?";
+    $result = pdo_query_one($sql, $id);
+
+    if ($result) {
+        $sql = "UPDATE lsgiaodich SET ngaydk=?, ngayhethan=? WHERE id_user=?";
+        pdo_execute($sql, $ngaydk, $ngayhethan, $id);
+    } else {
+        $sql = "INSERT INTO lsgiaodich (id_user, ngaydk, ngayhethan) VALUES (?, ?, ?)";
+        pdo_execute($sql, $id, $ngaydk, $ngayhethan);
+    }
 }
 function user_thongke($limit){
     $sql = "SELECT * FROM user limit $limit";

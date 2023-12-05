@@ -9,12 +9,12 @@
 .DK_popup_pricing-card {
     flex: 1;
     max-width: 360px;
-    background-color: #fff;
+    background-color: #000000;
     margin: 20px 10px;
     text-align: center;
     cursor: pointer;
     overflow: hidden;
-    color: #2d2d2d;
+    color: #ffffff;
     transition: .3s linear;
 }
 
@@ -30,10 +30,6 @@
     transition: .4s linear;
 }
 
-.DK_popup_pricing-card:hover .DK_popup_pricing-card-header {
-    box-shadow: 0 0 0 24em #00DC5A;
-}
-
 .DK_popup_price {
     font-size: 70px;
     color: #00DC5A;
@@ -47,11 +43,6 @@
     font-weight: 700;
 }
 
-.DK_popup_pricing-card:hover,
-.DK_popup_pricing-card:hover .DK_popup_price {
-    color: #fff;
-}
-
 .DK_popup_pricing-card li {
     font-size: 16px;
     padding: 10px 0;
@@ -63,7 +54,7 @@
     margin-bottom: 40px;
     margin-top: 80px;
     border: 2px solid #00DC5A;
-    color: #000000;
+    color: #ffffff;
     padding: 18px 40px;
     border-radius: 8px;
     text-transform: uppercase;
@@ -73,7 +64,7 @@
 
 .DK_popup_order-btn:hover {
     background-color: #00DC5A;
-    color: #fff;
+    color: #000000;
 }
 
 #DK_popup_overlay {
@@ -96,10 +87,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #000000;
     z-index: 3;
     padding: 20px;
-    width: 800px;
     border-radius: 8px;
     text-align: center;
 }

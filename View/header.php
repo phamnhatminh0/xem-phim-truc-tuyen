@@ -107,7 +107,6 @@
 
 					<!--/phần popup dùng để đăng ký VIP-->
 
-					<!-- <button id="DK_dk_button">Đăng ký VIP</button> id này dùng để cho trường hợp cần nút bấm-->
 					<button id="DK_dk_button" style="display: none;">Đăng ký VIP</button>
 
 					<div id="DK_popup_overlay"></div>
@@ -115,13 +114,6 @@
 						<span id="DK_popup_close_button">X</span>
 						<div class="DK_popup_pricing-table">
 							<!-- Update IDs and function calls accordingly -->
-							<div class="DK_popup_pricing-card">
-								<h3 class="DK_popup_pricing-card-header">Bình thường</h3>
-								<div class="DK_popup_price"><sup>VND</sup>0</div>
-								<ul>
-									<li><strong></strong>Không xem được những bộ phim VIP</li>
-								</ul>
-							</div>
 							<div class="DK_popup_pricing-card">
 								<h3 class="DK_popup_pricing-card-header">ĐĂNG KÝ VIP</h3>
 								<div class="DK_popup_price"><sup>VND</sup>99.000<span>/Tháng</span></div>

@@ -26,7 +26,7 @@
                     <p class="normal-text"><?= $chitiet["mota"]?></p>
                    <a href="?pg=watch&id=<?=$chitiet["id_phim"]?>&tap=<?=$chitiet["id_tap"]?>"> <button class="watch-button2"> Xem phim </button></a>
                     
-                    <form action="" method="post">
+                    <form action="" method="post" class="watch-button2">
                     <button class="watch-button2" style="background-color: #25867d;" name="submit">Yêu thích</button>
                     </form>
                 </div>

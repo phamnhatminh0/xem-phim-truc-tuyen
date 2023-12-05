@@ -227,26 +227,23 @@
               include "view/header.php";
                include "view/users.php";
                break;
-            case 'users_update':
-                  if(isset($_GET['id'])&&($_GET['id'])>0){
-                        $id=$_GET['id'];
-                     $uptk=user_select_by_id($id);
-                     if(isset($_POST['btnupdate'])){
-                        $name=$_POST['name'];
-                        $pass=$_POST['pass'];
-                        $email=$_POST['email'];
-                        $role=$_POST['role'];
-                        $img=$_FILES['img']['name'];
-                        user_update($name,$pass,$email,$role,$img,$id);
-                        $target_dir = "images/user/";
-                        $target_file = $target_dir . basename($_FILES["img"]["name"]);
-                        move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);             
-                       $tbUserEdit="Bạn đã sửa thông tin người dùng thành công!";
+               case 'users_update':
+                  if (isset($_GET['id']) && ($_GET['id']) > 0) {
+                     $id = $_GET['id'];
+                     $uptk = user_select_by_id($id);
+                     if (isset($_POST['btnupdate'])) {
+         
+                        $role = $_POST['role'];
+                        $ngaydk = $_POST['ngaydk'];
+                        $ngayhethan = $_POST['ngayhethan'];
+                        user_update($role, $id, $ngaydk, $ngayhethan);
+                        $tbUserEdit = "Bạn đã sửa thông tin người dùng thành công!";
+                        header('Location:index.php?pg=users');
                      }
                   }
                   include "view/header.php";
-                   include "view/users_update.php";
-                   break;
+                  include "view/users_update.php";
+                  break;
             case 'delusers':
                      if(isset($_GET['id'])&&($_GET['id'])>0){
                         $id=$_GET['id'];
