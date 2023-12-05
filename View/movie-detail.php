@@ -24,7 +24,7 @@
                         <p class="bold-text">Số tập: <span class="normal-text"><?=$chitiet["tongsotap"]?></span></p>
                     </div>
                     <p class="normal-text"><?= $chitiet["mota"]?></p>
-                   <a href="?pg=watch&id=<?=$chitiet["id_phim"]?>&tap=<?=$chitiet["id_tap"]?>"> <button class="watch-button2"> Xem phim </button></a>
+                   <a href="?pg=them&id=<?=$chitiet["id_phim"]?>&tap=<?=$chitiet["id_tap"]?>"> <button class="watch-button2"> Xem phim </button></a>
                     
                     <form action="" method="post" class="watch-button2">
                     <button class="watch-button2" style="background-color: #25867d;" name="submit">Yêu thích</button>

@@ -111,6 +111,11 @@ function tim_phim($ten){
 $sql="SELECT * FROM phim WHERE ten LIKE '%$ten%'";
 return pdo_query($sql);
 }
+function tim_phimsap($ten){
+    $sql="SELECT * FROM phim WHERE ten LIKE '%$ten%' ORDER BY ten ASC";
+return pdo_query($sql);
+}
+
 function luotxem($id_phim){
     $sql = "UPDATE phim SET luotxem = luotxem + 1 WHERE id_phim = ?";
  pdo_execute($sql,$id_phim);

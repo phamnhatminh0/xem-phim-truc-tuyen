@@ -19,11 +19,11 @@
 							<h3 class="hny-title">Tìm kiếm "<?=$_POST["search"]?>" </h3>
 						</div>
 						<div class="headerhny-right text-lg-right">
-							<h4><a class="show-title" href="genre.html">Hiển thị tất cả</a></h4>
+							<h4><a class="show-title" onclick="doi()">Sắp xếp từ A-Z</a></h4>
 						</div>
 					</div>
 				</div>
-				<div class="w3l-populohny-grids">
+				<div class="w3l-populohny-grids" id="doi">
 					<?php foreach($tim as $tm):?>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
@@ -160,5 +160,26 @@
 		});
 	});
 </script>
+<script>
+let dau= document.querySelector('#doi');
+let myString = `<?php foreach($tims as $tm):?>
+					<div class="item vhny-grid">
+						<div class="box16 mb-0">
+							<a href="?pg=detail&id=<?=$tm["id_phim"]?>">
+								<figure>
+									<img class="img-fluid" src="<?=$img_p?><?=$tm["img"]?>" alt="">
+								</figure>
+								<div class="box-content">
+									<h3 class="title"><?=$tm["ten"]?></h3>
+								</div>
+							</a>
+						</div>
+					</div>
+				<?php endforeach;?>`;
+				function doi(){
+					dau.innerHTML=myString;
+				}
+</script>
+
 <!--//MENU-JS-->
 <script src="Layout/assets/js/bootstrap.min.js"></script>

@@ -78,31 +78,43 @@ if (!isset($_GET['pg'])) {
             $chitiet = chitietphim($_GET["id"]);
             $cungtheloai = phimcungtheloai($chitiet["tentl"], $chitiet["id_phim"]);
             
-            if (isset($_POST["submit"])) {
+            $kq=checkyeuthich($_GET["id"]);
+            if (isset($_POST["submit"]) && !$kq) {
                 yeuthich($_GET["id"],$_SESSION["user"]["id_user"]);
             }
+
+
             include_once "View/movie-detail.php";
             break;
 
         case 'watch':
             if (isset($_GET["tap"])&& ($_GET["tap"]>0) ) {
                 $xuatphim = xuat_phimtap($_GET["id"], $_GET["tap"]);
-                lichsu($_GET["id"],$_SESSION["user"]["id_user"],$_GET["tap"]);
-                luotxem($_GET["id"]);
             }
            
             $binhluan = binhluan($_GET["id"]);
             $dienvien = dienvien($_GET["id"]);
             $tap = xuat_tap($_GET["id"]);
             
-            if(isset($_POST["submit"])&&($_POST["submit"])){
+            if(isset($_POST["submit"])){
                 them_bl($_SESSION["user"]["id_user"],$_GET["id"],$_POST["thembl"]);
-                header('Location:?pg=watch&id='.$_POST['id']);
+                header('Location:?pg=watch&id='.$_GET['id'].'&tap='.$_GET["tap"]);
             }
 
             include_once "View/watch-video.php";
 
             break;
+
+
+            case 'them':
+                $kqls=check($_GET["tap"]);
+                if(!$kqls){
+            lichsu($_GET["id"],$_SESSION["user"]["id_user"],$_GET["tap"]);
+                }
+            luotxem($_GET["id"]);
+            header('Location:?pg=watch&id='.$_GET['id'].'&tap='.$_GET['tap']);
+            break;
+
 
         case 'user':
             if (!isset($_SESSION['user'])) {
@@ -175,10 +187,13 @@ if (!isset($_GET['pg'])) {
             break;
 
         case 'bosuutap':
+            $kqyt=getyt($_SESSION["user"]["id_user"]);
             include_once "View/collection.php";
+
             break;
 
         case 'lichsu':
+            $getls= getls($_SESSION["user"]["id_user"]);
             include_once "View/history.php";
             break;
         case 'dangnhap':
@@ -273,6 +288,7 @@ if (!isset($_GET['pg'])) {
 
         case 'search':
             $tim = tim_phim($_POST["search"]);
+            $tims=tim_phimsap($_POST["search"]);
             include_once "View/search.php";
             break;
 

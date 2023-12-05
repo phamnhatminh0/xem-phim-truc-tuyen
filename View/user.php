@@ -26,19 +26,19 @@
 									</div>
 								</li>
 								<li class="account__item">
-									<a href="user.html" class="account__link account__link-active">
+									<a href="?pg=user" class="account__link account__link-active">
 										<i class="account__icon ti-user"></i>
 										Thông tin cá nhân
 									</a>
 								</li>
 								<li class="account__item">
-									<a href="lichsuxem.html" class="account__link">
+									<a href="?pg=lichsu" class="account__link">
 										<i class="account__icon ti-briefcase"></i>
 										Lịch sử xem
 									</a>
 								</li>
 								<li class="account__item">
-									<a href="bosuutap.html" class="account__link">
+									<a href="?pg=bosuutap" class="account__link">
 										<i class="account__icon ti-location-pin"></i>
 										Bộ sưu tập
 									</a>

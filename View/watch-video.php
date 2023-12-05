@@ -60,7 +60,7 @@
                             <h5>Tập phim</h5>
                         </div>
                         <?php foreach($tap as $t):?>
-                        <a href="?pg=watch&id=<?=$t["id_phim"]?>&tap=<?=$t["id_tap"]?>"><?=$t["tapphim"]?></a>
+                        <a href="?pg=them&id=<?=$t["id_phim"]?>&tap=<?=$t["id_tap"]?>"><?=$t["tapphim"]?></a>
                      <?php endforeach;?>
                     </div>
                 </div>
@@ -87,9 +87,11 @@
                         <div class="section-title">
                             <h5>Bình luận của bạn</h5>
                         </div>
-                        <form action="#">
-                            <textarea placeholder="Bình luận của bạn"></textarea>
-                            <button type="submit"> Gửi</button>
+                        <form action="" method="post">
+                            <textarea placeholder="Bình luận của bạn" name="thembl"></textarea>      
+                            <input type="hidden" value="$_GET['id']" name="id">
+                            <button type="submit" name="submit"> Gửi</button>
+                            
                         </form>
                     </div>
                 </div>

@@ -27,19 +27,19 @@
                                             </div>
                                         </li>
                                         <li class="account__item">
-                                            <a href="user.html" class="account__link">
+                                            <a href="?pg=user" class="account__link">
                                                 <i class="account__icon ti-user"></i>
                                                 Thông tin cá nhân
                                             </a>
                                         </li>
                                         <li class="account__item">
-                                            <a href="lichsuxem.html" class="account__link">
+                                            <a href="?pg=lichsu" class="account__link">
                                                 <i class="account__icon ti-briefcase"></i>
                                                 Lịch sử xem
                                             </a>
                                         </li>
                                         <li class="account__item">
-                                            <a href="bosuutap.html" class="account__link account__link-active">
+                                            <a href="?pg=bosuutap" class="account__link account__link-active">
                                                 <i class="account__icon ti-location-pin"></i>
                                                 Bộ sưu tập
                                             </a>
@@ -57,159 +57,21 @@
                                 <h1>Bộ sưu tập</h1>
                                 <br/>
                                 <div class="cot">
+                                <?php foreach ($kqyt as $yt):?>
                                 <div class="box16">
                                     <a href="#">
                                         <figure>
-                                            <img class="img-fluid" src="Upload/images/haihuoc1.jpg" alt="" style="height: 304.8px; width: 254.9px;">
+                                            <img class="img-fluid" src="<?=$img_p?><?=$yt["img"]?>" alt="" style="height: 304.8px; width: 254.9px;">
         
                                         </figure>
                                         <div class="box-content">
-                                            <h3 class="title">Rocketman</h3>
-                                            <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-        
-                                                </span>
-        
-                                                
+                                            <h3 class="title"><?=$yt["ten"]?></h3>
                                             </h4>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="box16">
-                                    <a href="#">
-                                        <figure>
-                                            <img class="img-fluid" src="Upload/images/haihuoc2.jpg" alt="" style="height: 304.8px; width: 254.9px;">
-        
-                                        </figure>
-                                        <div class="box-content">
-                                            <h3 class="title">Rocketman</h3>
-                                            <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-        
-                                                </span>
-        
-                                                
-                                            </h4>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="box16">
-                                    <a href="#">
-                                        <figure>
-                                            <img class="img-fluid" src="Upload/images/hanhdong1.jpg" alt="" style="height: 304.8px; width: 254.9px;">
-        
-                                        </figure>
-                                        <div class="box-content">
-                                            <h3 class="title">Rocketman</h3>
-                                            <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-        
-                                                </span>
-        
-                                                
-                                            </h4>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="box16">
-                                    <a href="#">
-                                        <figure>
-                                            <img class="img-fluid" src="Upload/images/cotrang2.jpg" alt="" style="height: 304.8px; width: 254.9px;">
-        
-                                        </figure>
-                                        <div class="box-content">
-                                            <h3 class="title">Phong thần diệt trụ</h3>
-                                            <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-        
-                                                </span>
-        
-                                                
-                                            </h4>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="box16">
-                                    <a href="#">
-                                        <figure>
-                                            <img class="img-fluid" src="Upload/images/hanhdong2.jpg" alt="" style="height: 304.8px; width: 254.9px;">
-        
-                                        </figure>
-                                        <div class="box-content">
-                                            <h3 class="title">Rocketman</h3>
-                                            <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-        
-                                                </span>
-        
-                                                
-                                            </h4>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="box16">
-                                    <a href="#">
-                                        <figure>
-                                            <img class="img-fluid" src="Upload/images/hanhdong3.jpg" alt="" style="height: 304.8px; width: 254.9px;">
-        
-                                        </figure>
-                                        <div class="box-content">
-                                            <h3 class="title">Rocketman</h3>
-                                            <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-        
-                                                </span>
-        
-                                                
-                                            </h4>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="box16">
-                                    <a href="#">
-                                        <figure>
-                                            <img class="img-fluid" src="Upload/images/hanhdong5.jpg" alt="" style="height: 304.8px; width: 254.9px;">
-        
-                                        </figure>
-                                        <div class="box-content">
-                                            <h3 class="title">Kẻ kiến tạo</h3>
-                                            <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-        
-                                                </span>
-        
-                                                
-                                            </h4>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="box16">
-                                    <a href="#">
-                                        <figure>
-                                            <img class="img-fluid" src="Upload/images/kinhdi3.jpg" alt="" style="height: 304.8px; width: 254.9px;">
-        
-                                        </figure>
-                                        <div class="box-content">
-                                            <h3 class="title">Rocketman</h3>
-                                            <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-        
-                                                </span>
-        
-                                                
-                                            </h4>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="box16">
-                                    <a href="#">
-                                        <figure>
-                                            <img class="img-fluid" src="Upload/images/kinhdi5.jpg" alt="" style="height: 304.8px; width: 254.9px;">
-        
-                                        </figure>
-                                        <div class="box-content">
-                                            <h3 class="title">Kẻ ăn hồn</h3>
-                                            <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-        
-                                                </span>
-        
-                                                
-                                            </h4>
-                                        </div>
-                                    </a>
-                                </div>
+                                <?php endforeach;?>
+  
                             </div>
                         </div>
                     </div>
