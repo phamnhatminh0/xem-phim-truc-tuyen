@@ -4,6 +4,8 @@ ob_start();
 include_once "Dao/pdo.php";
 include_once "Dao/genre.php";
 $theloai = theloai_getAll();
+include_once "Dao/goi.php";
+$goivip = goi_all();
 include_once "Dao/movie.php";
 include_once "Dao/config.php";
 include_once "Dao/actor.php";
@@ -12,6 +14,7 @@ include_once "View/header.php";
 include_once "Dao/d_user.php";
 include_once "Dao/history.php";
 include_once "Dao/favorite.php";
+
 if (!isset($_GET['pg'])) {
     $luotview = phim_luotxem();
     $vip = phim_vip();
@@ -20,6 +23,7 @@ if (!isset($_GET['pg'])) {
     $movietc = tinhcam();
     $moviekd = kinhdi();
     $movierole = phim_role();
+
     // Kiểm tra xem biến $_SESSION['user'] có tồn tại và có giá trị hay không
     if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
         $popup = $_SESSION['user']['id_user'];
