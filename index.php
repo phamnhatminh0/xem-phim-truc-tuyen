@@ -184,32 +184,38 @@ if (!isset($_GET['pg'])) {
                 $ten_user = $_POST['ten_user'];
                 $img_user = $_FILES['img_user'];
 
-                // Xử lý việc tải lên tệp
-                if ($img_user['error'] === 0) {
-                    $anhuser = "Upload/images/user/";
-                    $user_file = $anhuser . basename($img_user["name"]);
-                    move_uploaded_file($img_user["tmp_name"], $user_file);
-                    // Xóa tệp ảnh cũ
-                    if (file_exists($anhuser . $hienthi["img_user"])) {
-                        // Kiểm tra xem tệp có phải là avatar.png hay không
-                        if ($hienthi["img_user"] != "avatar.png") {
-                            // Nếu không phải, xóa tệp
-                            unlink($anhuser . $hienthi["img_user"]);
-                        }
-                    }
-                    edit_User($maTK, $ten_user, $img_user["name"]);
-                    $_SESSION['user']['img_user'] = $img_user["name"]; // Cập nhật hình ảnh trong session
-                    $_SESSION['loi'] = 'Thông tin tài khoản đã được cập nhật';
+                // Kiểm tra xem Tên tài khoản có trống rỗng không
+                if (empty($ten_user)) {
+                    $_SESSION['loi'] = 'Tên tài khoản không được để trống';
                 } else {
-                    edit_User($maTK, $ten_user, $hienthi["img_user"]);
-                    $_SESSION['loi'] = 'Thông tin tài khoản đã được cập nhật';
+                    // Xử lý việc tải lên tệp
+                    if ($img_user['error'] === 0) {
+                        $anhuser = "Upload/images/user/";
+                        $user_file = $anhuser . basename($img_user["name"]);
+                        move_uploaded_file($img_user["tmp_name"], $user_file);
+                        // Xóa tệp ảnh cũ
+                        if (file_exists($anhuser . $hienthi["img_user"])) {
+                            // Kiểm tra xem tệp có phải là avatar.png hay không
+                            if ($hienthi["img_user"] != "avatar.png") {
+                                // Nếu không phải, xóa tệp
+                                unlink($anhuser . $hienthi["img_user"]);
+                            }
+                        }
+                        edit_User($maTK, $ten_user, $img_user["name"]);
+                        $_SESSION['user']['img_user'] = $img_user["name"]; // Cập nhật hình ảnh trong session
+                        $_SESSION['loi'] = 'Thông tin tài khoản đã được cập nhật';
+                    } else {
+                        edit_User($maTK, $ten_user, $hienthi["img_user"]);
+                        $_SESSION['loi'] = 'Thông tin tài khoản đã được cập nhật';
+                    }
+                    header('Location:?pg=user');
+                    return;
                 }
-                header('Location:?pg=user');
-                return;
             }
 
             include_once "View/edit_user.php";
             break;
+
 
         case 'bosuutap':
             $kqyt = getyt($_SESSION["user"]["id_user"]);
@@ -305,24 +311,30 @@ if (!isset($_GET['pg'])) {
                 $mkmoi = $_POST['mkmoi'];
                 $nlmk = $_POST['nlmk'];
 
-                $checkPass = checkmk($pass);
-                if ($checkPass) {
-                    if ($mkmoi === $nlmk) {
-                        // Passwords match, update the password
-                        doiMatKhau($maTK, $mkmoi);
-                        $_SESSION['loi'] = 'Đổi mật khẩu thành công';
-                        header('Location:?pg=user');
-                        return;
-                    } else {
-                        $_SESSION['loi'] = 'Mật khẩu mới và nhập lại mật khẩu mới không giống nhau';
-                    }
+                // Kiểm tra xem các trường có trống rỗng không
+                if (empty($pass) || empty($mkmoi) || empty($nlmk)) {
+                    $_SESSION['loi'] = 'Vui lòng nhập đầy đủ thông tin mật khẩu cũ, mật khẩu mới và nhập lại mật khẩu mới';
                 } else {
-                    $_SESSION['loi'] = 'Bạn đã nhập sai mật khẩu';
+                    $checkPass = checkmk($pass);
+                    if ($checkPass) {
+                        if ($mkmoi === $nlmk) {
+                            // Passwords match, update the password
+                            doiMatKhau($maTK, $mkmoi);
+                            $_SESSION['loi'] = 'Đổi mật khẩu thành công';
+                            header('Location:?pg=user');
+                            return;
+                        } else {
+                            $_SESSION['loi'] = 'Mật khẩu mới và nhập lại mật khẩu mới không giống nhau';
+                        }
+                    } else {
+                        $_SESSION['loi'] = 'Bạn đã nhập sai mật khẩu';
+                    }
                 }
             }
 
             include_once "View/changePassword.php";
             break;
+
 
         case 'search':
             $search = addslashes($_POST["search"]); // Thêm dấu gạch chéo vào trước các ký tự đặc biệt trong chuỗi tìm kiếm

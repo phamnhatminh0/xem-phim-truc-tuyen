@@ -90,6 +90,12 @@
                             <div class="box-group f-height">
                                 <div class="col-12">
                                     <div class="alert alert-danger" role="alert" id="error-message" style="display: none;"></div>
+                                    <?php if (isset($_SESSION['loi'])) : ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            <?= $_SESSION['loi'] ?>
+                                        </div>
+                                    <?php endif;
+                                    unset($_SESSION['loi']); ?>
                                     <form id="profile-form" action="" method="POST" enctype="multipart/form-data">
                                         <div class="form-group-profile">
                                             <label for="" class="profile-label">Tên tài khoản:</label>
