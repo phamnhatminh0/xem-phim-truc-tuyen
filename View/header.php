@@ -109,21 +109,25 @@
 
 					<button id="DK_dk_button" style="display: none;">Đăng ký VIP</button>
 
+					<!-- Đặt đoạn mã khai báo popup ở đầu trang hoặc nơi thích hợp -->
 					<div id="DK_popup_overlay"></div>
 					<div id="DK_popup_dkBox">
 						<span id="DK_popup_close_button">X</span>
 						<div class="DK_popup_pricing-table">
 							<!-- Update IDs and function calls accordingly -->
-							<div class="DK_popup_pricing-card">
-								<h3 class="DK_popup_pricing-card-header">ĐĂNG KÝ VIP</h3>
-								<div class="DK_popup_price"><sup>VND</sup>99.000<span>/Tháng</span></div>
-								<ul>
-									<li><strong></strong>Xem tất cả các bộ phim yêu thích</li>
-								</ul>
-								<a href="vnpay_php/vnpay_pay.php" class="DK_popup_order-btn">Đăng ký ngay</a>
-							</div>
+							<?php foreach ($goivip as $gv) : ?>
+								<div class="DK_popup_pricing-card">
+									<h3 class="DK_popup_pricing-card-header">ĐĂNG KÝ VIP</h3>
+									<div class="DK_popup_price"><sup>VND</sup><?= $gv["giatri"] ?><span>/Tháng</span></div>
+									<ul>
+										<li><strong></strong><?= $gv["noidung"] ?></li>
+									</ul>
+									<a href="vnpay_php/vnpay_pay.php" class="DK_popup_order-btn">Đăng ký ngay</a>
+								</div>
+							<?php endforeach; ?>
 						</div>
 					</div>
+
 					<!--/phần popup dùng để đăng ký VIP-->
 
 				</div>

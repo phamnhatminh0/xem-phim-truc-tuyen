@@ -6,11 +6,13 @@ require_once 'pdo.php';
 //  * @param String $ten_danhmuc là tên loại
 //  * @throws PDOException lỗi thêm mới
 //  */
-function goi_insert($name,$giatri,$noidung){
+function goi_insert($name, $giatri, $noidung)
+{
     $sql = "INSERT INTO goi(ten_goi,giatri,noidung) VALUES(?,?,?)";
-    pdo_execute($sql, $name,$giatri,$noidung);
+    pdo_execute($sql, $name, $giatri, $noidung);
 }
-function goi_select_by_id($id){
+function goi_select_by_id($id)
+{
     $sql = "SELECT * FROM goi WHERE id_goi=?";
     return pdo_query_one($sql, $id);
 }
@@ -20,9 +22,10 @@ function goi_select_by_id($id){
 //  * @param String $ten_danhmuc là tên loại mới
 //  * @throws PDOException lỗi cập nhật
 //  */
-function goi_update($id, $name,$giatri,$noidung){
+function goi_update($id, $name, $giatri, $noidung)
+{
     $sql = "UPDATE goi SET  ten_goi=?,giatri=?,noidung=? WHERE id_goi=?";
-    pdo_execute($sql, $name,$giatri,$noidung ,$id);
+    pdo_execute($sql, $name, $giatri, $noidung, $id);
 }
 // function movietype_stt($limit){
 //     $sql = "SELECT * FROM theloai  limit $limit  ";
@@ -33,19 +36,21 @@ function goi_update($id, $name,$giatri,$noidung){
 //  * @param mix $ma_danhmuc là mã loại hoặc mảng mã loại
 //  * @throws PDOException lỗi xóa
 //  */
-function goi_delete($id){
+function goi_delete($id)
+{
     $sql = "DELETE FROM goi WHERE id_goi=?";
-//     // if(is_array($ma_danhmuc)){
-//     //     foreach ($ma_danhmuc as $ma) {
-//     //         pdo_execute($sql, $ma);
-//     //     }
-//     // }
-//     // else{
-        pdo_execute($sql, $id);
-//     // }
+    //     // if(is_array($ma_danhmuc)){
+    //     //     foreach ($ma_danhmuc as $ma) {
+    //     //         pdo_execute($sql, $ma);
+    //     //     }
+    //     // }
+    //     // else{
+    pdo_execute($sql, $id);
+    //     // }
 }
-function goi_checkName($name){
-    return pdo_query_one("SELECT * from goi where ten_goi=?",$name);
+function goi_checkName($name)
+{
+    return pdo_query_one("SELECT * from goi where ten_goi=?", $name);
 }
 
 /**
@@ -53,7 +58,8 @@ function goi_checkName($name){
  * @return array mảng loại truy vấn được
  * @throws PDOException lỗi truy vấn
  */
-function goi_all(){
+function goi_all()
+{
     $sql = "SELECT * FROM goi  ";
     return pdo_query($sql);
 }

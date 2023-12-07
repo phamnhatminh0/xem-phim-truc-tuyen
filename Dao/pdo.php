@@ -98,7 +98,8 @@ function pdo_query_value($sql)
         unset($conn);
     }
 }
-function pdo_query_exists($sql){
+function pdo_query_exists($sql)
+{
     $sql_args = array_slice(func_get_args(), 1);
 
     try {
@@ -112,12 +113,10 @@ function pdo_query_exists($sql){
         } else {
             return false;
         }
-    }
-    catch(PDOException $e){
+    } catch (PDOException $e) {
         // Handle the exception (you might want to log or do something else)
         throw $e;
-    }
-    finally{
+    } finally {
         // Close the database connection
         unset($conn);
     }
