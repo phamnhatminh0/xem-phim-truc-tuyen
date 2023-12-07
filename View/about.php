@@ -54,7 +54,7 @@
 					<div class="counter_grid">
 						<div class="icon_info">
 							<p class="counter"><?=$tongTVDK?></p>
-							<h4>Thành viên mua gói</h4>
+							<h4>Thành viên vip</h4>
 
 						</div>
 					</div>
@@ -69,7 +69,7 @@
 		<div class="grids-main py-5">
 			<div class="container py-lg-4">
 				<div class="headerhny-title">
-					<h3 class="hny-title">THÀNH VIÊN</h3>
+					<h3 class="hny-title">NHÀ SÁNG LẬP</h3>
 				</div>
 				<div class="owl-team owl-carousel owl-theme">
 					<div class="item vhny-grid">
