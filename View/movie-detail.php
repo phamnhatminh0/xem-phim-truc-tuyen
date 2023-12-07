@@ -17,7 +17,7 @@
                     <img class="img-fluid" src="<?=$img_p?><?= $chitiet["img"]?>" alt="Your Image">
                 </div>
                 <div class="col-md-8 ">
-                    <?=$chitiet["trangthai"]?>
+
                     <h1 class="title"><?=$chitiet["ten"]?></h1>
                     <p class="bold-text">Thể loại: <span class="normal-text"><a class="alink" href=""><?= $chitiet["tentl"]?></a></span></p>
                     <div class="release-duration">
