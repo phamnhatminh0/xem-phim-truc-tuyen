@@ -7,7 +7,7 @@
         <div class="w3l-breadcrumbs">
             <nav id="breadcrumbs" class="breadcrumbs">
                 <div class="container page-wrapper">
-                    <a href="index.html">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Bộ sưu tập</span>
+                    <a href="?pg=home">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Bộ sưu tập</span>
                 </div>
             </nav>
         </div>
@@ -16,42 +16,44 @@
                 <div class="containerr">
                     <div class="box">
                         <div class="rowa">
-                            <div class="col-4">
-                                <div class="account">
-                                    <ul class="account__list">
-                                        <li class="account__item">
-                                            <img src="Upload/images/avatar.png" alt="avatar" class="account__img">
-                                            <div class="account-info">
-                                                <h3>Tài khoản của</h3>
-                                                <p>Tan Dai</p>
-                                            </div>
-                                        </li>
-                                        <li class="account__item">
-                                            <a href="?pg=user" class="account__link">
-                                                <i class="account__icon ti-user"></i>
-                                                Thông tin cá nhân
-                                            </a>
-                                        </li>
-                                        <li class="account__item">
-                                            <a href="?pg=lichsu" class="account__link">
-                                                <i class="account__icon ti-briefcase"></i>
-                                                Lịch sử xem
-                                            </a>
-                                        </li>
-                                        <li class="account__item">
-                                            <a href="?pg=bosuutap" class="account__link account__link-active">
-                                                <i class="account__icon ti-location-pin"></i>
-                                                Bộ sưu tập
-                                            </a>
-                                        </li>
-                                        <li class="account__item">
-                                            <a href="" class="account__link">
-                                                Đăng xuất
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+						<div class="col-4">
+						<div class="account">
+							<ul class="account__list">
+								<li class="account__item">
+									<img src="Upload/images/User/<?= $hienthi["img_user"] ?>" alt="avatar" class="account__img">
+									<div class="account-info">
+										<h3>Tài khoản của</h3>
+										<p><?= $hienthi["ten_user"] ?></p>
+									</div>
+								</li>
+								<li class="account__item">
+									<a href="?pg=user" class="account__link account__link-active">
+										<i class="account__icon ti-user"></i>
+										Thông tin cá nhân
+									</a>
+								</li>
+								<li class="account__item">
+									<a href="?pg=lichsu" class="account__link">
+										<i class="account__icon ti-briefcase"></i>
+										Lịch sử xem
+									</a>
+								</li>
+								<li class="account__item">
+									<a href="?pg=bosuutap" class="account__link">
+										<i class="account__icon ti-location-pin"></i>
+										Bộ sưu tập
+									</a>
+								</li>
+								<li class="account__item">
+									<a href="?pg=dangxuat" class="account__link" onclick="return confirmLogout();">
+									<i class="fa-solid fa-right-from-bracket"></i>
+										Đăng xuất
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
 
                             <div class="col-8 col-sm-12">
                                 <h1>Bộ sưu tập</h1>
@@ -59,7 +61,7 @@
                                 <div class="cot">
                                 <?php foreach ($kqyt as $yt):?>
                                 <div class="box16">
-                                    <a href="#">
+                                    <a href="?pg=them&id=<?=$yt["id_phim"]?>&tap=<?=$yt["id_tap"]?>">
                                         <figure>
                                             <img class="img-fluid" src="<?=$img_p?><?=$yt["img"]?>" alt="" style="height: 304.8px; width: 254.9px;">
         

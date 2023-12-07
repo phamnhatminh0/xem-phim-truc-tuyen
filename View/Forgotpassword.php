@@ -4,7 +4,7 @@
 <div class="w3l-breadcrumbs">
     <nav id="breadcrumbs" class="breadcrumbs">
         <div class="container page-wrapper" style="display: flex; gap: 3px;">
-            <a href="index.html">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Đăng nhập</span>
+            <a href="?pg=home">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Đăng nhập</span>
         </div>
     </nav>
 </div>
