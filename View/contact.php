@@ -2,7 +2,7 @@
 	<div class="w3l-breadcrumbs">
 		<nav id="breadcrumbs" class="breadcrumbs">
 			<div class="container page-wrapper">
-				<a href="index.html">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Liên hệ</span>
+				<a href="?pg=home">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Liên hệ</span>
 			</div>
 		</nav>
 	</div>

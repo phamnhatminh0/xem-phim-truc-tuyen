@@ -3,7 +3,7 @@
     <div class="w3l-breadcrumbs">
         <nav id="breadcrumbs" class="breadcrumbs">
             <div class="container page-wrapper" style="display: flex; gap: 3px;">
-                <a href="index.html">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Chi tiết phim</span>
+                <a href="?pg=home">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Chi tiết phim</span>
             </div>
         </nav>
     </div>
@@ -17,6 +17,7 @@
                     <img class="img-fluid" src="<?=$img_p?><?= $chitiet["img"]?>" alt="Your Image">
                 </div>
                 <div class="col-md-8 ">
+                    <?=$chitiet["trangthai"]?>
                     <h1 class="title"><?=$chitiet["ten"]?></h1>
                     <p class="bold-text">Thể loại: <span class="normal-text"><a class="alink" href=""><?= $chitiet["tentl"]?></a></span></p>
                     <div class="release-duration">
@@ -27,7 +28,7 @@
                    <a href="?pg=them&id=<?=$chitiet["id_phim"]?>&tap=<?=$chitiet["id_tap"]?>"> <button class="watch-button2"> Xem phim </button></a>
                     
                     <form action="" method="post" class="watch-button2">
-                    <button class="watch-button2" style="background-color: #25867d;" name="submit">Yêu thích</button>
+                    <button class="watch-button2" style="background-color: #25867d;" name="submit" id="check">Yêu thích</button>
                     </form>
                 </div>
             </div>
@@ -279,3 +280,10 @@
 <!--//MENU-JS-->
 
 <script src="Layout/assets/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('check').addEventListener('click', showAlert);
+    function showAlert() {
+        
+    alert('Thêm thành công!');
+}
+</script>

@@ -102,8 +102,13 @@ if (!isset($_GET['pg'])) {
             break;
 
         case 'detail':
-
+           
             $chitiet = chitietphim($_GET["id"]);
+             if ($chitiet["trangthai"]==2 && $_SESSION["user"]["role"]==0 ) {
+                if(!$_SESSION["user"]){
+                header('Location:?pg=home');
+                }
+            }
             $cungtheloai = phimcungtheloai($chitiet["tentl"], $chitiet["id_phim"]);
             if($_SESSION["user"]){
             $kq=checkyeuthich($_GET["id"],($_SESSION["user"]["id_user"]));
@@ -234,13 +239,21 @@ if (!isset($_GET['pg'])) {
 
 
         case 'bosuutap':
-            $kqyt = getyt($_SESSION["user"]["id_user"]);
+            $maTK = $_SESSION['user']['id_user'];
+            // Lấy ra thông tin của người dùng đã đăng nhập
+            $hienthi = hienuser($maTK);
+
+            $kqyt=getyt($_SESSION["user"]["id_user"]);
             include_once "View/collection.php";
 
             break;
 
         case 'lichsu':
-            $getls = getls($_SESSION["user"]["id_user"]);
+            $maTK = $_SESSION['user']['id_user'];
+            // Lấy ra thông tin của người dùng đã đăng nhập
+            $hienthi = hienuser($maTK);
+
+            $getls= getls($_SESSION["user"]["id_user"]);
             include_once "View/history.php";
             break;
         case 'dangnhap':

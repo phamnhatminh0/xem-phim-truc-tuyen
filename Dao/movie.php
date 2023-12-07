@@ -1,6 +1,6 @@
 <?php
 function phimmoi(){
-    $sql= "SElECT * FROM phim WHERE namsx = (SElECT MAX(namsx) FROM phim) lIMIT 4;";
+    $sql= "SElECT * FROM phim WHERE namsx = (SElECT MAX(namsx) FROM phim) AND trangthai != 2 lIMIT 4;";
     return pdo_query($sql);
 }
 function phimmoicapnhat(){
@@ -42,7 +42,7 @@ function hanhdong(){
     FROM phim P
     JOIN loaiphim lP ON P.id_phim = lP.id_phim
     JOIN theloai Tl ON lP.id_loai = Tl.id_loai
-    WHERE Tl.tentl = 'hành động' AND P.trangthai != 1";
+    WHERE Tl.tentl = 'hành động' AND P.trangthai != 1 AND P.trangthai != 2";
     return pdo_query($sql);
 }
 function tinhcam(){
@@ -50,7 +50,7 @@ function tinhcam(){
     FROM phim P
     JOIN loaiphim lP ON P.id_phim = lP.id_phim
     JOIN theloai Tl ON lP.id_loai = Tl.id_loai
-    WHERE Tl.tentl = 'tình cảm' AND P.trangthai != 1";
+    WHERE Tl.tentl = 'tình cảm' AND P.trangthai != 1 AND P.trangthai != 2";
     return pdo_query($sql);
 }
 function kinhdi(){
@@ -58,7 +58,7 @@ function kinhdi(){
     FROM phim P
     JOIN loaiphim lP ON P.id_phim = lP.id_phim
     JOIN theloai Tl ON lP.id_loai = Tl.id_loai
-    WHERE Tl.tentl = 'kinh dị' AND P.trangthai != 1";
+    WHERE Tl.tentl = 'kinh dị' AND P.trangthai != 1 AND P.trangthai != 2";
     return pdo_query($sql);
 }
 // hàm chưa sài
@@ -66,6 +66,7 @@ function phim_luotxem(){
     $sql= "SElECT * FROM phim
     JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
    JOIN theloai ON loaiphim.id_loai = theloai.id_loai
+   WHERE phim.trangthai != 2
     ORDER BY phim.luotxem  DESC
     lIMIT 4;";
     return pdo_query($sql);
@@ -81,13 +82,13 @@ function phim_vip(){
     return pdo_query($sql);
 }
 function chitietphim($id_phim){
-   $sql="SElECT COUNT(tap.tapphim) AS tongsotap,tap.id_tap, phim.ten,phim.namsx,phim.mota,phim.id_phim,phim.img,theloai.tentl
+   $sql="SElECT COUNT(tap.tapphim) AS tongsotap, phim.ten,phim.namsx,phim.mota,phim.id_phim,phim.img,theloai.tentl,tap.id_tap,phim.trangthai
    FROM phim
    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
    JOIN theloai ON loaiphim.id_loai = theloai.id_loai
    JOIN tap ON phim.id_phim = tap.id_phim
    WHERE phim.id_phim =?
-   GROUP BY phim.ten,phim.namsx,phim.mota,phim.id_phim,theloai.tentl,phim.img";
+   GROUP BY phim.ten,phim.namsx,phim.mota,phim.id_phim,theloai.tentl,phim.img,tap.id_tap,phim.trangthai";
    return pdo_query_one($sql,$id_phim);
 }
 function phimcungtheloai($tentl,$id_phim){
@@ -186,8 +187,8 @@ function phimtheloai1(){
     JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
     JOIN theloai ON loaiphim.id_loai = theloai.id_loai
     JOIN tap ON phim.id_phim = tap.id_phim
-    WHERE loaiphim.id_loai = 1
-    GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img lIMIT 4" ;
+    WHERE loaiphim.id_loai = 1 AND phim.trangthai != 1
+    GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img lIMIT 4";
     return pdo_query($sql);
 }
 function phimtheloai2(){
@@ -196,7 +197,7 @@ function phimtheloai2(){
     JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
     JOIN theloai ON loaiphim.id_loai = theloai.id_loai
     JOIN tap ON phim.id_phim = tap.id_phim
-    WHERE loaiphim.id_loai = 2
+    WHERE loaiphim.id_loai = 2 AND phim.trangthai != 1
     GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img lIMIT 4";
     return pdo_query($sql);
 }
@@ -206,7 +207,7 @@ function phimtheloai3(){
     JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
     JOIN theloai ON loaiphim.id_loai = theloai.id_loai
     JOIN tap ON phim.id_phim = tap.id_phim
-    WHERE loaiphim.id_loai = 3
+    WHERE loaiphim.id_loai = 3 AND phim.trangthai != 1
     GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img lIMIT 4";
     return pdo_query($sql);
 }
@@ -216,7 +217,7 @@ function phimtheloai4(){
     JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
     JOIN theloai ON loaiphim.id_loai = theloai.id_loai
     JOIN tap ON phim.id_phim = tap.id_phim
-    WHERE loaiphim.id_loai = 4
+    WHERE loaiphim.id_loai = 4 AND phim.trangthai != 1
     GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img lIMIT 4";
     return pdo_query($sql);
 }
@@ -226,7 +227,7 @@ function phimtheloai5(){
     JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
     JOIN theloai ON loaiphim.id_loai = theloai.id_loai
     JOIN tap ON phim.id_phim = tap.id_phim
-    WHERE loaiphim.id_loai = 5
+    WHERE loaiphim.id_loai = 5 AND phim.trangthai != 1
     GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img lIMIT 4";
     return pdo_query($sql);
 }
@@ -236,7 +237,7 @@ function phimtheloai6(){
     JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
     JOIN theloai ON loaiphim.id_loai = theloai.id_loai
     JOIN tap ON phim.id_phim = tap.id_phim
-    WHERE loaiphim.id_loai = 6
+    WHERE loaiphim.id_loai = 6 AND phim.trangthai != 1
     GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img lIMIT 4";
     return pdo_query($sql);
 }
@@ -246,7 +247,7 @@ function phimtheloai7(){
     JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
     JOIN theloai ON loaiphim.id_loai = theloai.id_loai
     JOIN tap ON phim.id_phim = tap.id_phim
-    WHERE loaiphim.id_loai = 7
+    WHERE loaiphim.id_loai = 7 AND phim.trangthai != 1
     GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img lIMIT 4";
     return pdo_query($sql);
 }
@@ -256,7 +257,7 @@ function phimtheloai8(){
     JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
     JOIN theloai ON loaiphim.id_loai = theloai.id_loai
     JOIN tap ON phim.id_phim = tap.id_phim
-    WHERE loaiphim.id_loai = 8
+    WHERE loaiphim.id_loai = 8 AND phim.trangthai != 1
     GROUP BY phim.ten, phim.namsx, phim.mota, phim.id_phim, theloai.tentl, phim.img lIMIT 4";
     return pdo_query($sql);
 }
