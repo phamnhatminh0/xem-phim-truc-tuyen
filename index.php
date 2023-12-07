@@ -129,12 +129,17 @@ if (!isset($_GET['pg'])) {
 
 
             case 'them':
-                $kqls=check($_GET["tap"]);
+                if($_SESSION["user"]){
+                $kqls=check($_GET["tap"],($_SESSION["user"]["id_user"]));
+               
                 if(!$kqls){
             lichsu($_GET["id"],$_SESSION["user"]["id_user"],$_GET["tap"]);
                 }
+            }
             luotxem($_GET["id"]);
+                
             header('Location:?pg=watch&id='.$_GET['id'].'&tap='.$_GET['tap']);
+               
             break;
 
 
@@ -226,7 +231,7 @@ if (!isset($_GET['pg'])) {
             if (isset($_POST['email']) && isset($_POST['pass'])) {
                 $kq = dangnhap($_POST['email'], $_POST['pass']);
                 
-                if ($kq) {
+                if (is_array($kq)) {
                     $_SESSION['user'] = $kq;
                     header('Location: ?pg=home');
                 }

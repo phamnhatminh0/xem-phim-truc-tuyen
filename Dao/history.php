@@ -13,10 +13,11 @@ function getls($user){
     WHERE user.id_user=? ";
     return pdo_query($sql,$user);
 }
-function check($id_tap){
+function check($id_tap,$email){
     $sql="SELECT * FROM lichsu
-    WHERE id_tap=?";
-    return pdo_query($sql,$id_tap);
+     JOIN user ON lichsu.id_user = user.id_user
+    WHERE lichsu.id_tap=? AND user.id_user=? " ;
+    return pdo_query($sql,$id_tap,$email);
 }
 
 ?>

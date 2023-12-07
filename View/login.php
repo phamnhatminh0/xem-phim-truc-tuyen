@@ -52,7 +52,7 @@
                     <?php endif;
                     unset($_SESSION['loi']); ?>
 
-                    <form action="" method="POST">
+                    <form action="?pq=dangnhap" method="POST">
                         <div class="input__item">
                             <input type="text" placeholder="Email của bạn" name="email" autocomplete="off" style="color: black;">
                             <span><i class="fas fa-envelope" style="color: black;"></i></span>
