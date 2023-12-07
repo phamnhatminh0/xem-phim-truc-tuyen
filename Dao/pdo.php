@@ -6,8 +6,8 @@
 function pdo_get_connection()
 {
     $dburl = "mysql:host=localhost;dbname=movieon;charset=utf8";
-    $username = 'movieon_user';
-    $password = 'kaid8120a@01';
+    $username = 'root';
+    $password = '';
 
     $conn = new PDO($dburl, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -98,7 +98,8 @@ function pdo_query_value($sql)
         unset($conn);
     }
 }
-function pdo_query_exists($sql){
+function pdo_query_exists($sql)
+{
     $sql_args = array_slice(func_get_args(), 1);
 
     try {
@@ -112,12 +113,10 @@ function pdo_query_exists($sql){
         } else {
             return false;
         }
-    }
-    catch(PDOException $e){
+    } catch (PDOException $e) {
         // Handle the exception (you might want to log or do something else)
         throw $e;
-    }
-    finally{
+    } finally {
         // Close the database connection
         unset($conn);
     }

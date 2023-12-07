@@ -1,72 +1,62 @@
 <?php
 // require_once 'pdo.php';
-function user_insert($username,$password){
-    $sql = "INSERT INTO user(username,password) values(?,?)" ;
-    pdo_execute($sql,$username,$password);
+function user_insert($username, $password)
+{
+    $sql = "INSERT INTO user(username,password) values(?,?)";
+    pdo_execute($sql, $username, $password);
 }
 
 function user_select_all()
 {
-    $sql = "SELECT user.*, lsgiaodich.ngaydk, lsgiaodich.ngayhethan FROM user 
-            LEFT JOIN lsgiaodich ON user.id_user = lsgiaodich.id_user";
+    $sql = "SELECT * FROM user";
     return pdo_query($sql);
 }
 function user_select_by_id($id)
 {
-    $sql = "SELECT user.*, lsgiaodich.ngaydk, lsgiaodich.ngayhethan FROM user 
-            LEFT JOIN lsgiaodich ON user.id_user = lsgiaodich.id_user WHERE user.id_user=?";
+    $sql = "SELECT * FROM user WHERE id_user=?";
     return pdo_query_one($sql, $id);
 }
-function user_update($role, $id, $ngaydk, $ngayhethan)
+function user_update($name, $pass, $email, $role, $img, $id)
 {
-    // kiểm tra ngày
-    $ngaydk = date('Y-m-d');
-    $ngayhethan = $_POST['ngayhethan'];
-
-    $date1 = new DateTime($ngaydk);
-    $date2 = new DateTime($ngayhethan);
-    $set_ngay = $date1->diff($date2);
-
-    if ($ngaydk == $ngayhethan) {
-        $role = 0;
-    } elseif ($set_ngay->days > 1) {
-        $role = 1;
-    }
-
-    $sql = "UPDATE user SET role=? WHERE id_user=?";
-    pdo_execute($sql,  $role, $id);
-
-    $sql = "SELECT * FROM lsgiaodich WHERE id_user=?";
-    $result = pdo_query_one($sql, $id);
-
-    if ($result) {
-        $sql = "UPDATE lsgiaodich SET ngaydk=?, ngayhethan=? WHERE id_user=?";
-        pdo_execute($sql, $ngaydk, $ngayhethan, $id);
-    } else {
-        $sql = "INSERT INTO lsgiaodich (id_user, ngaydk, ngayhethan) VALUES (?, ?, ?)";
-        pdo_execute($sql, $id, $ngaydk, $ngayhethan);
-    }
+    $sql = "UPDATE user SET ten_user=?,pass=?,email=?,role=?,img_user=? WHERE id_user=?";
+    pdo_execute($sql, $name, $pass, $email, $role, $img, $id,);
 }
-function user_thongke($limit){
+function user_thongke($limit)
+{
     $sql = "SELECT * FROM user limit $limit";
     return pdo_query($sql);
 }
-function user_delete($id){
+function user_delete($id)
+{
     $sql = "DELETE FROM user  WHERE id_user=?";
-    return pdo_execute($sql,$id);
+    return pdo_execute($sql, $id);
 }
 
 // functi
-function user_get_img($id){
+function user_get_img($id)
+{
     $sql = "SELECT img_user FROM user  WHERE id_user=?";
-    $user_getimg=pdo_query_one($sql,$id);
+    $user_getimg = pdo_query_one($sql, $id);
     return $user_getimg['img'];
 }
-function check_user($email,$pass){
-    return pdo_query_one("SELECT * FROM user where email=? and pass=?",$email,$pass);
+function check_user($email, $pass)
+{
+    return pdo_query_one("SELECT * FROM user where email=? and pass=?", $email, $pass);
 }
-function check_admin($email,$pass){
-    return pdo_query_exists("SELECT * FROM user where email=? and pass=? and role=2",$email,$pass);
+function userPackage_get()
+{
+    $sql = "SELECT user.ten_user, lsgiaodich.id_giaodich, lsgiaodich.ngaydk, lsgiaodich.ngayhethan, goi.giatri
+    FROM user
+    JOIN lsgiaodich ON user.id_user = lsgiaodich.id_user
+    JOIN goi ON lsgiaodich.id_goi = goi.id_goi;
+    
+    ";
+    return pdo_query($sql);
+}
+function userPackage_delete($id)
+{
+    $sql = "DELETE FROM lsgiaodich WHERE id_giaodich=?";
+    pdo_execute($sql, $id);
 }
 //     $sql = "INSERT INTO user(username, password, email) VALUES (?, ?, ?)";
 //     pdo_execute($sql, $username, $password, $email);

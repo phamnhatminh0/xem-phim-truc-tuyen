@@ -14,26 +14,26 @@ include_once "Dao/history.php";
 include_once "Dao/favorite.php";
 if (!isset($_GET['pg'])) {
     $luotview = phim_luotxem();
-            $vip = phim_vip();
-            $movie = phimmoi();
-            $moviehd = hanhdong();
-            $movietc = tinhcam();
-            $moviekd = kinhdi();
-            $movierole = phim_role();
-            // Kiểm tra xem biến $_SESSION['user'] có tồn tại và có giá trị hay không
-            if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
-                $popup = $_SESSION['user']['id_user'];
-                $anhien = hienuser($popup);
-                // Gán giá trị mặc định cho biến $role là 0 nếu biến $anhien không có giá trị hoặc không có chỉ mục 'role'
-                $role = $anhien['role'] ?? 0;
-            } else {
-                // Nếu biến $_SESSION['user'] không tồn tại hoặc không có giá trị, gán giá trị mặc định cho các biến $popup và $role là 0
-                $popup = 0;
-                $role = 0;
-            }
+    $vip = phim_vip();
+    $movie = phimmoi();
+    $moviehd = hanhdong();
+    $movietc = tinhcam();
+    $moviekd = kinhdi();
+    $movierole = phim_role();
+    // Kiểm tra xem biến $_SESSION['user'] có tồn tại và có giá trị hay không
+    if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
+        $popup = $_SESSION['user']['id_user'];
+        $anhien = hienuser($popup);
+        // Gán giá trị mặc định cho biến $role là 0 nếu biến $anhien không có giá trị hoặc không có chỉ mục 'role'
+        $role = $anhien['role'] ?? 0;
+    } else {
+        // Nếu biến $_SESSION['user'] không tồn tại hoặc không có giá trị, gán giá trị mặc định cho các biến $popup và $role là 0
+        $popup = 0;
+        $role = 0;
+    }
 
     include "View/home.php";
-} else{
+} else {
     switch ($_GET['pg']) {
         case 'home':
             $luotview = phim_luotxem();
@@ -64,25 +64,25 @@ if (!isset($_GET['pg'])) {
 
             include_once "View/genre.php";
             break;
-            case 'genrechinh' :
-                $phimtheloai1 = phimtheloai1();
-                $phimtheloai2 = phimtheloai2();
-                $phimtheloai3 = phimtheloai3();
-                $phimtheloai4 = phimtheloai4();
-                $phimtheloai5 = phimtheloai5();
-                $phimtheloai6 = phimtheloai6();
-                $phimtheloai7 = phimtheloai7();
-                $phimtheloai8 = phimtheloai8();
-                include_once "View/genrechinh.php";
-                break;
-        case 'genrenew' :
+        case 'genrechinh':
+            $phimtheloai1 = phimtheloai1();
+            $phimtheloai2 = phimtheloai2();
+            $phimtheloai3 = phimtheloai3();
+            $phimtheloai4 = phimtheloai4();
+            $phimtheloai5 = phimtheloai5();
+            $phimtheloai6 = phimtheloai6();
+            $phimtheloai7 = phimtheloai7();
+            $phimtheloai8 = phimtheloai8();
+            include_once "View/genrechinh.php";
+            break;
+        case 'genrenew':
             $phimmoicapnhat = phimmoicapnhat();
             include_once "View/genrenew.php";
             break;
-        case 'genrevip' :
-                $phimvip = phimvip();
-                include_once "View/genrevip.php";
-                break;
+        case 'genrevip':
+            $phimvip = phimvip();
+            include_once "View/genrevip.php";
+            break;
         case 'about':
             $tongphim = movie_count();
             $tongtheloai = theloai_count();
@@ -99,28 +99,27 @@ if (!isset($_GET['pg'])) {
 
             $chitiet = chitietphim($_GET["id"]);
             $cungtheloai = phimcungtheloai($chitiet["tentl"], $chitiet["id_phim"]);
-            if($_SESSION["user"]){
-            $kq=checkyeuthich($_GET["id"],($_SESSION["user"]["id_user"]));
-            if (isset($_POST["submit"]) && !$kq) {
-                yeuthich($_GET["id"],$_SESSION["user"]["id_user"]);
+            if ($_SESSION["user"]) {
+                $kq = checkyeuthich($_GET["id"], ($_SESSION["user"]["id_user"]));
+                if (isset($_POST["submit"]) && !$kq) {
+                    yeuthich($_GET["id"], $_SESSION["user"]["id_user"]);
+                }
             }
-
-               }
             include_once "View/movie-detail.php";
             break;
 
         case 'watch':
-            if (isset($_GET["tap"])&& ($_GET["tap"]>0) ) {
+            if (isset($_GET["tap"]) && ($_GET["tap"] > 0)) {
                 $xuatphim = xuat_phimtap($_GET["id"], $_GET["tap"]);
             }
-           
+
             $binhluan = binhluan($_GET["id"]);
             $dienvien = dienvien($_GET["id"]);
             $tap = xuat_tap($_GET["id"]);
-            
-            if(isset($_POST["submit"])){
-                them_bl($_SESSION["user"]["id_user"],$_GET["id"],$_POST["thembl"]);
-                header('Location:?pg=watch&id='.$_GET['id'].'&tap='.$_GET["tap"]);
+
+            if (isset($_POST["submit"])) {
+                them_bl($_SESSION["user"]["id_user"], $_GET["id"], $_POST["thembl"]);
+                header('Location:?pg=watch&id=' . $_GET['id'] . '&tap=' . $_GET["tap"]);
             }
 
             include_once "View/watch-video.php";
@@ -128,17 +127,17 @@ if (!isset($_GET['pg'])) {
             break;
 
 
-            case 'them':
-       if($_SESSION["user"]){
-                $kqls=check($_GET["tap"],($_SESSION["user"]["id_user"]));
-               
-                if(!$kqls){
-            lichsu($_GET["id"],$_SESSION["user"]["id_user"],$_GET["tap"]);
+        case 'them':
+            if ($_SESSION["user"]) {
+                $kqls = check($_GET["tap"], ($_SESSION["user"]["id_user"]));
+
+                if (!$kqls) {
+                    lichsu($_GET["id"], $_SESSION["user"]["id_user"], $_GET["tap"]);
                 }
             }
             luotxem($_GET["id"]);
-                
-            header('Location:?pg=watch&id='.$_GET['id'].'&tap='.$_GET['tap']);
+
+            header('Location:?pg=watch&id=' . $_GET['id'] . '&tap=' . $_GET['tap']);
             break;
 
 
@@ -213,43 +212,54 @@ if (!isset($_GET['pg'])) {
             break;
 
         case 'bosuutap':
-            $kqyt=getyt($_SESSION["user"]["id_user"]);
+            $kqyt = getyt($_SESSION["user"]["id_user"]);
             include_once "View/collection.php";
 
             break;
 
         case 'lichsu':
-            $getls= getls($_SESSION["user"]["id_user"]);
+            $getls = getls($_SESSION["user"]["id_user"]);
             include_once "View/history.php";
             break;
         case 'dangnhap':
-            if ($_SESSION["dagui"] == 1) {
+            if ($_SESSION['dagui'] == 1) {
                 echo "<script type='text/javascript'>alert('Mật khẩu của bạn đã được gửi. Vui lòng kiểm tra email và đổi mật khẩu.');</script>";
-                unset($_SESSION["dagui"]);
-              }
+                unset($_SESSION['dagui']);
+            }
+
             if (isset($_POST['email']) && isset($_POST['pass'])) {
-                $kq = dangnhap($_POST['email'], $_POST['pass']);
-                
-                if ($kq) {
-                    $_SESSION['user'] = $kq;
-                    header('Location: ?pg=home');
-                }
-                 else {
-                    $_SESSION['loi'] = 'Đăng nhập không thành công';
+                $email = $_POST['email'];
+
+                // Gọi hàm kiểm tra email hợp lệ
+                $valid_email = check_email($email);
+
+                // Nếu email không hợp lệ, gán giá trị cho biến $_SESSION['loi']
+                if (!$valid_email) {
+                    $_SESSION['loi'] = 'Mail của bạn không đúng cú pháp';
+                } else {
+                    // Nếu email hợp lệ, kiểm tra email đã tồn tại hay chưa
+                    $kq = dangnhap($email, $_POST['pass']);
+                    if ($kq) {
+                        $_SESSION['user'] = $kq;
+                        header('Location: ?pg=home');
+                    } else {
+                        $_SESSION['loi'] = 'Đăng nhập không thành công';
+                    }
                 }
             }
+
             include_once "View/login.php";
             break;
-            case 'Forgotpassword':
-                $kq=checkdk($_POST['email']);
-                if($kq){
+        case 'Forgotpassword':
+            $kq = checkdk($_POST['email']);
+            if ($kq) {
                 $_SESSION['gmail'] = $kq;
-                    header('Location:PHPMailer/index.php'); 
-                }else {
-                    $_SESSION['lổi'] = "email không tồn tại";
-                }
-                include_once "View/Forgotpassword.php";
-                break;
+                header('Location:PHPMailer/index.php');
+            } else {
+                $_SESSION['lổi'] = "email không tồn tại";
+            }
+            include_once "View/Forgotpassword.php";
+            break;
         case 'dangxuat':
             unset($_SESSION['user']);
             header('Location:?pg=home');
@@ -315,14 +325,15 @@ if (!isset($_GET['pg'])) {
             break;
 
         case 'search':
-            $tim = tim_phim($_POST["search"]);
-            $tims=tim_phimsap($_POST["search"]);
+            $search = addslashes($_POST["search"]); // Thêm dấu gạch chéo vào trước các ký tự đặc biệt trong chuỗi tìm kiếm
+            $tim = tim_phim($search); // Tìm phim với từ khóa đã được xử lý
+            $tims = tim_phimsap($search); // Tìm sắp xếp với từ khóa a-z
             include_once "View/search.php";
             break;
 
-            case 'admin':
-                header('Location: admin/index.php');
-                break;
+        case 'admin':
+            header('Location: admin/index.php');
+            break;
 
         default:
             include_once "View/home.php";
