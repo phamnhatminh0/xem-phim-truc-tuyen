@@ -9,7 +9,7 @@
 								<div class="banner-info">
 									<h3><?= $lx["ten"] ?></h3>
 									<p><?= $lx["mota"] ?></p>
-									<a href="?pg=watch&id=<?=$lx["id_phim"]?>" class="with-zoom-anim play-view1">
+									<a href="?pg=them&id=<?=$lx["id_phim"]?>&tap=<?=$lx["id_tap"]?>" class="with-zoom-anim play-view1">
 										<span class="video-play-icon">
 											<span class="fa fa-play"></span>
 										</span>
@@ -90,7 +90,7 @@
 							<div class="button-center text-center mt-4">
 							<?php
         if (isset($_SESSION['user'])) {
-			if ($_SESSION['user']['role'] == 1) {
+			if ($_SESSION['user']['role'] == 1 || $_SESSION['user']['role'] == 2) {
 				echo "<a href=?pg=detail&id=" . $vp['id_phim'] . " class='btn watch-button'>Xem ngay</a>";
 			} else {
 				echo "<a class='btn watch-button' id='DK_dk_button'>Xem ngay</a>";
@@ -228,6 +228,8 @@
 			</div>
 		</div>
 	</section>
+
+	
 	<!-- //tabs-->
 	<script src="Layout/assets/js/jquery-1.9.1.min.js"></script>
 	<script src="Layout/assets/js/easyResponsiveTabs.js"></script>

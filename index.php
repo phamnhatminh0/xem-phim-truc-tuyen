@@ -60,7 +60,7 @@ if (!isset($_GET['pg'])) {
         case 'genre':
             $tencungtheloai = phimcungtheloai_ten($_GET["id"]);
             $cacphimcungloai = phimcungtheloai_all($_GET["id"]);
-            $theloailuotxem = phimcungtheloai_luotxem($_GET["id"]);
+            $tims = phimcungtheloai_all_sap($_GET["id"]);
 
             include_once "View/genre.php";
             break;
@@ -77,10 +77,12 @@ if (!isset($_GET['pg'])) {
                 break;
         case 'genrenew' :
             $phimmoicapnhat = phimmoicapnhat();
+            $tims = phimmoicapnhat_sap();
             include_once "View/genrenew.php";
             break;
         case 'genrevip' :
                 $phimvip = phimvip();
+                $tims = phimvip_sap();
                 include_once "View/genrevip.php";
                 break;
         case 'about':
@@ -101,8 +103,12 @@ if (!isset($_GET['pg'])) {
             $cungtheloai = phimcungtheloai($chitiet["tentl"], $chitiet["id_phim"]);
             if($_SESSION["user"]){
             $kq=checkyeuthich($_GET["id"],($_SESSION["user"]["id_user"]));
+            }
             if (isset($_POST["submit"]) && !$kq) {
+                if($_SESSION["user"]){
                 yeuthich($_GET["id"],$_SESSION["user"]["id_user"]);
+            }else{
+                header('Location:?pg=dangnhap');
             }
 
                }
@@ -117,11 +123,17 @@ if (!isset($_GET['pg'])) {
             $binhluan = binhluan($_GET["id"]);
             $dienvien = dienvien($_GET["id"]);
             $tap = xuat_tap($_GET["id"]);
-            
+           
             if(isset($_POST["submit"])){
+                if($_SESSION["user"]){
                 them_bl($_SESSION["user"]["id_user"],$_GET["id"],$_POST["thembl"]);
                 header('Location:?pg=watch&id='.$_GET['id'].'&tap='.$_GET["tap"]);
+            }else{
+                header('Location:?pg=dangnhap');
             }
+               
+            }
+      
 
             include_once "View/watch-video.php";
 

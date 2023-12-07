@@ -1,0 +1,2 @@
+[06-Dec-2023 14:03:21 UTC] PHP Notice:  Undefined variable: tap in /home/movieon1/public_html/admin/index.php on line 95
+[06-Dec-2023 14:04:33 UTC] PHP Notice:  Undefined index: img in /home/movieon1/public_html/Dao/dienvien.php on line 19
