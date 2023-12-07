@@ -90,7 +90,7 @@
 
 						// Nếu đã đăng nhập, thay đổi đường dẫn thành ?pg=user
 						$link = "?pg=user";
-						$hinh = '<img src="Upload/images/user/' . $hienthi["img_user"] . '" style="border-radius: 50%; width: 30px; height: 30px;">';
+						$hinh = '<img src="Upload/images/User/' . $hienthi["img_user"] . '" style="border-radius: 50%; width: 30px; height: 30px;">';
 					} else {
 						// Nếu chưa đăng nhập, giữ nguyên đường dẫn là ?pg=dangnhap
 						$link = "?pg=dangnhap";

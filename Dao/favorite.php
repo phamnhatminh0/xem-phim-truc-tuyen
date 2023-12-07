@@ -13,9 +13,11 @@ function getyt($user){
     WHERE user.id_user=? ";
     return pdo_query($sql,$user);
 }
-function checkyeuthich($id_phim){
-    $sql= "SELECT * FROM yeuthich WHERE id_phim=? ";
-   return pdo_query($sql,$id_phim);
+function checkyeuthich($id_phim,$email){
+    $sql= "SELECT * FROM yeuthich 
+     JOIN user ON yeuthich.id_user = user.id_user
+    WHERE id_phim=? AND user.id_user=?  ";
+   return pdo_query($sql,$id_phim,$email);
 }
 
 ?>

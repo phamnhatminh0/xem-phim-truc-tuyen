@@ -10,7 +10,7 @@
 </div>
 <!-- Breadcrumb End -->
 <!-- Normal Breadcrumb Begin -->
-<section class="normal-breadcrumb set-bg" data-setbg="upload/images/banner/banner1.jpg">
+<section class="normal-breadcrumb set-bg" data-setbg="Upload/images/Banner/banner1.jpg">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -289,4 +289,4 @@
         });
     });
 </script>
-<script src="layout/assets/js/theme-change.js"></script>
+<script src="Layout/assets/js/theme-change.js"></script>

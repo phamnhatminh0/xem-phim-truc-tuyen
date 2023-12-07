@@ -9,7 +9,7 @@ include_once "Dao/config.php";
 include_once "Dao/actor.php";
 include_once "Dao/comment.php";
 include_once "View/header.php";
-include_once "dao/d_user.php";
+include_once "Dao/d_user.php";
 include_once "Dao/history.php";
 include_once "Dao/favorite.php";
 if (!isset($_GET['pg'])) {
@@ -99,13 +99,13 @@ if (!isset($_GET['pg'])) {
 
             $chitiet = chitietphim($_GET["id"]);
             $cungtheloai = phimcungtheloai($chitiet["tentl"], $chitiet["id_phim"]);
-            
-            $kq=checkyeuthich($_GET["id"]);
+            if($_SESSION["user"]){
+            $kq=checkyeuthich($_GET["id"],($_SESSION["user"]["id_user"]));
             if (isset($_POST["submit"]) && !$kq) {
                 yeuthich($_GET["id"],$_SESSION["user"]["id_user"]);
             }
 
-
+               }
             include_once "View/movie-detail.php";
             break;
 
@@ -129,7 +129,7 @@ if (!isset($_GET['pg'])) {
 
 
             case 'them':
-                if($_SESSION["user"]){
+       if($_SESSION["user"]){
                 $kqls=check($_GET["tap"],($_SESSION["user"]["id_user"]));
                
                 if(!$kqls){
@@ -139,7 +139,6 @@ if (!isset($_GET['pg'])) {
             luotxem($_GET["id"]);
                 
             header('Location:?pg=watch&id='.$_GET['id'].'&tap='.$_GET['tap']);
-               
             break;
 
 
@@ -210,7 +209,7 @@ if (!isset($_GET['pg'])) {
                 return;
             }
 
-            include_once "view/edit_user.php";
+            include_once "View/edit_user.php";
             break;
 
         case 'bosuutap':
@@ -231,7 +230,7 @@ if (!isset($_GET['pg'])) {
             if (isset($_POST['email']) && isset($_POST['pass'])) {
                 $kq = dangnhap($_POST['email'], $_POST['pass']);
                 
-                if (is_array($kq)) {
+                if ($kq) {
                     $_SESSION['user'] = $kq;
                     header('Location: ?pg=home');
                 }
@@ -279,7 +278,7 @@ if (!isset($_GET['pg'])) {
                     }
                 }
             }
-            include_once "view/signup.php";
+            include_once "View/signup.php";
             break;
         case 'doimatkhau':
             if (!isset($_SESSION['user'])) {
@@ -312,7 +311,7 @@ if (!isset($_GET['pg'])) {
                 }
             }
 
-            include_once "view/changePassword.php";
+            include_once "View/changePassword.php";
             break;
 
         case 'search':

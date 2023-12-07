@@ -211,6 +211,7 @@
                            }
                         }
                      $dsdvud= dienvien_select_by_id($id);
+                     include "view/header.php";
                         include "view/actor_update.php";
                         break;
                            case 'delactor':

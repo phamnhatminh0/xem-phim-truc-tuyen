@@ -20,4 +20,5 @@ function check($id_tap,$email){
     return pdo_query($sql,$id_tap,$email);
 }
 
+
 ?>

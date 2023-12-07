@@ -1,0 +1,159 @@
+[06-Dec-2023 05:58:09 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 05:58:09 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 05:58:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movieon.theLoai' doesn't exist in /home/movieon1/public_html/Dao/pdo.php:48
+Stack trace:
+#0 /home/movieon1/public_html/Dao/pdo.php(48): PDOStatement->execute(Array)
+#1 /home/movieon1/public_html/Dao/movie.php(54): pdo_query('SELECT * FROM p...')
+#2 /home/movieon1/public_html/index.php(16): phim_luotxem()
+#3 {main}
+  thrown in /home/movieon1/public_html/Dao/pdo.php on line 48
+[06-Dec-2023 06:02:04 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:04 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movieon.theLoai' doesn't exist in /home/movieon1/public_html/Dao/pdo.php:48
+Stack trace:
+#0 /home/movieon1/public_html/Dao/pdo.php(48): PDOStatement->execute(Array)
+#1 /home/movieon1/public_html/Dao/movie.php(54): pdo_query('SELECT * FROM p...')
+#2 /home/movieon1/public_html/index.php(16): phim_luotxem()
+#3 {main}
+  thrown in /home/movieon1/public_html/Dao/pdo.php on line 48
+[06-Dec-2023 06:02:06 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:06 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movieon.theLoai' doesn't exist in /home/movieon1/public_html/Dao/pdo.php:48
+Stack trace:
+#0 /home/movieon1/public_html/Dao/pdo.php(48): PDOStatement->execute(Array)
+#1 /home/movieon1/public_html/Dao/movie.php(54): pdo_query('SELECT * FROM p...')
+#2 /home/movieon1/public_html/index.php(16): phim_luotxem()
+#3 {main}
+  thrown in /home/movieon1/public_html/Dao/pdo.php on line 48
+[06-Dec-2023 06:02:08 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:08 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movieon.theLoai' doesn't exist in /home/movieon1/public_html/Dao/pdo.php:48
+Stack trace:
+#0 /home/movieon1/public_html/Dao/pdo.php(48): PDOStatement->execute(Array)
+#1 /home/movieon1/public_html/Dao/movie.php(54): pdo_query('SELECT * FROM p...')
+#2 /home/movieon1/public_html/index.php(16): phim_luotxem()
+#3 {main}
+  thrown in /home/movieon1/public_html/Dao/pdo.php on line 48
+[06-Dec-2023 06:02:19 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:19 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movieon.theLoai' doesn't exist in /home/movieon1/public_html/Dao/pdo.php:48
+Stack trace:
+#0 /home/movieon1/public_html/Dao/pdo.php(48): PDOStatement->execute(Array)
+#1 /home/movieon1/public_html/Dao/movie.php(54): pdo_query('SELECT * FROM p...')
+#2 /home/movieon1/public_html/index.php(16): phim_luotxem()
+#3 {main}
+  thrown in /home/movieon1/public_html/Dao/pdo.php on line 48
+[06-Dec-2023 06:02:27 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:27 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:42 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:42 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:42 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 06:02:45 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:02:45 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:03:04 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:03:04 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:03:07 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:03:07 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:03:10 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:03:10 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:03:10 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 06:04:35 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:04:35 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:04:35 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 06:08:28 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:28 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:28 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 06:08:31 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:31 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function checkdk() in /home/movieon1/public_html/index.php:240
+Stack trace:
+#0 {main}
+  thrown in /home/movieon1/public_html/index.php on line 240
+[06-Dec-2023 06:08:41 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:41 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:48 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:48 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:51 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:51 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:56 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:56 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:59 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:08:59 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:09:00 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:09:00 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:09:00 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 06:09:03 UTC] PHP Warning:  include_once(dao/d_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:09:03 UTC] PHP Warning:  include_once(): Failed opening 'dao/d_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 12
+[06-Dec-2023 06:09:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function checkdk() in /home/movieon1/public_html/index.php:240
+Stack trace:
+#0 {main}
+  thrown in /home/movieon1/public_html/index.php on line 240
+[06-Dec-2023 06:11:04 UTC] PHP Notice:  Undefined index: email in /home/movieon1/public_html/index.php on line 240
+[06-Dec-2023 06:11:11 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 06:14:50 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 06:15:00 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 06:20:16 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 06:23:15 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 06:45:56 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 07:29:59 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 07:34:29 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 07:34:52 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 07:35:07 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 07:35:08 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 07:51:09 UTC] PHP Warning:  include_once(view/edit_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 208
+[06-Dec-2023 07:51:09 UTC] PHP Warning:  include_once(): Failed opening 'view/edit_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 208
+[06-Dec-2023 07:53:54 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 07:53:56 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 07:54:03 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 222
+[06-Dec-2023 08:16:10 UTC] PHP Warning:  include_once(view/changePassword.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 310
+[06-Dec-2023 08:16:10 UTC] PHP Warning:  include_once(): Failed opening 'view/changePassword.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 310
+[06-Dec-2023 08:21:28 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 08:23:35 UTC] PHP Warning:  include_once(view/edit_user.php): failed to open stream: No such file or directory in /home/movieon1/public_html/index.php on line 212
+[06-Dec-2023 08:23:35 UTC] PHP Warning:  include_once(): Failed opening 'view/edit_user.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/movieon1/public_html/index.php on line 212
+[06-Dec-2023 08:28:06 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 08:28:09 UTC] PHP Notice:  Undefined index: email in /home/movieon1/public_html/index.php on line 244
+[06-Dec-2023 08:29:21 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 08:29:23 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 08:29:24 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 08:30:12 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 12:45:31 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 12:46:46 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 12:47:17 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 12:48:12 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 12:49:07 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 12:49:14 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 13:52:14 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 13:54:29 UTC] PHP Notice:  Undefined index: email in /home/movieon1/public_html/index.php on line 244
+[06-Dec-2023 13:54:33 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 13:57:45 UTC] PHP Notice:  Undefined index: user in /home/movieon1/public_html/index.php on line 102
+[06-Dec-2023 13:57:48 UTC] PHP Notice:  Undefined index: user in /home/movieon1/public_html/index.php on line 132
+[06-Dec-2023 13:57:51 UTC] PHP Notice:  Undefined index: user in /home/movieon1/public_html/index.php on line 122
+[06-Dec-2023 13:57:51 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/movieon1/public_html/index.php on line 122
+[06-Dec-2023 13:57:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_user' cannot be null in /home/movieon1/public_html/Dao/pdo.php:28
+Stack trace:
+#0 /home/movieon1/public_html/Dao/pdo.php(28): PDOStatement->execute(Array)
+#1 /home/movieon1/public_html/Dao/comment.php(14): pdo_execute('INSERT INTO bin...', NULL, '9', 'd')
+#2 /home/movieon1/public_html/index.php(122): them_bl(NULL, '9', 'd')
+#3 {main}
+  thrown in /home/movieon1/public_html/Dao/pdo.php on line 28
+[06-Dec-2023 13:58:11 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 13:58:14 UTC] PHP Notice:  Undefined index: email in /home/movieon1/public_html/index.php on line 244
+[06-Dec-2023 13:58:16 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 13:58:19 UTC] PHP Notice:  Undefined index: user in /home/movieon1/public_html/index.php on line 102
+[06-Dec-2023 13:58:26 UTC] PHP Notice:  Undefined index: user in /home/movieon1/public_html/index.php on line 102
+[06-Dec-2023 13:58:29 UTC] PHP Notice:  Undefined index: user in /home/movieon1/public_html/index.php on line 102
+[06-Dec-2023 13:58:34 UTC] PHP Notice:  Undefined index: user in /home/movieon1/public_html/index.php on line 132
+[06-Dec-2023 13:58:36 UTC] PHP Notice:  Undefined index: user in /home/movieon1/public_html/index.php on line 102
+[06-Dec-2023 13:58:41 UTC] PHP Notice:  Undefined index: user in /home/movieon1/public_html/index.php on line 132
+[06-Dec-2023 13:59:06 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 13:59:10 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 13:59:24 UTC] PHP Notice:  Undefined index: email in /home/movieon1/public_html/index.php on line 244
+[06-Dec-2023 13:59:56 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 14:00:08 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 14:10:09 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 14:10:16 UTC] PHP Notice:  Undefined index: user in /home/movieon1/public_html/index.php on line 102
+[06-Dec-2023 14:10:18 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 14:10:22 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[06-Dec-2023 14:10:34 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[07-Dec-2023 03:14:00 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226
+[07-Dec-2023 03:15:46 UTC] PHP Notice:  Undefined index: dagui in /home/movieon1/public_html/index.php on line 226

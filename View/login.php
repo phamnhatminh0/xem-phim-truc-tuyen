@@ -10,7 +10,7 @@
 </div>
 <!-- Breadcrumb End -->
 <!-- Normal Breadcrumb Begin -->
-<section class="normal-breadcrumb set-bg" data-setbg="upload/images/banner/banner1.jpg" style="position: relative; opacity:0.3" >
+<section class="normal-breadcrumb set-bg" data-setbg="Upload/images/Banner/banner1.jpg" style="position: relative; opacity:0.3" >
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -52,7 +52,7 @@
                     <?php endif;
                     unset($_SESSION['loi']); ?>
 
-                    <form action="?pq=dangnhap" method="POST">
+                    <form action="" method="POST">
                         <div class="input__item">
                             <input type="text" placeholder="Email của bạn" name="email" autocomplete="off" style="color: black;">
                             <span><i class="fas fa-envelope" style="color: black;"></i></span>
@@ -306,4 +306,4 @@
         });
     });
 </script>
-<script src="layout/assets/js/theme-change.js"></script>
+<script src="Layout/assets/js/theme-change.js"></script>

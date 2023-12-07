@@ -19,7 +19,7 @@
 						<div class="account">
 							<ul class="account__list">
 								<li class="account__item">
-									<img src="Upload/images/user/<?= $hienthi["img_user"] ?>" alt="avatar" class="account__img">
+									<img src="Upload/images/User/<?= $hienthi["img_user"] ?>" alt="avatar" class="account__img">
 									<div class="account-info">
 										<h3>Tài khoản của</h3>
 										<p><?= $hienthi["ten_user"] ?></p>
