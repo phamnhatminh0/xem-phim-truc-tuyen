@@ -98,8 +98,10 @@ if (!isset($_GET['pg'])) {
         case 'detail':
            
             $chitiet = chitietphim($_GET["id"]);
-             if (!$_SESSION["user"] || $chitiet["trangthai"]==2 && $_SESSION["user"]["role"]==0 ) {
+             if ($chitiet["trangthai"]==2 && $_SESSION["user"]["role"]==0 ) {
+                if(!$_SESSION["user"]){
                 header('Location:?pg=home');
+                }
             }
             $cungtheloai = phimcungtheloai($chitiet["tentl"], $chitiet["id_phim"]);
             if($_SESSION["user"]){
