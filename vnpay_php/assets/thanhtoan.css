@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #52C5FB , #DF85F7);
-  margin: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  margin: 25px;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -12,7 +12,6 @@ body {
 form {
   background-color: #fff;
   padding: 20px;
-
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 400px;
@@ -43,16 +42,20 @@ button {
 button:hover {
   background-color: #45a049;
 }
-.class-form{
+
+.class-form {
   display: flex;
 }
-label{
+
+label {
   font-size: small;
   margin-left: 5px;
 }
-.option-input{
+
+.option-input {
   width: 400px;
 }
-.radio{
+
+.radio {
   margin: 5px;
 }
