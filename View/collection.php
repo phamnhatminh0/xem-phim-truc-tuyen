@@ -27,7 +27,7 @@
 									</div>
 								</li>
 								<li class="account__item">
-									<a href="?pg=user" class="account__link account__link-active">
+									<a href="?pg=user" class="account__link ">
 										<i class="account__icon ti-user"></i>
 										Thông tin cá nhân
 									</a>
@@ -39,7 +39,7 @@
 									</a>
 								</li>
 								<li class="account__item">
-									<a href="?pg=bosuutap" class="account__link">
+									<a href="?pg=bosuutap" class="account__link account__link-active">
 										<i class="account__icon ti-location-pin"></i>
 										Bộ sưu tập
 									</a>

@@ -111,7 +111,7 @@
                                         </div>
                                         <div class="form-group-profile">
                                             <label for="phone" class="profile-label"><button class="button-input" name="submit">Lưu</button></label>
-                                            <span><a href="#" class="forget_pass">Bạn quên mật khẩu</a></span>
+                                            <span><a href="?pg=Forgotpassword" class="forget_pass">Bạn quên mật khẩu</a></span>
                                         </div>
                                     </form>
                                 </div>
