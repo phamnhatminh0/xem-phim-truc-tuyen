@@ -19,7 +19,13 @@
                 <div class="col-md-8 ">
 
                     <h1 class="title"><?=$chitiet["ten"]?></h1>
-                    <p class="bold-text">Thể loại: <span class="normal-text"><a class="alink" href=""><?= $chitiet["tentl"]?></a></span></p>
+                    <p class="bold-text">Thể loại:
+                    <?php foreach($theloai as $ttl):?>
+                        <span class="normal-text"><a class="alink" href="?pg=genre&id=<?= $ttl["id_loai"] ?>"><?= $ttl["tentl"]?>,</a></span>
+                    <?php endforeach;?>
+                         
+                        
+                        </p>
                     <div class="release-duration">
                         <p class="bold-text">Phát hành: <span class="normal-text"><?=$chitiet["namsx"]?></span></p>
                         <p class="bold-text">Số tập: <span class="normal-text"><?=$chitiet["tongsotap"]?></span></p>
@@ -30,6 +36,9 @@
                     <form action="" method="post" class="watch-button2">
                     <button class="watch-button2" style="background-color: #25867d;" name="submit" id="check">Yêu thích</button>
                     </form>
+                    <?php foreach ($tap as $t) : ?>
+                        <a style="background: #222222; padding: 10px; border-radius: 5px; color: white !important; margin: 3px;" href="?pg=them&id=<?= $t["id_phim"] ?>&tap=<?= $t["id_tap"] ?>"><?= $t["tapphim"] ?></a>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

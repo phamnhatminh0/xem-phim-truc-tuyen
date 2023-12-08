@@ -122,7 +122,15 @@
 									<ul>
 										<li><strong></strong><?= $gv["noidung"] ?></li>
 									</ul>
-									<a href="vnpay_php/vnpay_pay.php" class="DK_popup_order-btn">Đăng ký ngay</a>
+									<?php
+									if(isset($_SESSION["user"])) {
+										// Nếu tồn tại, in ra đoạn mã HTML thứ nhất
+										echo '<a href="vnpay_php/vnpay_pay.php?goi=' . $gv["id_goi"] . '" class="DK_popup_order-btn">Đăng ký ngay</a>';
+									} else {
+										// Nếu không tồn tại, in ra đoạn mã HTML thứ hai
+										echo '<a href="?pg=dangnhap" class="DK_popup_order-btn">Đăng ký ngay</a>';
+									}
+									?>
 								</div>
 							<?php endforeach; ?>
 						</div>
