@@ -106,7 +106,9 @@ if (!isset($_GET['pg'])) {
             $chitiet = chitietphim($_GET["id"]);
              if ($chitiet["trangthai"]==2 && $_SESSION["user"]["role"]==0 ) {
                 if(!$_SESSION["user"]){
-                header('Location:?pg=home');
+                    header('Location:?pg=dangnhap');
+                }else{
+                    header('Location:?pg=home');
                 }
             }
             $cungtheloai = phimcungtheloai($chitiet["tentl"], $chitiet["id_phim"]);
