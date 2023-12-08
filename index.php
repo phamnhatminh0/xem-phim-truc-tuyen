@@ -62,10 +62,14 @@ if (!isset($_GET['pg'])) {
             break;
 
         case 'genre':
+            $kq=gettheloai($_GET["id"]);
+            if(isset($_GET["id"]) && $_GET["id"]>0 && is_numeric($_GET["id"]) && $kq!=null){
             $tencungtheloai = phimcungtheloai_ten($_GET["id"]);
             $cacphimcungloai = phimcungtheloai_all($_GET["id"]);
             $tims = phimcungtheloai_all_sap($_GET["id"]);
-
+            }else {
+                header('Location:?pg=home');
+            }
             include_once "View/genre.php";
             break;
         case 'genrechinh':
@@ -102,8 +106,11 @@ if (!isset($_GET['pg'])) {
             break;
 
         case 'detail':
-           
+            $tap = xuat_tap($_GET["id"]);
+            $theloai= theloai_getphim($_GET["id"]);
             $chitiet = chitietphim($_GET["id"]);
+           if(isset($_GET["id"]) && $_GET["id"]>0 && is_numeric($_GET["id"]) && $chitiet["id_phim"]!=null ){
+          
              if ($chitiet["trangthai"]==2 && $_SESSION["user"]["role"]==0 ) {
                 if(!$_SESSION["user"]){
                     header('Location:?pg=dangnhap');
@@ -122,14 +129,15 @@ if (!isset($_GET['pg'])) {
                 header('Location:?pg=dangnhap');
             }
         }
+    }else {
+        header('Location:?pg=home');
+    }
             include_once "View/movie-detail.php";
             break;
 
         case 'watch':
-            if (isset($_GET["tap"]) && ($_GET["tap"] > 0)) {
-                $xuatphim = xuat_phimtap($_GET["id"], $_GET["tap"]);
-            }
-
+            $xuatphim = xuat_phimtap($_GET["id"], $_GET["tap"]);
+            if(isset($_GET["id"]) && $_GET["id"]>0 && isset($_GET["tap"]) && $_GET["tap"]>0 &&  is_numeric($_GET["id"]) && is_numeric($_GET["tap"]) &&   $xuatphim["id_phim"]!=null && $xuatphim["id_tap"]!=null ){
             $binhluan = binhluan($_GET["id"]);
             $dienvien = dienvien($_GET["id"]);
             $tap = xuat_tap($_GET["id"]);
@@ -143,6 +151,9 @@ if (!isset($_GET['pg'])) {
             }
                
             }
+        }else {
+            header('Location:?pg=home');
+        }
       
 
             include_once "View/watch-video.php";
@@ -368,9 +379,13 @@ if (!isset($_GET['pg'])) {
 
 
         case 'search':
+            if(!empty($_POST["search"])){
             $search = addslashes($_POST["search"]); // Thêm dấu gạch chéo vào trước các ký tự đặc biệt trong chuỗi tìm kiếm
             $tim = tim_phim($search); // Tìm phim với từ khóa đã được xử lý
             $tims = tim_phimsap($search); // Tìm sắp xếp với từ khóa a-z
+            }else{
+                header('Location: ?pg=home'); 
+            }
             include_once "View/search.php";
             break;
 

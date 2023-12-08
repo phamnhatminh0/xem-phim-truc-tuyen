@@ -15,7 +15,6 @@
 				<div class="headerhny-title">
 					<div class="w3l-title-grids">
 						<div class="headerhny-left"> 
-							
 							<h3 class="hny-title">Tìm kiếm "<?=$_POST["search"]?>" </h3>
 						</div>
 						<div class="headerhny-right text-lg-right">

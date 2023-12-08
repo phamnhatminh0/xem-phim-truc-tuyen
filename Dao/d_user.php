@@ -57,6 +57,15 @@ function check_email($email)
     // Nếu email hợp lệ, trả về true
     return true;
 }
+function doitrangthai($id_user){
+    $sql = "UPDATE user SET role =1 WHERE id_user=?";
+    pdo_execute($sql,$id_user);
+}
+function thongtinvip($id_goi,$id_user,$ngaydk,$ngayhethan)
+{
+    $sql = "INSERT INTO lsgiaodich (id_goi,id_user,ngaydk,ngayhethan) VALUES (?,?,?,?)";
+    return pdo_execute($sql,$id_goi,$id_user,$ngaydk,$ngayhethan);
+}
 // function hienuser(){
 //     $sql = "SELECT * FROM user";
 //     return pdo_query($sql);

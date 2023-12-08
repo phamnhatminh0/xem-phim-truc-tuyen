@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+$_SESSION["goi"]=$_GET["goi"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

@@ -1,3 +1,10 @@
+
+<?php
+session_start();
+include_once "../Dao/pdo.php";
+include_once "../Dao/d_user.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -155,8 +162,14 @@
                                         <p><strong>Kết quả:</strong>    <?php
                                                                 if ($secureHash == $vnp_SecureHash) {
                                                                     if ($_GET['vnp_ResponseCode'] == '00') {
+                                                                       
                                                                         echo "<span style='color:blue'>GD Thành công</span>";
+                                                                        doitrangthai($_SESSION["user"]["id_user"]);
+                                                                        $ngaydk=date("Y/m/d");
+                                                                        $ngayhethan=date("Y/m/d", strtotime("+30 days"));
+                                                                        thongtinvip($_SESSION["goi"],$_SESSION["user"]["id_user"],$ngaydk,$ngayhethan);
                                                                     } else {
+
                                                                         echo "<span style='color:red'>GD Không thành công</span>";
                                                                     }
                                                                 } else {
