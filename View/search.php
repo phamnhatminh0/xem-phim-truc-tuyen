@@ -41,11 +41,6 @@
 				</div>
 			</div>
 
-			<div class="button-center text-center mt-3">
-				<a href="#" class="btn view-button">Xem tất cả <span class="fa fa-angle-double-right ml-2"
-						aria-hidden="true"></span></a>
-			</div>
-
 		</div>
 	</section>
 	<!--//grids-sec1-->

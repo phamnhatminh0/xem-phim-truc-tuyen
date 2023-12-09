@@ -6,24 +6,18 @@ function phimmoi(){
 function phimmoicapnhat(){
     $sql= "SElECT *
     FROM phim
-    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
-    JOIN theloai ON loaiphim.id_loai = theloai.id_loai
     WHERE phim.namsx = 2023 AND phim.trangthai != 1 ";
     return pdo_query($sql);
 }
 function phimmoicapnhat_sap(){
     $sql= "SElECT *
     FROM phim
-    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
-    JOIN theloai ON loaiphim.id_loai = theloai.id_loai
     WHERE phim.namsx = 2023 AND phim.trangthai != 1 ORDER BY ten ASC";
     return pdo_query($sql);
 }
 function phimvip(){
     $sql= "SElECT *
     FROM phim
-    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
-    JOIN theloai ON loaiphim.id_loai = theloai.id_loai
     WHERE phim.trangthai = 2 AND phim.trangthai != 1";
     return pdo_query($sql);
 }
@@ -31,8 +25,6 @@ function phimvip(){
 function phimvip_sap(){
     $sql= "SElECT *
     FROM phim
-    JOIN loaiphim ON phim.id_phim = loaiphim.id_phim
-    JOIN theloai ON loaiphim.id_loai = theloai.id_loai
     WHERE phim.trangthai = 2 AND phim.trangthai != 1 ORDER BY ten ASC";
     return pdo_query($sql);
 }
@@ -42,7 +34,7 @@ function hanhdong(){
     FROM phim P
     JOIN loaiphim lP ON P.id_phim = lP.id_phim
     JOIN theloai Tl ON lP.id_loai = Tl.id_loai
-    WHERE Tl.tentl = 'hành động' AND P.trangthai != 1 AND P.trangthai != 2";
+    WHERE Tl.tentl = 'hành động' AND P.trangthai != 1 AND P.trangthai != 2 LIMIT 6";
     return pdo_query($sql);
 }
 function tinhcam(){
@@ -50,7 +42,7 @@ function tinhcam(){
     FROM phim P
     JOIN loaiphim lP ON P.id_phim = lP.id_phim
     JOIN theloai Tl ON lP.id_loai = Tl.id_loai
-    WHERE Tl.tentl = 'tình cảm' AND P.trangthai != 1 AND P.trangthai != 2";
+    WHERE Tl.tentl = 'tình cảm' AND P.trangthai != 1 AND P.trangthai != 2 LIMIT 6";
     return pdo_query($sql);
 }
 function kinhdi(){
@@ -58,7 +50,7 @@ function kinhdi(){
     FROM phim P
     JOIN loaiphim lP ON P.id_phim = lP.id_phim
     JOIN theloai Tl ON lP.id_loai = Tl.id_loai
-    WHERE Tl.tentl = 'kinh dị' AND P.trangthai != 1 AND P.trangthai != 2";
+    WHERE Tl.tentl = 'kinh dị' AND P.trangthai != 1 AND P.trangthai != 2 LIMIT 6";
     return pdo_query($sql);
 }
 // hàm chưa sài
